@@ -1,0 +1,198 @@
+{% extends 'W_message.html' %}
+
+{% block main %}
+	<style>
+		
+		.W_tab{
+			width: 100%;
+			margin:20px 0px;
+			position: relative;
+			
+		}
+		.W_tab:last-of-type td{
+			text-align:center;
+		}
+		ol{
+			position: relative;
+			
+		}
+		th{
+			height: 40px;
+			text-align:center;
+			border: 1px solid #000;
+		}
+		td{
+			padding:0px 5px;
+			height: 40px;
+			border: 1px solid #ccc;
+			text-align:text;
+			font-size: 16px;
+			font-family: '仿宋';
+			overflow: hidden;
+		}
+		td input[type=radio]{
+			float:left;
+			margin-top: 6px;
+			margin-right: 5px;
+			margin-left: 10px;
+		}
+		
+		td label{
+			float:left;
+		}
+		
+		td:last-of-type{
+			text-align:center;
+			width: 60px;
+			padding: 0px;
+			position: relative;
+		}
+		.W_hideTit{
+			position: absolute;
+			text-align:center;
+			height: 40px;
+			width: 60%;
+			top: 0px;
+			left: 300px;
+			font-size: 26px;
+			font-family: '仿宋';
+			font-weight:900;
+			overflow: hidden;
+		}
+		td:last-of-type a{
+			display: block;
+			width: 100%;
+			text-decoration: none;
+			font-size: 20px;
+			color:red;
+			font-weight: 600;
+		}
+		td:last-of-type a:hover{
+			background: #cac;
+		}
+		th{
+			background: #ccc
+		}
+		
+	</style>
+	<ol class="breadcrumb">
+		<li ><a href="/user">管理首页</a></li>
+		<li><span>后台用户管理</span></li>
+		<div class="W_hideTit"></div>
+	</ol>
+
+	
+	<h3>添加用户</h3>
+	<table class="W_tab">
+		
+		<tr>
+			<th>帐号</th>
+			<th>密码</th>
+			<th class="W_root">权限</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td class="add_username" contenteditable="true"></td>
+			<td class="add_password" contenteditable="true"></td>
+			<td class="W_root">
+				<input class="addUserR" id="user" checked name="W_vip" value="1" type="radio"/><label for="user">普通用户</label>
+				<input class="addUserR" id="userVip" name="W_vip" value="2" type="radio"/><label for="userVip">管理员</label>
+			</td>
+			<td>
+				<a href="javascript:;" class="W_user_btn" id="W_addUser">
+					添加
+				</a>
+				
+			</td>
+		</tr>
+		
+	</table>
+	
+	<h3>修改信息</h3>
+	<table class="W_tab">
+		
+		<tr>
+			<th>帐号</th>
+			<th>旧密码</th>
+			<th>新密码</th>
+			<th>权限</th>
+			<th>操作</th>
+		</tr>
+		<tr class="W_root">
+			<td contenteditable="true"></td>
+			<td contenteditable="true"></td>
+			
+			<td contenteditable="true"></td>
+			<td class="W_root">
+				<input class="XiuAdd" id="user1" checked name="W_vip1" value="1" type="radio"/><label for="user1">普通用户</label>
+				<input class="XiuAdd" id="userVip1" name="W_vip1" value="2" type="radio"/><label for="userVip1">管理员</label>
+			</td>
+			<td>
+				<a href="javascript:;" class="W_user_btn2">
+					修改
+				</a>
+			</td>
+		</tr>
+		
+	</table>
+	
+	<h3>用户列表</h3>
+	<table class="W_tab">
+		
+		<tr>
+			<th class="hide">ID</th>
+			<th>帐号</th>
+			{%if userInfo1.isAdmin == '3'%}
+			<th>密码</th>
+			{%endif%}
+			<th>添加时间</th>
+			<th class="W_root">级别</th>
+			<th>修改时间</th>
+			<th>操作</th>
+		</tr>
+
+		<!-- 遍历数据并使用模板显示遍历的每条数据 -->
+
+		{% for user in users %}
+		
+		<tr>
+			<td class="W_user_id hide">{{user._id.toString()}}</td>
+			<td>{{user.username}}</td>
+			{% if userInfo1.isAdmin == '3'%}
+			<td>{{user.password}}</td>
+			{%endif%}
+			
+			
+			<td>{{user.AddTime}}</td>
+			<td class="W_admin_quanxian" data-quanxian="{{user.isAdmin}}"></td>
+			{%if user.xiuTime %}
+			<td class="W_root">
+				{{user.xiuTime}}
+			</td>
+			{%else%}
+			<td class="W_root">
+				暂未修改
+			</td>
+			{%endif%}
+			
+			{% if user.isAdmin == '3' %}
+			<td>
+				不可删除
+			</td>
+			{% else%}
+			<td>
+				<a href="javascript:;" class="W_user_link">
+					删除
+				</a>
+			</td>
+			{%endif%}
+		</tr>
+		{% endfor %}
+		
+	</table>
+
+
+	<!-- 引入分页模板 -->
+	{% include 'page.html' %}
+
+{% endblock %}

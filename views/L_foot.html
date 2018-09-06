@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*定义尾部*/
+		footer{
+			/*margin-top:30px;*/
+			padding:20px 0;
+			border-top:1px solid #ededed;
+			background: #F7F7F7;
+		}
+		.L_box{
+			width:1200px;
+			margin:0 auto;
+		}
+		.L_foot_left{
+			float:left;
+		}
+		.L_foot_left dl{
+			float:left;
+			width:175px;
+			text-align: left;
+		}
+		.L_foot_left dt{
+			color:#666;
+			font: bold 14px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1"
+		}
+		.L_foot_left dd{
+			font:12px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+		}
+		.L_foot_left dd a{
+			color:#666;
+		}
+		.L_foot_right{
+			float:right;
+		}
+		.L_foot_right>div{
+			float:left;
+			margin-left:50px;
+		}
+		.L_foot_right_left div{
+			float:left;	
+		}
+		.L_foot_right_left div:first-child{
+			font-size:50px;
+			color:#DBDBDB;
+			margin-right:20px;
+		}
+		.L_foot_right_left div:last-child li:first-child{
+			font: bold 14px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+			color:#666;
+			font-size:16px;
+		}
+		.L_foot_right_left div:last-child li{
+			font:12px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+			color:#333;
+		}
+
+		.L_foot_right_right>div{
+			float:left;
+		}
+		.L_foot_right_right>div:first-child{
+			font-size:50px;
+			color:#DBDBDB;
+			margin-right:20px;
+		}
+		.L_foot_right_right ol li:first-child{
+			font: bold 14px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+			color:#666;
+			font-size:16px;
+		}
+		.L_foot_right_right ol li{
+			font:12px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+			color:#333;	
+		}
+		.L_foot_right_right div:last-child a{
+			display:block;
+			margin:6px 0 0;
+			width:80px;
+			height:26px;
+			color:#fff;
+			background-color:#f33;
+			text-align: center;
+			font-size:12px;
+			line-height:26px;
+			border-radius: 3px;
+		}
+		.L_bottom{
+			background-color:#2D2D2D;
+			position: relative;
+			height:185px;
+		}
+		.L_bottom_box{
+			width:1200px;
+			margin:0 auto;
+			padding-top:25px;
+			padding-bottom:30px;
+			overflow:hidden;
+
+		}
+		.L_bottom_box>div{
+			float:left;
+		}
+		.L_bottom_box>div:last-child{
+			float:right;
+		}
+		.L_clear::after{
+			content:'';
+			display:block;
+			clear:both;
+		}
+		.L_bottom_box ul{
+			padding-top:7px;
+		}
+		.L_bottom_box ul li{
+			float:left;
+			color:#666;
+			font-size:12px;
+		}
+		.L_bottom_box ul li a{
+			color:#fff;
+			margin:0 10px;
+		}
+		.L_bottom_box ol{
+			margin-top:25px;
+		}
+		.L_bottom_box ol li{
+			float:left;
+			color:#999;
+			font-size:12px;
+		}
+		.L_bottom_box ol li a{
+			padding:0 10px;
+			color:#999;
+		}
+		.L_bright >div{
+			float:left;
+		}
+		.L_bright >div li img{
+			width:100px;
+			height:100px;
+		}
+		.L_bright >div:first-child{
+			color:#fff;
+			font-size:12px;
+			margin-right:40px;
+		}
+		.L_bright >div:first-child span{
+			font-size:20px;
+			margin-right:10px;
+		}
+		.L_bright >div li{
+			font-size:20px;
+			color:#fff;
+			margin-right: 10px;
+		}
+		.L_gg{
+			background-color:#666;
+			text-align:center;
+			position:absolute;
+			width:40px;
+			border-radius:5px;
+			right:63px;
+			bottom:10px;
+		}
+		.L_gg a{
+			color:#fff;
+			padding:10px 0;
+			font-size: 12px;
+		}
+		.L_gg a:hover{
+			text-decoration:underline;
+		}
+		.L_foot_left dd a:hover {
+			text-decoration: underline;
+		}
+		.L_bottom_box ol li a:hover {
+			text-decoration: underline;
+		}
+		.L_bottom_box ul li a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<footer style="box-sizing:border-box">
+		<div class="L_box L_clear">
+			<div class="L_foot_left L_clear">
+				<dl>
+					<dt>购物指南</dt>
+					<dd><a href="">账号注册</a></dd>
+					<dd><a href="">购物流程</a></dd>
+					<dd><a href="">付款方式</a></dd>
+				</dl>
+				<dl>
+					<dt>售后服务</dt>
+					<dd><a href="">先行赔付</a></dd>
+					<dd><a href="">退款退货流程</a></dd>
+					<dd><a href="">投诉举报</a></dd>
+				</dl>
+				<dl>
+					<dt>商品保障</dt>
+					<dd><a href="">正品保障</a></dd>
+					<dd><a href="">物流配送</a></dd>
+					<dd><a href="">24小时发货</a></dd>
+					<dd><a href="">发票保障</a></dd>
+				</dl>
+				<dl>
+					<dt>商家服务</dt>
+					<dd><a href="">商家中心</a></dd>
+				</dl>
+			</div>
+			<div class="L_foot_right">
+				<div class="L_foot_right_left L_clear">
+					<div class="iconfont">&#xe82c;</div>
+					<div>
+						<ol>
+							<li>400-688-1999</li>
+							<li>工作日 9:00 - 18:00</li>
+						</ol>
+					</div>
+				</div>
+				<div class="L_foot_right_right">
+					<div class="iconfont">&#xe65f;</div>
+					<div>
+						<ol>
+							<li>商家合作</li>
+							<li>错过天猫？别再错过我们！</li>
+							<li>Z商城开启全新旅程！</li>
+						</ol>
+						<a href="">关于入驻></a>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="L_bottom">
+		<div class="L_bottom_box L_clear">
+			<div>
+				<ul class="L_clear">
+					<li><a href="">中关村在线</a><span>|</span></li>
+					<li><a href="">Z商城</a><span>|</span></li>
+					<li><a href="">团购</a><span>|</span></li>
+					<li><a href="">产品报价</a><span>|</span></li>
+					<li><a href="">论坛</a><span>|</span></li>
+					<li><a href="">问答</a></li>
+				</ul>
+				<ol class="L_clear">
+					<li><a href="">关于Z商城</a><span>|</span></li>
+					<li><a href="">帮助中心</a><span>|</span></li>
+					<li><a href="">联系我们</a></li>
+				</ol>
+				<ol class="L_clear">
+					<li style="padding-left:10px;">©2017 中关村在线 版权所有.</li>
+					<li><a href="">京ICP证150096号</a></li>
+					<li>京ICP备14061128号</li>
+					<li><a href="">京公网安备11010802020026号</a></li>
+					<li><a href="">网络文化经营许可证京网文[2016]1631-199</a></li>
+				</ol>
+			</div>
+			<div class="L_bright L_clear">
+				<div>
+					<p><span class="iconfont">&#xe64b;</span>关注新浪微博</p>
+				</div>
+				<div>
+					<ul>
+						<li class="iconfont">&#xe62e;</li>
+						<li>
+						<img src="/public/images/shop_wechat.png" alt=""></li>
+						
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+		<div class="L_gg">
+			<a href="">广告</a>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,443 @@
+.Z_main {
+    width: 960px;
+    margin: 0 auto;
+}
+/* 地址 */
+.Z_container {
+    margin: 0 0 20px;
+}
+.Z_container > .Z_container_head {
+    margin: 0 0 10px;
+    overflow: hidden;
+    border-bottom: 1px solid #ebebeb;
+}
+.Z_container > .Z_container_head > .Z_links {
+    float: right;
+    font: 12px/40px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #36c;
+}
+.Z_container > .Z_container_head > .Z_title {
+    font: bold 16px/40px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+
+.Z_container > .Z_address_list > .Z_add_edits {
+    background: #f7f7f7;
+}
+.Z_container > .Z_address_list > li {
+    position: relative;
+    margin: 0 0 2px;
+    padding: 6px 88px 6px 10px;
+    color: #666;
+}
+.Z_container > .Z_address_list > .Z_add_edits > label > input {
+    margin: 0 10px 0 0;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor {
+    display: block;
+    padding: 15px 0 5px 22px;
+    box-sizing: content-box;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor dl {
+    position: relative;
+    padding: 0 0 10px 75px;
+    box-sizing: content-box;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor dt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75px;
+    font: 12px/26px "Arial";
+    color: #666;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor .Z_xh {
+    padding: 0 8px 0 0;
+    color: #f30;
+    font-family: "Simsun";
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor dd {
+    overflow: hidden;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor .Z_text {
+    float: left;
+    margin: 0 10px 0 0;
+    padding: 2px 5px;
+    box-sizing: content-box;
+    width: 118px;
+    height: 20px;
+    border: 1px solid #d6d6d6;
+    font: 12px/20px "Arial";
+    color: #000;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor .Z_wrong_tips {
+    color: #c00;
+    margin-left: 10px;
+    position: relative;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor span {
+    float: left;
+    font: 12px/20px "Arial";
+}
+.Z_none {
+    display: none;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor .Z_area dd {
+    height: 26px;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor select {
+    width: 87px;
+    height: 26px;
+    float: left;
+    margin: 0 5px 0 0;
+    border: 1px solid #d6d6d6;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor .Z_clickadd {
+    margin-left: 6px;
+    color: #144b9e;
+    line-height: 25px;
+    font-size: 14px;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor > .Z_detailed_address .Z_text {
+    width: 338px;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor > .Z_number {
+    position: relative;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor > .Z_number dl {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 152px;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor > .Z_number dl .Z_tips {
+    float: left;
+    font-size: 12px;
+    line-height: 25px;
+    color: #999;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor > .Z_number .Z_fixed_line {
+    padding: 0 0 10px 60px;
+    box-sizing: content-box;
+    width: 332px;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor > .Z_number .Z_fixed_line dt {
+    width: 60px;
+}
+
+.Z_container > .Z_address_list > li > .Z_infor_editor > .Z_setup_default {
+    display: block;
+    padding: 0px 0 20px 75px;
+    box-sizing: content-box;
+    color: #333;
+    font: 12px/1.5 Arial;   
+    font-family: Microsoft YaHei;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor > .Z_setup_default input {
+    margin: 0 5px 0 0;
+}
+.Z_w120-btn, .Z_method_peisong .Z_ico, .Z_suit_details .Z_ico, .Z_security, .Z_goods_infor > .Z_color-suits span, .Z_fail_submit {
+        background: url('/public/images/ico-1.png') no-repeat;
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor > .Z_w120-btn {
+    margin: 15px 0 0 75px;
+    display: block;
+    width: 120px;
+    height: 30px;
+    border: 0 none;
+    cursor: pointer;
+    font: 14px/30px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #fff;
+    text-align: center;
+    background-position: 0 -270px;
+    
+}
+.Z_container > .Z_address_list > li > .Z_infor_editor > .Z_w120-btn:hover {
+    background-position: 0 -301px;
+}
+
+/* 配送、支付 */
+.Z_container > .Z_method_peisong {
+    padding: 20px 10px;
+}
+.Z_container > .Z_method_peisong li {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 110px;
+    height: 36px;
+    border: 1px solid #dbd8d8;
+    font: 14px/36px"Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    text-align: center;
+}
+.Z_container > .Z_method_peisong .Z_current {
+    position: relative;
+    width: 108px;
+    height: 34px;
+    border: 2px solid #c00;
+    line-height: 34px;
+}
+.Z_container > .Z_method_peisong .Z_current .Z_ico {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 11px;
+    height: 11px;
+    background-position: -118px -333px;
+}
+/* 发票 */
+.Z_container > .Z_invoice-title {
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    color: #333;
+    margin-left: 10px;
+}
+.Z_container > .Z_invoice-title a {
+    color: #36c;
+    margin-left: 20px;
+}
+.Z_container > .Z_invoice-title a:hover, .Z_goods_infor > .Z_security:hover {
+    border-bottom: 1px solid #36c;
+}
+
+/* 购物车 */
+.Z_goods_list > table {
+    width: 100%;
+    border-collapse: collapse;
+    font: 12px/1.5 Arial;
+}
+.Z_goods_list > table .Z_cell_1 {
+    width: 300px;
+    text-align: left;
+}
+.Z_goods_list > table .Z_cell_2 {
+    width: 170px;
+}
+.Z_goods_list > table .Z_cell_3 {
+    width: 120px;
+}
+.Z_goods_list > table .Z_cell_4 {
+    width: 164px;
+}
+.Z_goods_list > table .Z_cell_5 {
+    text-align: right;
+}
+.Z_goods_list > table th.Z_cell_5 {
+    padding: 0 25px 0 10px;
+    box-sizing: content-box;
+    width: 106px;
+}
+.Z_goods_list > table th {
+    padding: 0 10px;
+    box-sizing: content-box;
+    font: 12px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    text-align: center;
+    border-bottom: 2px solid #c0daf8;
+}
+.Z_goods_list > table td {
+    padding: 20px 10px;
+    box-sizing: content-box;
+    background: #fbfcff;
+    text-align: center;
+}
+.Z_goods_infor {
+    width: 294px;
+    height: 82px;
+    text-align: left;
+}
+.Z_goods_infor > .Z_pic {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 0 10px 0 0;
+}
+.Z_goods_infor > .Z_title {
+    float: left;
+    width: 202px;
+    height: 36px;
+    overflow: hidden;
+    font: 12px/18px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.Z_goods_infor > .Z_title a {
+    color: #333;
+}
+.Z_goods_infor > .Z_color-suits {
+    float: left;
+    width: 202px;
+    padding: 7px 0 0;
+    box-sizing: content-box;
+}
+.Z_goods_infor > .Z_color-suits dl {
+    position: relative;
+    zoom: 1;
+    padding: 0 0 0 36px;
+    color: #666;
+    font: 12px/18px arial;
+}
+.Z_goods_infor > .Z_color-suits dt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #999;
+}
+.Z_goods_infor > .Z_color-suits span {
+    display: inline-block;
+    padding: 0 10px 0 0;
+    background-position: 100% -363px;
+    cursor: pointer;
+} 
+.Z_goods_infor > .Z_color-suits .Z_suit_details {
+    display: none;
+}
+.Z_goods_infor > .Z_color-suits:hover .Z_suit_details {
+    display: block;
+}
+.Z_suit_details {
+    position: absolute;
+    top: 26px;
+    left: 0;
+    padding: 6px 10px;
+    width: 158px;
+    border: 1px solid #d6d6d6;
+    background: #fff;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+.Z_suit_details .Z_ico {
+    position: absolute;
+    top: -5px;
+    left: 53px;
+    display: block;
+    width: 9px;
+    height: 5px;
+    background-position: -133px -231px;
+}
+.Z_suit_details p {
+    font: 12px/20px "Arial";
+}
+.Z_goods_infor > .Z_security {
+    color: #36c;
+}
+
+.Z_original {
+    color: #999;
+    text-decoration: line-through;
+}
+.Z_goods_list > table td .Z_icon {
+    background-color: #ce1a1b;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 3px;
+}
+.Z_goods_list > table td .Z_time {
+    color: #333;
+    font-size: 12px;
+    line-height: 24px;
+}
+.Z_goods_list > table td.Z_cell_5 {
+    font-weight: bold;
+    color: #c00;
+}
+.Z_goods_list > table td .Z_order_extra {
+    padding: 0 10px;
+    border-top: 1px solid #c0daf8;
+    background: #f2f6ff;
+    text-align: left;
+}
+.Z_goods_list > table td .Z_order_extra .Z_message_box {
+    float: left;
+    position: relative;
+    zoom: 1;
+    margin: 20px 0 0;
+    padding: 0 0 0 77px;
+}
+.Z_goods_list > table td .Z_order_extra .Z_message_box .Z_label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font: 12px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #999;
+}
+.Z_goods_list > table td .Z_order_extra .Z_message_box textarea {
+    display: block;
+    padding: 4px 10px;
+    width: 320px;
+    border: 1px solid #cee2f8;
+    background: #fff;
+    font: 12px/18px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    resize: none;
+}
+.Z_goods_list > table td .Z_order_extra .Z_message_box .Z_text_focus {
+    height: 66px;
+}
+.Z_goods_list > table td .Z_order_extra .Z_message_box .Z_words_num {
+    display: block;
+    padding: 6px 0 0;
+    font: 12px/18px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #999;
+}
+.Z_goods_list > table td .Z_order_extra_info {
+    float: right;
+    width: 300px;
+    padding: 10px 0 0;
+    text-align: left;
+}
+.Z_goods_list > table td .Z_order_extra_info dl {
+    font: 12px/30px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.Z_goods_list > table td .Z_order_extra_info dl dt {
+    float: left;
+    width: 60px;
+    color: #999;
+    text-align: right;
+}
+.Z_goods_list > table td .Z_order_extra_info dl dd {
+    float: left;
+    width: 170px;
+}
+.Z_goods_list > table td .Z_order_extra_info dl .Z_price {
+    width: 70px;
+    text-align: right;
+    color: #c00;
+}
+
+/* 总价 */
+.Z_total_price {
+    padding: 0 0 23px;
+}
+.Z_total_price span {
+    float: right;
+    padding: 0 0 0 20px;
+    font: 12px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #666;
+}
+.Z_total_price span em {
+    color: #c00;
+}
+.Z_total_price .Z_price {
+    position: relative;
+    top: -5px;
+}
+.Z_total_price .Z_price em {
+    font-size: 24px;
+    font-family: Verdana;
+}
+/* 提交按钮 */
+.Z_fail_submit {
+    float: right;
+    display: block;
+    margin: 0 0 0 10px;
+    width: 160px;
+    height: 46px;
+    text-indent: -9999em;
+    overflow: hidden;
+    font: 0/0 "Arial";
+    border: 0 none;
+    background-position: 0 0px;
+    cursor:pointer;
+}
+
+
+
+
+

@@ -1,0 +1,75 @@
+.clear::after{
+	content:'';
+	display: block;
+	clear:both;
+}
+.submit{
+	display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 8px 30px;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+header{
+	width:980px;
+	margin:0 auto;
+	padding: 30px 0;
+}
+header ul li{
+	float:left;
+}
+
+header ul li a{
+	margin:0 18px 0 0;
+}
+header ul li span{
+	font-size:35px;
+	color:#666;
+	margin: 10px 0 0;
+	padding-left:10px;
+	border-left:1px solid #ccc;
+}
+main{
+	width:980px;
+	border:1px solid #e6e6e6;
+	margin:0 auto;
+	padding: 50px 0;
+}
+.L_foot_form form{
+	width:45%;
+	margin: 0 auto;
+}
+.L_foot_form form span{
+	display:inline-block;
+	width:72px;
+	height:30px;
+	text-align: right;
+	color:#999;
+	line-height:30px;
+	font-size:14px;
+}
+.L_foot_form form>div{
+	padding:15px 0;
+}
+.L_foot_form form input[type="text"]{
+	width:190px;
+	height:20px;
+	padding: 7px;
+	font:14px/20px "Microsoft YaHei";
+}
+.L_foot_form button{
+	display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 8px 35px;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    margin-left:50px;
+}

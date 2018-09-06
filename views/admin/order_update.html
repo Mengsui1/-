@@ -1,0 +1,163 @@
+{% extends 'W_message.html' %}
+
+{% block main %}
+	<style>
+		
+		.W_tab{
+			width: 100%;
+			margin:20px 0px;
+			position: relative;
+			
+		}
+		.W_tab:last-of-type td{
+			text-align:center;
+		}
+		ol{
+			position: relative;
+			
+		}
+		th{
+			height: 40px;
+			text-align:center;
+			border: 1px solid #000;
+		}
+		td{
+			width: 200px;
+			padding:0px 5px;
+			height: 40px;
+			border: 1px solid #ccc;
+			text-align:text;
+			line-height: 40px;
+			font-size: 16px;
+			font-family: '仿宋';
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		td input[type=radio]{
+			float:left;
+			margin-top: 14px;
+			margin-right: 5px;
+			margin-left: 10px;
+		}
+		.W_root{
+			width: 300px;
+		}
+		
+		td label{
+			float:left;
+		}
+		
+		td:last-of-type{
+			text-align:center;
+			width: 60px;
+			padding: 0px;
+			position: relative;
+		}
+		.W_hideTit{
+			position: absolute;
+			text-align:center;
+			height: 40px;
+			width: 60%;
+			top: 0px;
+			left: 300px;
+			line-height: 40px;
+			font-size: 26px;
+			font-family: '仿宋';
+			font-weight:900;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		td:last-of-type a{
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: 40px;
+			text-decoration: none;
+			font-size: 20px;
+			color:red;
+			font-weight: 600;
+		}
+		td:last-of-type a:hover{
+			background: #cac;
+		}
+		th{
+			background: #ccc
+		}
+		.x_box{
+			margin-top:20px;
+			/*padding-left:50px;*/
+		}
+		.x_input{
+			width:300px;
+			height:30px;
+			padding:5px 10px;
+			margin:10px 0px 0px 50px;
+			cursor:auto;
+			outline:none;
+		}
+		.x_submit{
+			width:50px;
+			height:30px;
+			display:inline-block;
+			background-color:#CCCCCC;
+			cursor:pointer;
+			text-align:center;
+			line-height:30px;
+			vertical-align:bottom;
+			
+		}
+		.x_submit > a{
+			color:#333333;
+			text-decoration:none;
+		}
+		
+	</style>
+	<ol class="breadcrumb">
+		<li ><a href="/user">管理首页</a></li>
+		<li><span>后台用户管理</span></li>
+		<div class="W_hideTit"></div>
+	</ol>
+
+	
+	<h3>修改订单</h3>
+	<div class="x_box">
+		<label for="">请输入订单编号:</label><br>
+		<input type="text" class="x_input">
+		<div class="x_submit"><a href="####">提交</a></div>
+	</div>
+	{% if response %}
+	<table class="W_tab">
+		
+		<tr>
+			<th>送货地址</th>
+			<th>电话号码</th>
+			<th>收件人</th>
+			<th>价格</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td class="x_hideid" contenteditable="true" style="display:none">{{ response._id.toString() }}</td>
+			<td class="x_add" contenteditable="true">{{ response.sendAdd }}</td>
+			<td class="x_phone" contenteditable="true">{{ response.spphone }}</td>
+			<td class="x_aname" contenteditable="true">{{ response.spname }}</td>
+			<td class="x_price" contenteditable="true">{{ response.spPrice }}</td>
+			<td>
+				<!-- <a href="javascript:;" class="x_orderupdate"> -->
+					<!-- 修改 -->
+				<!-- </a> -->
+				
+			</td>
+		</tr>
+		
+	</table>
+	<!-- 引入分页模板 -->
+	{% include 'page.html' %}
+	{% else %}
+	{% endif %}
+
+
+	
+
+{% endblock %}

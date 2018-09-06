@@ -1,0 +1,160 @@
+
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="/public/css/L_cat.css">
+	<link rel="stylesheet" href="/public/css/reset.css">
+	<link rel="stylesheet" href="/public/css/font/iconfont.css">
+	<script src="/public/js/vue.js"></script>
+	<script src="/public/js/jquery.min.js"></script>
+	<link rel="stylesheet" href="/public/css/W_head_index.css" />
+
+</head>
+<body>
+	{% include '../head.html' %}
+	<main>
+		<div class="main_head L_clear">
+			<div>
+				<a href=""><img src="/public/images/logo3.png" alt=""></a>
+			</div>
+			<div>
+				<ul class="L_clear">
+					<li class="L_toColor">加入购物车<p></p></li>
+					<li class="L2">下订单<p></p></li>
+					<li class="L3">去付款<p></p></li>
+					<li class="L4">确认收货<p></p></li>
+					<li class="L5">评价<p></p></li>
+				</ul>
+			</div>
+		</div>
+		<div class="L_main_center" >
+		<!-- 判断是否有数据传输进去 -->
+			{% if newStudents %}
+			<!-- <h1>1111</h1> -->
+			<div id="app">
+				<div class="L_app_head">
+					<p>购物车状态(${zhuangtai}/30)</p>
+					<div>
+						<p>总计(不含运费)：<span>¥${total}</span><a href="#" class="L_btn">去结算</a></p>
+					</div>
+				</div>
+				<div class="L_app_foor">
+					<table>
+			            <tr>
+			                <th><input type="checkbox" name="selectAll" v-model="checked" @click="all">:全选</th>
+			                <th>所选商品</th>
+			                <th>单价（元）</th>
+			                <th>数量</th>
+			                <th>优惠</th>
+			                <th>小计（元）</th>
+			                <th>操作</th>
+			            </tr>
+			            <tr v-for="(item,index) in list">
+			            	<td>
+			            		<input type="checkbox" v-model="selectList" :value="index" name="selectList">
+			            	</td>
+			            	<td class="L_clear">
+				            	<div>
+				            		<a href=""><img :src="item.url" alt=""></a>
+				            	</div>
+				            	<div>
+				            		<h3>${item.describe}</h3>
+				            		<a href="" title="7天退换"></a>
+				            		<p>${item.color}</p>
+				            		<p>${item.taozhuang}</p>
+				            	</div>
+			            	</td>
+			            	<td>${item.pirce}</td>
+							<td>
+								<button @click="reduce(index)">-</button>
+								<input type="text" :value="item.count">
+								<button @click="add(index)">+</button>
+							</td>
+							<td>${item.zhekou}</td>
+							<td>${jiage(index)}</td>
+							<td class="x_aclick"><a href="####" @click="remove(index)">删除</a></td>
+			            </tr>
+					</table>
+					<div class="L_app_sum">
+						<p>商品总价(不含运费)：<span>¥${total}</span></p>
+					</div>
+					<div class="L_jeisuan">
+						<div>
+							<a href="####" @click="allRemove">批量删除</a>
+						</div>
+						<div>
+							<a href="">继续购物</a>
+							<input type="submit" value="提交" @click="sendorder()">
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="/public/data/L_cat.js"></script>
+
+			{%else%}
+			<!-- <h2>22222</h2> -->
+			<div class="L_mian_true L_clear">
+				<div><a href=""><img src="/public/images/cat.png" alt=""></a></div>
+				<div>
+					<h6>您的购物车里还没有商品，您可以：</h6>
+					<p>去<a href="/index?hover=0">挑选商品</a></p>
+				</div>
+			</div>
+			{%endif%}
+		</div>
+		<div class="main_like">
+			<p>猜你喜欢</p>
+			<ul class="L_clear">
+				<li>
+					<a href=""><img src="/public/images/cat-foot01.jpg" alt=""></a>
+					<a href=""><span>游戏悍将 核武器1</span></a>
+					<p>¥<span>126</span></p>
+				</li>
+				<li>
+					<a href=""><img src="/public/images/cat-foot01.jpg" alt=""></a>
+					<a href=""><span>游戏悍将 核武器1</span></a>
+					<p>¥<span>126</span></p>
+				</li>
+				<li>
+					<a href=""><img src="/public/images/cat-foot01.jpg" alt=""></a>
+					<a href=""><span>游戏悍将 核武器1</span></a>
+					<p>¥<span>126</span></p>
+				</li>
+				<li>
+					<a href=""><img src="/public/images/cat-foot01.jpg" alt=""></a>
+					<a href=""><span>游戏悍将 核武器1</span></a>
+					<p>¥<span>126</span></p>
+				</li>
+				<li>
+					<a href=""><img src="/public/images/cat-foot01.jpg" alt=""></a>
+					<a href=""><span>游戏悍将 核武器1</span></a>
+					<p>¥<span>126</span></p>
+				</li>
+			</ul>
+		</div>
+	</main>
+	<footer>
+		<ul class="L_clear">
+			<li><a href="">关于商城</a><span>|</span></li>
+			<li><a href="">营销中心</a><span>|</span></li>
+			<li><a href="">服务中心</a><span>|</span></li>
+			<li><a href="">联系我们</a><span>|</span></li>
+			<li><a href="">发展历程</a><span>|</span></li>
+			<li><a href="">媒体报道</a></li>
+		</ul>
+		<p>©2017中关村在线 版权所有. 京ICP备09041801号-182 <a href="">京ICP证010391号</a></p>
+		<ol class="L_clear">
+			<li><a href=""><img src="/public/images/foot01.png" alt=""></a></li>
+			<li><a href=""><img src="/public/images/foot02.png" alt=""></a></li>
+			<li><a href=""><img src="/public/images/foot03.png" alt=""></a></li>
+		</ol>
+	</footer>
+</body>
+
+</html>
+
+{%endblock%}
+

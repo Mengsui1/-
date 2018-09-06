@@ -1,0 +1,176 @@
+.L_toColor{
+	color:#fff;
+	background-color:#e02d2d !important;
+	background-position:100% -38px !important;
+}
+.L_toColor2{
+	background-position:100% -111px !important;
+}
+.L_clear::after{
+	content:'';
+	display:block;
+	clear:both;
+}
+main{
+	width:960px;
+	margin:0 auto;
+}
+.main_head{
+	padding:30px 0;
+}
+.main_head > div:first-child{
+	float:left;
+}
+.main_head > div:last-child{
+	float:right;
+}
+.main_head > div:last-child li{
+	line-height:36px;
+	height:35px;
+	text-align: center;
+	width:90px;
+	float:left;
+	padding-right:14px;
+	font:14px/36px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+	background: url(http://icon.zol-img.com.cn/newshop/order/step-bg.png) no-repeat;
+	background-position:100% -75px;
+	background-color:#E6E6E6;
+}	
+.main_head > div:last-child li:first-child{
+	padding:0 14px;
+}
+.main_head > div:last-child li:last-child{
+	background-image: none;
+}
+.L_dizhi small{
+	font-weight:700;
+}
+.L_dizhi{
+	margin-bottom: 5px;
+}
+.L_dizhi span{
+	color:#666;
+	font-size:14px;
+}
+/*购物车*/
+.L_app_foor table{
+	width:100%;
+	text-align: center;
+	margin-top:20px;
+}
+tbody{
+	margin-top:10px;
+}
+tbody >tr{
+	border:1px solid #E3E3E3;
+}
+/*.L_app_foor table tr>td:nth-child(2){
+	width:30%;
+}*/
+.L_app_foor tr:first-child{
+	background-color:#F5F5F5;
+	border-top:2px solid #e02d2d;
+}
+.L_app_foor tr td,.L_app_foor tr th{
+	padding:10px 0;
+}
+.L_app_foor tr td:nth-child(1)>div{
+	float:left;
+}
+.L_app_foor tr td:nth-child(1)>div:first-child{
+	width:80px;
+	height:80px;
+	margin-right:10px;
+
+}
+.L_app_foor tr td:nth-child(1)>div:first-child img{
+	width: 79px;
+	height:79px;
+	border:1px solid;
+}
+.L_app_foor tr td:nth-child(1)>div:last-child{
+	width:240px;
+	text-align:left;
+}
+.L_app_foor tr td:nth-child(1) h3{
+	height:40px;
+	line-height:20px;
+	font-size:12px;
+	overflow: hidden;
+}
+.L_app_foor tr td:nth-child(1) a{
+	display: block;
+	width:16px;
+	height:16px;
+	background:url('/public/images/pic1.png') no-repeat 0 -286px;
+}
+.L_app_foor tr td:nth-child(1) p{
+	font-size:12px;
+	color:#666;
+	line-height:20px;
+}
+.L_app_foor td button{
+	padding:0 4px;
+	width: 20px;
+}
+.L_app_foor td input[type="text"]{
+	width:20px;
+}
+.L_app_sum {
+	text-align: right;
+	margin-top:10px;
+}
+.L_app_sum p{
+	color:#999;
+	padding:0 8px 0 0;
+	font-size:14px;
+}
+.L_app_sum p span{
+	color:red;
+	font-size:20px;
+	font-weight:700;
+}
+/*尾部*/
+footer{
+	width:960px;
+	margin:0 auto;
+	padding:5px 0 20px;
+	border-top:1px solid #e3e3e3;
+	text-align:center;
+}
+footer a:hover{
+	color:#FF6600;
+	text-decoration: underline;
+}
+footer ul,footer ol{
+	display: inline-block;
+}
+
+footer ul li{
+	padding:14px 0 6px;
+	float:left;
+}
+footer ul li a{
+	color:#134ba0;
+	margin:0 10px;
+}
+footer ul li span{
+	color:#ccc;
+	font-size:12px;
+}
+footer p{
+	font-size:12px;
+}
+footer p a{
+	color:#134ba0;
+
+}
+footer ol{
+	padding-top:12px;
+}
+footer ol li{
+	float: left;
+	color:#333;
+	line-height:23px;
+	margin-right: 8px;
+}

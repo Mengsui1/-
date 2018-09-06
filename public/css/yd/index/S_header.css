@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  height: 2.13333333rem;
+  background: #CE1A1B;
+}
+header div:nth-child(1) {
+  float: left;
+}
+header div:nth-child(1) a {
+  width: 2.93333333rem;
+  height: 1.33333333rem;
+  display: inline-block;
+  margin-top: 0.4rem;
+  margin-left: 0.53333333rem;
+}
+header div:nth-child(1) a img {
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+}
+header div:nth-child(2) {
+  float: left;
+  width: 2.4rem;
+  height: 0.8rem;
+  margin-left: 0.61333333rem;
+  margin-top: 0.61333333rem;
+}
+header div:nth-child(2) label {
+  width: inherit;
+}
+header div:nth-child(2) label a {
+  font-size: 0.32rem;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  float: left;
+  line-height: 0.8rem;
+}
+header div:nth-child(2) label i {
+  float: left;
+  color: white;
+  line-height: 0.88rem;
+  font-size: 0.53333333rem;
+}
+header div:nth-child(3) {
+  width: 10.13333333rem;
+  height: 1.6rem;
+  background: #A90102;
+  float: left;
+  margin-top: 0.26666667rem;
+  border-radius: 0.13333333rem;
+  color: white;
+}
+header div:nth-child(3) i {
+  font-size: 0.88rem;
+  margin-left: 0.26666667rem;
+  float: left;
+  line-height: 1.6rem;
+  opacity: .6;
+}
+header div:nth-child(3) span {
+  font-size: 0.32rem;
+  float: left;
+  line-height: 1.6rem;
+  margin-left: 0.08rem;
+  opacity: .6;
+}
+header div:nth-child(4) {
+  float: right;
+}
+header div:nth-child(4) i {
+  float: right;
+  font-size: 1.33333333rem;
+  margin-top: 0.34666667rem;
+  margin-right: 0.53333333rem;
+  color: white;
+}
+/*轮播*/

@@ -1,0 +1,529 @@
+{% include 'W_head_index.html' %} {%block main%}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="/public/css/S_pagehome_main.css" />
+<script src="/public/js/W_lunbo.js"></script>
+<body style="min-width:1200px;">
+	<!--楼层跳转-->
+	<div id="S_floor" style="">
+		<ul>
+			<li>
+				<a href="javascript:;">团购</a>
+			</li>
+			<li>
+				<a href="javascript:;">领券中心</a>
+			</li>
+			<li>
+				<a href="javascript:;">Z智选</a>
+			</li>
+			<li>
+				<a href="javascript:;">品牌精选</a>
+			</li>
+			<li>
+				<a href="javascript:;">电子竞技</a>
+			</li>
+			<li>
+				<a href="javascript:;">数码潮品</a>
+			</li>
+			<li>
+				<a href="javascript:;">本周热销</a>
+			</li>
+			<li>
+				<a href="javascript:;">回到顶部</a>
+			</li>
+		</ul>
+	</div>
+	<!--侧边栏-->
+	<div id="S_sibar">
+		<ul id="S_list">
+			<li>
+				<a href="/admin/buyhome" target="_blank">
+					<i class="iconfont">&#xe615;</i>
+					<span class="S_listSpan">我的订单</span>
+				</a>
+					
+			</li>
+			<li>
+				<a href="javascrip:;">
+					<i class="iconfont">&#xe6dd;</i>
+					<span class="S_listSpan">我的足迹</span>
+				</a>
+					
+			</li>
+			<li>
+				<a href="/cat/index" target="_blank">
+					<i class="iconfont">&#xe64a;</i>
+					<span class="S_listSpan">购物车</span>
+					<b>0</b>
+				</a>
+					
+			</li>
+			<li>
+				<a href="javascript:;">
+					<i class="iconfont">&#xe63c;</i>
+					<span class="S_listSpan">优惠券</span>
+				</a>
+					
+			</li>
+			<a class="S_linkTop" href="javascript:;">
+				<i class="iconfont">&#xe604;</i>
+			</a>
+		</ul>
+
+	</div>
+	<!--main-->
+	<div class="S_box">
+		<div class="W_lunbo">
+			<ul class="W_lunboUl">
+				{%for n1 in num1%}
+				<li style="display:block;" class="W_lunboLi">
+					<a href="/index/details?id={{n1._id.toString()}}&hover=1" target="_blank">
+						<img src="{{n1.indexImg}}" alt="" />
+					</a>
+				</li>
+				{%endfor%}
+			</ul>
+			<ol class="W_lunboOl">
+				<li class="W_lunboOlli">
+					<a class="W_lunboOlli_active" href="javascript:;"></a>
+				</li>
+				<li class="W_lunboOlli">
+					<a href="javascript:;"></a>
+				</li>
+				<li class="W_lunboOlli">
+					<a href="javascript:;"></a>
+				</li>
+			</ol>
+			<span class="W_lun_btn W_lun_btn_left iconfont">&#xe502;</span>
+			<span class="W_lun_btn W_lun_btn_right iconfont">&#xe609;</span>
+		</div>
+		<!--团购-->
+		<div class="S_tuan L_go">
+			<div class="S_tuan_t">
+				<i class="clear"></i>
+				<h3 class="clear">团购</h3>
+				<span>热门、低价、买实惠</span>
+
+				<i class="S_lasti"></i>
+				<a href="/index/tuan?hover=1" target="_blank" class="clear">更多</a>
+			</div>
+			<!--团购轮播主体-->
+			<div class="S_tuan_b">
+				<div class="L_box">
+					<!--轮播的 UL -->
+					<ul class="S_prc" id="S_ul">
+						{%for num2A in num2Arr%}
+						<li>
+							{%for numA in num2A%}
+							<div class="L_li">
+								<div class="S_prc_left">
+									<h4 class="one">{{numA.title}}</h4><br/>
+									<p>官方正品</p><br/>
+									<div class="S_tuan_price"><span>￥</span><span>{{numA.price}}</span></div><br/>
+									<div class="S_taun_time">
+										<span>剩余 : </span>
+										<span>1</span>天<span>10</span>小时<span>10</span>分<span>10</span>秒
+									</div>
+								</div>
+								<a class="link_img" target="_blank" href="/index/details?id={{numA._id.toString()}}&hover=1"><img src="{{numA.mainpic[0]}}" /></a>
+
+								<!--团购   大滑块-->
+								<div class="S_tuan_hid">
+									<div class="S_tuan_hidl">
+										<a href=""><img src="{{numA.mainpic[0]}}" /></a>
+										<p>
+											<a href="">测评</a>
+											<span>|</span>
+											<a href="">视频</a>
+											<span>|</span>
+											<a href="">点评</a>
+										</p>
+									</div>
+									<div class="S_tuan_hidr">
+										<h4>{{numA.title}}</h4>
+										<p>团购价: <span style="color:#FF3333">￥{{numA.price}}</span></p>
+										<p>电商参考价: <span>暂无</span></p>
+										<a class="link" target="_blank" style="display:block;" href="/index/details?id={{numA._id.toString()}}&hover=1">去团购</a>
+									</div>
+								</div>
+							</div>
+							{%endfor%}
+						</li>
+						{%endfor%}
+					</ul>
+				</div>
+				<!--改的->
+				<!--团购轮播下面的小方块-->
+				<div class="S_rect">
+					<ol class="S_s_rect clear">
+						<li style="background: #FF3333;"></li>
+						<li></li>
+						<li style="background: #cbcbcb;"></li>
+					</ol>
+				</div>
+
+			</div>
+			<!--换页按钮-->
+			<a href="javascript:;" class="S_tuan_pre" id="S_pre"></a>
+			<a href="javascript:;" class="S_tuan_next" id="S_next"></a>
+
+		</div>
+		<!--领券中心-->
+		<div class="S_ling L_go">
+			<ul class="S_ling_ul">
+				<!--第一个li-->
+				<li class="S_frist_li">
+					<p>领券中心</p>
+					<p>COUPON</p>
+					<p>去看看》</p>
+				</li>
+				<p class="S_ling_ico S_icon1"></p>
+				<!--第二个li-->
+				<li class="S_ling_2li">
+					<!--li的上半部分-->
+					<div class="S_ling_top">
+						<div class="S_ling_topLf"><i>￥49</i></div>
+						<div class="S_ling_topRg">
+							<h5>新捷数码(正品</h5>
+							<p>满6999可用</p>
+						</div>
+					</div>
+					<!--li的下半部分-->
+					<div class="S_ling_bom">
+						<a href="javascript:;">立即领取<i>>></i></a>
+					</div>
+				</li>
+				<p class="S_ling_ico S_icon2"></p>
+				<li class="S_ling_2li">
+					<!--li的上半部分-->
+					<div class="S_ling_top">
+						<div class="S_ling_topLf"><i>￥49</i></div>
+						<div class="S_ling_topRg">
+							<h5>新捷数码(正品</h5>
+							<p>满6999可用</p>
+						</div>
+					</div>
+					<!--li的下半部分-->
+					<div class="S_ling_bom">
+						<a href="javascript:;">立即领取<i>>></i></a>
+					</div>
+				</li>
+				<p class="S_ling_ico S_icon2"></p>
+				<li class="S_ling_2li">
+					<!--li的上半部分-->
+					<div class="S_ling_top">
+						<div class="S_ling_topLf"><i>￥49</i></div>
+						<div class="S_ling_topRg">
+							<h5>新捷数码(正品</h5>
+							<p>满6999可用</p>
+						</div>
+					</div>
+					<!--li的下半部分-->
+					<div class="S_ling_bom">
+						<a href="javascript:;">立即领取<i>>></i></a>
+					</div>
+				</li>
+				<p class="S_ling_ico S_icon2"></p>
+				<li class="S_ling_2li">
+					<!--li的上半部分-->
+					<div class="S_ling_top">
+						<div class="S_ling_topLf"><i>￥49</i></div>
+						<div class="S_ling_topRg">
+							<h5>新捷数码(正品</h5>
+							<p>满6999可用</p>
+						</div>
+					</div>
+					<!--li的下半部分-->
+					<div class="S_ling_bom">
+						<a href="javascript:;">立即领取<i>>></i></a>
+					</div>
+				</li>
+				<p class="S_ling_ico S_icon2"></p>
+			</ul>
+		</div>
+		<!--Z智选-->
+		<div class="S_Z_xuan L_go">
+			<div class="S_Z_tit">
+				<i></i>
+				<h3>Z智选</h3>
+			</div>
+			<div class="S_Z_prc">
+				<div class="S_Z_top">
+					<div class="S_Z_topl">
+						{% set num3_oo = [num3_one[0],num3_one[2],num3_one[4],num3_one[13],num3_one[1]]%}
+						{% set num3_o1 = num3_one[7]%}
+						{% set num3_o2 = num3_one[6]%}
+						{% set num3_o3 = num3_one[12]%}
+						
+						{% set num3_o44 = [num3_one[9],num3_one[8],num3_one[11],num3_one[1]]%}
+						{% set num3_o55 = [num3_one[5],num3_one[3]] %}
+						<ul class="W_aj_ul">
+							<li style="background:#CE1A1B;color:white;">影音</li>
+							<li style="">穿戴</li>
+							<li style="">家居</li>
+							<li style="">出行</li>
+							<li style="">美肤</li>
+						</ul>
+						<ul class="W_aj_uls">
+							{%for num3_o in num3_oo %}
+							<li>
+								<a target="_blank" href="/index/details?id={{num3_o._id.toString()}}&hover=1"><img src="{{num3_o.indexImg}}" /></a>
+							</li>
+							{%endfor%}							
+						</ul>
+					</div>
+					<div class="S_Z_topr">
+						<a target="_blank" href="/index/details?id={{num3_o2._id.toString()}}&hover=1"><img src="{{num3_o2.indexImg}}" alt="" /></a>
+						<a target="_blank" href="/index/details?id={{num3_o3._id.toString()}}&hover=1"><img src="{{num3_o3.indexImg}}" alt="" /></a>
+					</div>
+				</div>
+				<div class="S_Z_mdl">
+					<div class="S_Z_mdll">
+						<ul>
+							{%for num3_o4 in num3_o44 %}
+							<li>
+								<a target="_blank" href="/index/details?id={{num3_o4._id.toString()}}&hover=1"><img src="{{num3_o4.mainpic[0]}}" /></a>
+							</li>
+							{%endfor%}
+						</ul>
+					</div>
+					<div class="S_Z_mdlr">
+						<a target="_blank" href="/index/details?id={{num3_o1._id.toString()}}&hover=1"><img src="{{num3_o1.indexImg}}" /></a>
+					</div>
+				</div>
+				<div class="S_Z_bom">
+					{%for num3_o5 in num3_o55 %}
+					<a target="_blank" href="/index/details?id={{num3_o5._id.toString()}}&hover=1"><img src="{{num3_o5.indexImg}}" /></a>
+					{%endfor%}
+				</div>
+			</div>
+		</div>
+		<!--品牌精选-->
+		<div class="S_pinpai L_go">
+			<div class="S_pinpai_tit">
+				<i></i>
+				<h3>品牌精选</h3>
+				<span>大牌、保障、服务赞</span>
+			</div>
+			<div class="S_pinpai_prc">
+				<ul>
+					{% set num4_o = num4[0] %}
+					{% set num4_oA = [num4[1],num4[2],num4[3],num4[4]] %}
+					<li>
+						<a target="_blank" href="/index/details?id={{num4_o._id.toString()}}&hover=1"><img src="{{num4_o.indexImg}}" /></a>
+					</li>
+					{%for num4_oA1 in num4_oA %}
+					<li>
+						<a target="_blank" class="img" href="/index/details?id={{num4_oA1._id.toString()}}&hover=1"><img src="{{num4_oA1.mainpic[0]}}" /></a>
+						<a target="_blank" class="link" href="/index/details?id={{num4_oA1._id.toString()}}&hover=1">{{num4_oA1.title}}</a>
+						<p>RMB <span>{{num4_oA1.price}}</span></p>
+					</li>
+					{%endfor%}
+				</ul>
+			</div>
+		</div>
+		<!--电子竞技-->
+		<div class="S_game L_go">
+			<!--电子竞技标题-->
+			<div class="S_game_tit">
+				<i></i>
+				<h3>电子竞技</h3>
+				<span>
+					<a target="_blank" href="/index/dian?hover=2">更多</a>
+					<i class="iconfont">&#xe60d;</i>
+				</span>
+			</div>
+			<div class="S_game_diy">
+				<div class="S_game_diyl">
+					<div class="S_game_diyl_tit">
+						<h5>热门</h5>
+						<ul id="S_game">
+							<li style="border-bottom:2px solid white">游戏本</li>
+							<li>电竞外设</li>
+							<li>电竞主机</li>
+						</ul>
+					</div>
+					<div class="S_game_diyl_prc">
+						<div class="S_game_diyl_prct">
+							<ul>
+								{%set num5o = num5[0]%}
+								<li>
+									<a class="ajaxImgB" target="_blank" href="/index/details?id={{num5o._id.toString()}}&hover=1"><img src="{{num5o.indexImg}}" /></a>
+								</li>
+							</ul>
+						</div>
+						<div class="S_game_diyl_prcb">
+							{%set num5oArr = [num5[4],num5[5],num5[6]]%}
+							<ul>
+								{%for num5a in num5oArr%}
+								<li class="ajaxLi">
+									<a class="f_Link" target="_blank" href="/index/details?id={{num5a._id.toString()}}&hover=1"><img src="{{num5a.mainpic[0]}}" /></a>
+									<a class="title_link" target="_blank" href="/index/details?id={{num5a._id.toString()}}&hover=1">{{num5a.title}}</a>
+									<p class="f_p">￥{{num5a.price}}.00</p>
+								</li>
+								{%endfor%}
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="S_game_diyr">
+					<div class="S_game_diyr_tit">
+						<h5>电竞DIY</h5>
+					</div>
+					<div class="S_game_diyr_prc">
+						<ul>
+							{%for n5f in n5F %}
+							<li>
+								<a target="_blank" href="/index/details?id={{n5f._id.toString()}}&hover=1"><img src="{{n5f.mainpic[0]}}" /></a>
+								<a class="title_link" target="_blank" href="/index/details?id={{n5f._id.toString()}}&hover=1">{{n5f.title}}</a>
+								<p>￥{{n5f.price}}.00</p>
+							</li>
+							{%endfor%}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--数码潮品-->
+		<div class="S_shuma L_go">
+			<div class="S_shuma_tit">
+				<i></i>
+				<h3>数码潮品</h3>
+				<span>潮流、前端、黑科技</span>
+			</div>
+			<div class="S_shuma_prc">
+				<!--左边-->
+				<div class="S_shuma_prcl clear">
+					<div class="S_shuma_prclt clear">
+						<h5 class="clear">摄影/摄像</h5>
+						<a target="_blank" href="/index/tuan?num=4&hover=1"><span>更多</span>&nbsp;<i class="iconfont">&#xe60d;</i></a>
+					</div>
+					<ul class="clear">
+						{% set num6_one = [num6[0],num6[1],num6[2],num6[3],num6[4],num6[4],] %}
+						{% set num6_two = [num6[5],num6[6],num6[7],num6[8],num6[9],num6[10],] %}
+						{%for num6_o in num6_one%}
+						<li>
+							<a target="_blank" href="/index/details?id={{num6_o._id.toString()}}&hover=1"><img src="{{num6_o.mainpic[0]}}" /></a>
+							<a target="_blank" class="title_link" href="/index/details?id={{num6_o._id.toString()}}&hover=1">{{num6_o.title}}</a>
+							<p>¥{{num6_o.price}}.00</p>
+						</li>
+						{%endfor%}
+					</ul>
+				</div>
+				<!--右边-->
+				<div class="S_shuma_prcr clear">
+					<div class="S_shuma_prclt clear">
+						<h5 class="clear">笔记本/平板</h5>
+						<a href="/index/tuan?num=2&hover=1" target="_blank"><span>更多</span>&nbsp;<i class="iconfont">&#xe60d;</i></a>
+					</div>
+					<ul class="clear">
+						{%for num6_o in num6_two%}
+						<li>
+							<a target="_blank" href="/index/details?id={{num6_o._id.toString()}}&hover=1"><img src="{{num6_o.mainpic[0]}}" /></a>
+							<a target="_blank" class="title_link" href="/index/details?id={{num6_o._id.toString()}}&hover=1">{{num6_o.title}}</a>
+							<p>¥{{num6_o.price}}.00</p>
+						</li>
+						{%endfor%}
+						
+					</ul>
+				</div>
+				<!--下边 左-->
+				<div class="S_shuma_prcb">
+					<ul>
+						<li>
+							<a href="javascript:;"><img src="/public/images/ChMkJllCWo6IAExhAAApVVFt0SgAAdChgPY0OUAAClt434.jpg" /></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="/public/images/ChMkJ1lCW9qIFk0RAAAhaWesBYsAAdCjAMYu50AACGB730.jpg" /></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="/public/images/ChMkJllCXQOIaytaAAAp1QTu1O8AAdCjgJT0jkAACnt400.jpg" /></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="/public/images/ChMkJ1lCXjGIVX8BAAAbqA9Xi_AAAdCjwN7qN4AABvA947.jpg" /></a>
+						</li>
+					</ul>
+
+				</div>
+				<!--下边  右-->
+				<div class="S_shuma_prcb" style="margin-left:12px">
+					<ul>
+						<li>
+							<a href="javascript:;"><img src="/public/images/ChMkJ1lHegqIQp9zAAApsdDHXDkAAdHggBf_-MAACnJ002.jpg" /></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="/public/images/ChMkJ1lHefGILrduAAAnALwHdqgAAdHggAJHEYAACcY118.jpg" /></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="/public/images/ChMkJ1lHedWIL8rHAAAnvd8X3JoAAdHgQO3NuUAACfV827.jpg" /></a>
+						</li>
+						<li>
+							<a href="javascript:;"><img src="/public/images/ChMkJllHebWIJGyVAAA33Too0UAAAdHgQL-iFYAADf1167.jpg" /></a>
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+		</div>
+		<!--本周热销-->
+		<div class="S_hot_tit L_go">
+			<div class="S_hot_l"></div>
+			<span>本周热销</span>
+			<div class="S_hot_r"></div>
+		</div>
+		<!--热销商品-->
+		<div class="S_hot_prc">
+			<ul>
+				{%for num7_o in num7%}
+				<li>
+					<a target="_blank" href="/index/details?id={{num7_o._id.toString()}}&hover=1"><img src="{{num7_o.mainpic[0]}}" /></a>
+					<a target="_blank" class="title_link" href="/index/details?id={{num7_o._id.toString()}}&hover=1">【Lenovo授权专卖】联想 小...</a>
+					<p>¥{{num7_o.price}}.00</p>
+				</li>
+				{%endfor%}
+			</ul>
+		</div>
+	</div>
+	<div class="S_ft">
+		<ul>
+			<li>
+				<a href="javascript:;"></a>
+				<p>先行赔付</p>
+				<p>权益受损先行赔付</p>
+			</li>
+			<li>
+				<a href="javascript:;"></a>
+				<p>正品保障</p>
+				<p>正规渠道售后有保障</p>
+			</li>
+			<li>
+				<a href="javascript:;"></a>
+				<p>无忧退换</p>
+				<p>严格按照消法处理</p>
+			</li>
+			<li>
+				<a href="javascript:;"></a>
+				<p>发票保障</p>
+				<p>售卖商品可提供发票</p>
+			</li>
+			<li>
+				<a href="javascript:;"></a>
+				<p>快递包邮</p>
+				<p>满399快递包邮</p>
+			</li>
+			<li>
+				<a href="javascript:;"></a>
+				<p>急速发货</p>
+				<p>24小时内发货</p>
+			</li>
+		</ul>
+	</div>
+	{%include 'L_foot.html'%}
+</body>
+<script src="/public/js/move.js"></script>
+<script src="/public/js/S_pagehome2.js"></script>
+<script src="/public/js/S_pagehome.js"></script>
+
+{%endblock%}

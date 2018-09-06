@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理</title>
+	<link rel="stylesheet" href="/public/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/public/css/reset.css" />
+	<script src="/public/js/jquery.min.js"></script>
+	<script src="/public/js/vue.js"></script>
+	<script src="/public/js/bootstrap.min.js"></script>
+	<script src="/public/js/houtai/admin.js"></script>
+	<script src="/public/js/W_move.js"></script>
+	<link rel="stylesheet" href="/public/css/iconfont.css" />
+	<link rel="stylesheet" href="/public/css/houtai/adminNav.css" />
+
+</head>
+<body style="perspective="1000">
+<div>
+	<div class="W_navbar">
+		<div class="W_nt clear">
+			<div style="position:absolute;right:10%;font-size:16px;color:white;line-height:50px;" class="timerObj">
+				
+			</div>
+			<div class="W_nt_left">
+				<a title="后台" class="W_nt_ltr" style="color: white;font-size: 30px;font-family: '仿宋';" href="/user">后台管理首页</a>
+			</div>
+			<div class="w_show_btn">
+				<i class="iconfont">
+					&#xe6b2;
+				</i>
+			</div>
+			
+			<div class="W_nt_center">
+				{{ userInfo1.username }}
+				<span style="color: #eee; font-size: 14px;">的后台管理首页</span>
+			</div>	
+			<div class="W_nt_right">
+				<a title="退出" href="#" id="tui">退&nbsp;&nbsp;出</a> 
+			</div>
+		</div>
+	</div>
+	{% if show %}
+	<div style="height:80%;" class="clear W_nav  col-md-3 col-lg-2">
+		<h1>
+			<span>砖家</span>管理系统
+		</h1>
+		<div class="W_nav_body clear">
+			<div class="W_nav_list">
+				<div class="W_nb_box">
+					商品列表
+					<i class="iconfont">&#xe623;</i>
+				</div>
+				<ul class="W_nb_ul">
+					<li class="W_nb_li">
+						<a href="/user/cotegory_index">所有商品</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/cotegory_index?num=1">手机</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/cotegory_index?num=2">电脑</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/cotegory_index?num=3">DIY</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/cotegory_index?num=4">外设</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/cotegory_index?num=5">数码</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/cotegory_index?num=6">智能</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/cotegory_index?num=7">其他</a>
+					</li>
+				</ul>
+			</div>
+			<div class="W_nav_list">
+				<div class="W_nb_box">
+					商品管理
+					<i class="iconfont">&#xe623;</i>
+				</div>
+				<ul class="W_nb_ul">
+					
+					<li class="W_nb_li">
+						<a data-toggle="modal" data-target=".bs-example-modal-lg" href="/user/cotegory_add">添加商品</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/cotegory_index">修改商品</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/cotegory_index">删除商品</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/cotegory_see">查询商品</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="W_nav_list">
+				<div class="W_nb_box">
+					后台用户列表及管理
+					<i class="iconfont">&#xe623;</i>
+				</div>
+				<ul class="W_nb_ul">
+					<li class="W_nb_li">
+						<a href="/user/users">所有用户</a>
+					</li>
+				</ul>
+			</div>
+			<div class="W_nav_list">
+				<div class="W_nb_box">
+					前台用户列表
+					<i class="iconfont">&#xe623;</i>
+				</div>
+				<ul class="W_nb_ul">
+					<li class="W_nb_li">
+						<a href="/user/users_money">所有用户</a>
+					</li>
+				</ul>
+			</div>
+			<div class="W_nav_list">
+				<div class="W_nb_box">
+					用户管理
+					<i class="iconfont">&#xe623;</i>
+				</div>
+				<ul class="W_nb_ul">
+					<li class="W_nb_li">
+						<a href="/api/nregister">用户注册</a>
+					</li>
+					<li class="W_nb_li">
+						<a href="/user/user_money_see">用户查询</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="W_nav_list">
+				<div class="W_nb_box">
+					订单列表
+					<i class="iconfont">&#xe623;</i>
+				</div>
+				<ul class="W_nb_ul">
+					<li class="W_nb_li">
+						<a href="/order">查看所有订单</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+
+		
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      
+		    </div>
+		  </div>
+		</div>
+		<div class="modal fade xiu-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      
+		    </div>
+		  </div>
+		</div>
+	
+		<div style=" position:fixed; top:40%; margin-top:-200px;" class="modal fade xiu1-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      
+		    </div>
+		  </div>
+		</div>
+	<div style="min-height:500px;" class="moban col-sm-9 col-md-9 col-lg-10">
+	
+		{%block main%}{%endblock%}
+	</div>
+	{% else %}
+	<div class="moban" style="width:100%;height:80%">
+		<!--模板替换-->
+		{%block main%}{%endblock%}
+	</div>
+	{% endif %}
+</div>
+</body>
+
+</html>

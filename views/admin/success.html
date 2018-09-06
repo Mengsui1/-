@@ -1,0 +1,32 @@
+
+<!--错误信息显示模板-->
+
+{% extends 'W_message.html' %}
+
+{% block main %}
+
+<ol class="breadcrumb">
+    <li><a href="/user">管理首页</a></li>
+    <li><span>成功提示</span></li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">成功提示</h3>
+    </div>
+    <div style="text-align:center;" class="panel-body">
+        <font color="#F00">{{message}}</font>
+    </div>
+	{% if url%}
+    <div class="panel-footer">
+        <a href="{{url}}">点击跳转</a>
+    </div>
+    {%else%}
+    <div class="panel-footer">
+    	<a href="#">点击跳转</a>
+    </div>
+    {%endif%}
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,146 @@
+ {% include 'W_head_index.html' %} {%block main%}
+<link rel="stylesheet" href="/public/css/Z_help.css" ype="text/css">
+<link rel="stylesheet" href="/public/css/reset.css" ype="text/css">
+<script type="text/javascript" src="/public/js/jquery.min.js"></script>
+
+<div id="Z_title">
+    <a href="/index" target="_blank">商城首页</a>
+    > 
+    <a href="/index/helps" target="_blank">帮助中心首页</a>
+</div>
+
+<div class="Z_main">
+    <div class="Z_box">
+        <div class="Z_title">
+            <h3>自助服务</h3>
+        </div>
+        <ul class="Z_self_service clear">
+            <li class="Z_order_query"><a href="">订单查询</a></li>
+            <li class="Z_activist"><a href="">申请维权</a></li>
+            <li class="Z_change_password"><a href="">修改密码</a></li>
+            <li class="Z_user_center"><a href="">用户中心</a></li>
+        </ul>
+    </div>
+    <div class="Z_box" id="Z_box">
+        <div class="Z_title">
+            <h3>快速引导</h3>
+        </div>
+        <ul class="Z_tab-bar clear">
+            <li class="Z_cur">购物相关</li>
+            <li class>卖家帮助</li>
+            <li class>服务保障</li>
+        </ul>
+        <div id="Z_quick-box" class="Z_quick-box">
+            <div class="Z_quick-guide clear">
+                <ul>
+                    <li><a href="/api/nregister">1.用户注册</a></li>
+                    <li><a href="">2.付款方式</a></li>
+                    <li><a href="">3.搜索商铺</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">4.搜索商品</a></li>
+                    <li><a href="">5.购物流程</a></li>
+                    <li><a href="">6.退款说明</a></li>
+                </ul>
+            </div>
+            <div class="Z_quick-guide" style="display:none;">
+                <ul>
+                    <li><a href="">1.商品上架</a></li>
+                    <li><a href="">2.配送与支付</a></li>
+                    <li><a href="">3.已上架商品</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">4.订单管理</a></li>
+                    <li><a href="">5.营销活动</a></li>
+                    <li><a href="">6.店面装修</a></li>
+                </ul>
+            </div>
+            <div class="Z_quick-guide" style="display:none;">
+                <ul>
+                    <li><a href="">1.行货保证</a></li>
+                    <li><a href="">2.先行赔付</a></li>
+                    <li><a href="">3.如实描述</a></li>
+                </ul>
+                <ul>
+                    <li><a href="">4.24小时发货</a></li>
+                    <li><a href="">5.物流配送</a></li>
+                    <li><a href="">6.发票保障</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function Tab(){
+        //1、把变量改为属性
+            this.oBox = document.getElementById('Z_box');
+            this.oUl = document.getElementsByTagName('ul')[4]
+            this.lis = this.oUl.getElementsByTagName('li');
+            this.divs = document.getElementById('Z_quick-box').getElementsByTagName('div');
+            console.log(this.oUl);
+        }
+
+        //2、把函数变为方法
+        Tab.prototype.change = function(that){
+            //用this接收传进来的this
+                for(var j = 0; j<this.lis.length; j ++){
+                    this.divs[j].style.display ='none';
+                }
+                this.divs[that.index].style.display = 'block';
+        }
+        //
+        Tab.prototype.init = function(){
+            var This = this;
+            //for循环为添加点击是事件
+            for(var i = 0; i < this.lis.length;i++){
+                this.lis[i].index = i;
+                this.lis[i].onmouseover = function(){
+                    This.change(this);
+                    //把this当做参数传进入
+                }
+            }
+        }
+        var t = new Tab()
+        t.init();   
+        
+        $('.Z_tab-bar li').mouseover( function () {
+            $(this).addClass("Z_cur").siblings().removeClass('Z_cur');
+        });
+            
+
+    </script>
+    <div class="Z_box">
+        <div class="Z_title">
+            <h3>常见问题</h3>
+        </div>
+        <div class="Z_question clear"> 
+            <ul class="Z_question-box">
+                <li>卖家</li>
+                <li><a href="/index/helps/question-1?hover=1" >新版生意宝下载之后没有进入卖家中心的功能了？</a></li>
+                <li><a href="/index/helps/question-2?hover=1" >如何创建子账号？</a></li>
+                <li><a href="/index/helps/question-3?hover=1" >登陆生意宝，提示我账号或者密码错误怎么办？</a></li>
+                <li><a href="/index/helps/question-4?hover=1">团购结账的周期是多久？</a></li>
+                <li><a href="/index/helps/question-5?hover=1" >限时抢购为什么没有“推荐”的按钮了？</a></li>
+            </ul>
+            <ul class="Z_question-box">
+                <li>买家</li>
+                <li><a href="/index/helps/question-6?hover=1" >在商城的商家处下订单购买了产品，发生了纠纷怎么办？</a></li>
+                <li><a href="/index/helps/question-7?hover=1" >收到货后，根据支付方式不同相关的退款流程汇总</a></li>
+                <li><a href="/index/helps/question-8?hover=1" >购买商品后如何退款以及申请售后？</a></li>
+                <li><a href="/index/helps/question-9?hover=1" >已经付款，但卖家迟迟不发货怎么办？</a></li>
+                <li><a href="/index/helps/question-10?hover=1">当投诉判定不成立时，那么用户如何操作？</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    
+</div>
+{% include 'L_foot.html' %}
+{%endblock%}
+
+
+
+
+
+
+
+

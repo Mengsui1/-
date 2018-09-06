@@ -1,0 +1,69 @@
+
+
+{% block main %}
+
+    <ol class="breadcrumb">
+        <li>管理订单</li>
+        <li><span>修改订单</span></li>
+    </ol>
+
+
+<h3>修改订单</h3>
+
+{%endblock%}
+
+
+
+{% block main %}
+<style>
+	form{
+		padding: 10px;
+	}
+	label{
+		float:left;
+		text-align:right;
+	}
+	input[type=text]{
+		float:left;
+		
+	}
+	.form-group{
+
+		margin:5px auto 0px;
+	}
+
+	
+</style>
+
+<ol class="breadcrumb">
+    <li><a href="/user">管理订单</a></li>
+    <li><span>修改订单信息</span></li>
+</ol>
+
+<form role="form" action="/order/updatedetail" method="post">
+    <div class="form-group clear">
+        <label for="xl">地址:</label>
+        <input type="text" class="form-control" value="{{response.sendAdd}}" name="ad" placeholder="请输入地址...">
+    </div>
+    <div class="form-group clear">
+        <label for="indexImg">电话:</label>
+        <input type="text" class="form-control" value="{{response.spphone}}" name="ph" placeholder="请输入电话号码...">
+    </div>
+    
+	<input type="hidden" name="id" value="{{response._id.toString()}}"/>
+    <div class="form-group clear">
+        <label for="name">姓名:</label>
+        <input type="text" class="form-control" name="name" placeholder="请输入姓名..." value="{{response.spname}}">
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-lg btn-success">修改</button>
+</form>
+
+{%endblock%}
+
+
+
+
+
+

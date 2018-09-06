@@ -1,0 +1,303 @@
+/*公共样式*/
+.L_clear::after{
+	content:'';
+	display:block;
+	clear:both;
+}
+.L_toColor{
+	color:#fff;
+	background-color:#e02d2d !important;
+	background-position:100% -38px !important;
+}
+.L_toColor2{
+	background-position:100% -111px !important;
+}
+.L_toColor>p{
+	/*border-left-color:#e02d2d !important;*/
+
+}
+main{
+	width:960px;
+	margin:0 auto;
+}
+.main_head{
+	padding:30px 0;
+}
+.main_head > div:first-child{
+	float:left;
+	
+}
+.main_head > div:last-child{
+	float:right;
+}
+.main_head > div:last-child li{
+	line-height:36px;
+	height:35px;
+	text-align: center;
+	width:90px;
+	float:left;
+	padding-right:14px;
+	font:14px/36px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+	background: url(http://icon.zol-img.com.cn/newshop/order/step-bg.png) no-repeat;
+	background-position:100% -75px;
+	background-color:#E6E6E6;
+}	
+.main_head > div:last-child li:first-child{
+	padding:0 14px;
+}
+.main_head > div:last-child li:last-child{
+	background-image: none;
+}
+.L_mian_true{
+	padding:80px 0;
+}
+.L_mian_true h6{
+	font-size:14px;
+	color:#666;
+	line-height: 40px;
+}
+.L_mian_true>div{
+	float:left;
+	margin-left:10px;
+}
+.L_mian_true>div:first-child{
+	margin-left:50px;
+}
+.L_mian_true p{
+	font-size:12px;
+	line-height: 24px;
+}
+.L_mian_true p a{
+	margin-left:5px;
+}
+.L_mian_true p a:hover{
+	color:#FF6600;
+	text-decoration: underline;
+}
+.L_mian_true p a{
+	color:#134BA0;
+}
+.L_app_head{
+	text-align: right;
+}
+.L_app_head p{
+	font-size:12px;
+	color:#333;
+	padding:7px 0 10px 0;
+}
+.L_app_head div p{
+	color:#999;
+	padding:0 8px 0 0;
+}
+.L_app_head div span{
+	color:red;
+	font-weight:bold;
+}
+.L_btn{
+    width: 58px;
+    height: 22px;
+    color: #fff;
+    line-height: 22px;
+    text-align: center;
+    font-weight: bold;
+    background-color:#F8A200;
+    padding:3px 5px;
+    border:1px solid #FE9400;
+    border-radius:5px;
+    margin-left:5px;
+}
+.L_app_foor table{
+	width:100%;
+	text-align: center;
+	margin-top:20px;
+}
+tbody{
+	margin-top:10px;
+}
+tbody >tr{
+	border:1px solid #E3E3E3;
+}
+/*.L_app_foor table tr>td:nth-child(2){
+	width:30%;
+}*/
+.L_app_foor tr:first-child{
+	background-color:#F5F5F5;
+	border-top:2px solid #e02d2d;
+}
+.L_app_foor tr td,.L_app_foor tr th{
+	padding:10px 0;
+}
+.L_app_foor tr td:nth-child(2)>div{
+	float:left;
+}
+.L_app_foor tr td:nth-child(2)>div:first-child{
+	width:80px;
+	height:80px;
+	margin-right:10px;
+
+}
+.L_app_foor tr td:nth-child(2)>div:first-child img{
+	width: 79px;
+	height:79px;
+	border:1px solid;
+}
+.L_app_foor tr td:nth-child(2)>div:last-child{
+	width:240px;
+	text-align:left;
+}
+.L_app_foor tr td:nth-child(2) h3{
+	height:40px;
+	line-height:20px;
+	font-size:12px;
+	overflow: hidden;
+}
+.L_app_foor tr td:nth-child(2) a{
+	display: block;
+	width:16px;
+	height:16px;
+	background:url('/public/images/pic1.png') no-repeat 0 -286px;
+}
+.x_aclick > a:hover{
+	text-decoration:underline;
+	color:#FF0000;
+}
+.L_app_foor tr td:nth-child(2) p{
+	font-size:12px;
+	color:#666;
+	line-height:20px;
+}
+.L_app_foor td button{
+	padding:0 4px;
+	width: 20px;
+}
+.L_app_foor td input[type="text"]{
+	width:20px;
+}
+.L_app_sum {
+	text-align: right;
+	margin-top:10px;
+}
+.L_app_sum p{
+	color:#999;
+	padding:0 8px 0 0;
+	font-size:14px;
+}
+.L_app_sum p span{
+	color:red;
+	font-size:20px;
+	font-weight:700;
+}
+.L_jeisuan{
+	height:33px;
+	padding-left:10px;
+	border:1px solid #e3e3e3;
+	margin-top:10px;
+}
+.L_jeisuan>div{
+	float:left;
+}
+.L_jeisuan div a{
+	color:#134ba0;
+}
+.L_jeisuan>div:last-child{
+	float:right;
+}
+.L_jeisuan>div input{
+	padding:0 47px;
+	height:33px;
+	line-height:33px;
+	font: 18px/35px "Microsoft YaHei";
+	color:#fff;
+	border:none;
+	cursor:pointer;
+	background:url('/public/images/pic1.png') no-repeat 0 -113px;
+}
+/*猜你喜欢*/
+.main_like{
+	margin-top:20px;
+}
+.main_like>p{
+	background-color:#fff;
+	width:129px;
+	height:33px;
+	line-height:33px;
+	text-align:center;
+	border:1px solid #e3e3e3;
+	border-top:2px solid #e02d2d;
+	border-bottom:none;
+	position:relative;
+	top:1px;
+}
+.main_like ul{
+	padding:20px 0 13px 14px;
+	width:100%;
+	box-sizing:border-box;
+	border:1px solid #e3e3e3;
+}
+.main_like li{
+	text-align:center;
+	width:162px;
+	padding:0 12px;
+	float:left;
+}
+.main_like li img{
+	border:1px solid #e3e3e3;
+	display: block;
+}
+.main_like li a:nth-child(2){
+}
+.main_like li a:nth-child(2):hover{
+	color:#FF6600;
+	text-decoration: underline;
+}
+.main_like li p{
+	color:#ff0000;
+	font-size:16px;
+	font-weight:bold;
+	font-family: Verdana;
+}
+/*尾部*/
+footer{
+	width:960px;
+	margin:0 auto;
+	margin-top:40px;
+	padding:5px 0 20px;
+	border-top:1px solid #e3e3e3;
+	text-align:center;
+}
+footer a:hover{
+	color:#FF6600;
+	text-decoration: underline;
+}
+footer ul,footer ol{
+	display: inline-block;
+}
+
+footer ul li{
+	padding:14px 0 6px;
+	float:left;
+}
+footer ul li a{
+	color:#134ba0;
+	margin:0 10px;
+}
+footer ul li span{
+	color:#ccc;
+	font-size:12px;
+}
+footer p{
+	font-size:12px;
+}
+footer p a{
+	color:#134ba0;
+
+}
+footer ol{
+	padding-top:12px;
+}
+footer ol li{
+	float: left;
+	color:#333;
+	line-height:23px;
+	margin-right: 8px;
+}

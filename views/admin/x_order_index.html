@@ -1,0 +1,54 @@
+
+
+{% extends 'W_message.html' %}
+
+{% block main %}
+<ol class="breadcrumb">
+    <li><a href="/user">管理首页</a></li>
+    <li><span>商品管理</span></li>
+</ol>
+
+<h3>订单管理</h3>
+<table class="table">
+    <tr>
+        <th>订单编号</th>
+        <th>订单号</th>
+        <th>用户编号</th>
+        <th>送货地址</th>
+        <th>订购时间</th>
+        <th>总金额</th>
+        <th>发货时间</th>
+        <th>电话号码</th>
+        <th>收件人</th>
+        <th>订单状态</th>
+        <th>详细信息</th>
+        <th>操作</th>
+    </tr>
+    {% for item in order %}
+    <tr>
+        <td class="x_oid">{{item._id.toString()}}</td>
+        <td>{{item.subnum}}</td>
+        <td>{{item.uid}}</td>
+        <td>{{item.sendAdd}}</td>
+        <td>{{item.spDate}}</td>
+        <td>{{item.spPrice}}</td>
+        <td>{{item.sendDate}}</td>
+        <td>{{item.spphone}}</td>
+        <td>{{item.spname}}</td>
+        <td>{{item.spStatus}}</td>
+        <td><a href="order/look/orderdetail?oid={{item._id.toString()}}">查看</a></td>
+    
+        <td><a data-toggle="modal" data-target=".xiu-example-modal-lg" href="order/orderupdate?_id={{item._id.toString()}}">修改</a></td>
+    </tr>
+    {% endfor %}
+    
+</table>
+
+{% include 'page.html' %}
+
+
+{% endblock %}
+
+
+
+

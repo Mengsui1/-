@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  width: 100%;
+  height: 3.2rem;
+  background: white;
+  position: fixed;
+  bottom: 0;
+}
+footer a {
+  display: inline-block;
+  width: 4.77333333rem;
+  height: inherit;
+}
+footer a label {
+  width: inherit;
+  height: inherit;
+  background: white;
+  float: left;
+}
+footer a label i {
+  display: block;
+  font-size: 1.25333333rem !important;
+  height: 0.8rem;
+  color: #333;
+  width: inherit;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+footer a label span {
+  display: block;
+  text-align: center;
+  margin-top: 0.4rem;
+  font-size: 0.32rem;
+  color: #666;
+}

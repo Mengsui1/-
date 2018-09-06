@@ -1,0 +1,319 @@
+
+
+
+{% block main %}
+<link rel="stylesheet" href="/public/css/W_head_index.css" />
+{% include '../head.html' %}
+
+
+
+	<title>Document</title>
+	<link rel="stylesheet" href="/public/css/L_jiesuan.css">
+	<link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/shoukuan.css" type="text/css">
+    <script src="/public/js/jquery.min.js"></script>
+    <script src="/public/js/jiesuan.js"></script>
+	<script src="/public/js/vue.js"></script>
+
+<body>
+	<main>
+		<div class="main_head L_clear">
+			<div>
+				<a href=""><img src="/public/images/logo3.png" alt=""></a>
+			</div>
+			<div>
+				<ul class="L_clear">
+					<li class="L_toColor2">加入购物车<p></p></li>
+					<li class="L_toColor">下订单<p></p></li>
+					<li class="L3">去付款<p></p></li>
+					<li class="L4">确认收货<p></p></li>
+					<li class="L5">评价<p></p></li>
+				</ul>
+			</div>
+		</div>
+		<div class="Z_main">
+	        <form>
+	            <!-- 收货人信息 -->
+	            <div class="Z_container">
+	                <div class="Z_container_head">
+	                    <a href="#" class="Z_links">新增收货地址</a>
+	                    <div class="Z_title">收货地址</div>
+	                </div>
+	                {% if sendorder.address %}
+	                <div class="L_dizhi">
+	               		<input type="radio" name = "only" checked>
+	               		<span style="cursor:pointer"><small class="xsendClassname">{{ sendorder.username }}</small> <span class="xsendAddress">{{sendorder.address}}</span>  <span class="xsendphone">{{ sendorder.tellphone }}</span></span><br>
+	               		<br>
+	               		<input type="radio" name = "only" class="x_addnews">
+	               		<span class="x_addnew" style="cursor:pointer">添加新地址（最多可添加10个地址,您还可以添加9个地址）</span>
+	               	</div>
+
+	               	<div class=""></div>
+	               	<ul class="Z_address_list L_none" style="display:none">
+	                    <li class="Z_add_edits">
+	                        <label>
+	                            <input type="radio" value checked>
+	                            添加新地址
+	                        </label>
+	                        <div class="Z_infor_editor">
+	                            <dl>
+	                                <dt>
+	                                    <em class="Z_xh">*</em>
+	                                    收货人:
+	                                </dt>
+	                                <dd>
+	                                    <input type="text" value class="Z_text Z_recinput" maxlengh="10">
+	                                    <span class="Z_wrong_tips Z_none">请写收货人</span>
+	                                </dd>
+	                            </dl>
+	                            <dl class="S_city" >
+									<dt>
+	                                    <em class="Z_xh">*</em>
+	                                    所在地区:
+	                                </dt>
+
+									<select name="" id="city">
+										<option value="" class="x_sheng">--请选择--</option>
+									</select>
+									<select name="" id="area">
+										<option value="" class="x_city">--请选择--</option>
+									</select>
+									<div>
+										<a class="Z_clickadd" href="####">地图定位添加地址</a>
+                                    	<span class="Z_wrong-tips Z_none">请选择地区</span>
+									</div>
+                                   
+								</dl>
+	                            <dl class="Z_detailed_address">
+	                                <dt>
+	                                    <em class="Z_xh">*</em>
+	                                    详细地址:
+	                                </dt>
+	                                <dd>
+	                                    <input type="text" value class="Z_text Z_addinput" maxlengh="30">
+	                                    <span class="Z_wrong_tips Z_none">请填写详细地址，5~30字</span>
+	                                </dd>
+	                            </dl>
+	                            <div class="Z_number clear">
+	                                <dl>
+	                                    <dt>
+	                                        <em class="Z_xh">*</em>
+	                                        手机号码:
+	                                    </dt>
+	                                    <dd>
+	                                        <input type="text" value class="Z_text" class="x_newtel" maxlengh="11">
+	                                        <em class="Z_tips">或</em>
+	                                    </dd>
+	                                </dl>
+	                                <dl class="Z_fixed_line">
+	                                    <dt>
+	                                        固定电话:
+	                                    </dt>
+	                                    <dd>
+	                                        <input type="text" value class="Z_text" maxlengh="17">
+	                                        <em class="Z_tips" style="line-height: 25px;">手机号码和固定电话请至少输入一个</em>
+	                                    </dd>
+	                                </dl>
+	                            </div>
+	                            <label class="Z_setup_default">
+	                                <input type="checkbox" class="Z_checkbox" value="0">
+	                                设置为默认地址
+	                            </label>
+	                            <input id="x_newbtn" type="button" class="Z_savebtn Z_w120-btn" value="确认收货地址">
+	                        </div>
+
+	                    </li>
+	                </ul>
+	                {% else %}
+	                <ul class="Z_address_list">
+	                    <li class="Z_add_edits">
+	                        <label>
+	                            <input type="radio" value >
+	                            添加新地址
+	                        </label>
+	                        <div class="Z_infor_editor">
+	                            <dl>
+	                                <dt>
+	                                    <em class="Z_xh">*</em>
+	                                    收货人:
+	                                </dt>
+	                                <dd>
+	                                    <input type="text" value class="Z_text Z_recinput" maxlengh="10">
+	                                    <span class="Z_wrong_tips Z_none">请写收货人</span>
+	                                </dd>
+	                            </dl>
+	                            <dl class="S_city" >
+									<dt>
+	                                    <em class="Z_xh">*</em>
+	                                    所在地区:
+	                                </dt>
+
+									<select name="" id="city">
+										<option value="">--请选择--</option>
+									</select>
+									<select name="" id="area">
+										<option value="">--请选择--</option>
+									</select>
+									<div>
+										<a class="Z_clickadd" href="####">地图定位添加地址</a>
+                                    	<span class="Z_wrong-tips Z_none">请选择地区</span>
+									</div>
+                                   
+								</dl>
+	                            <dl class="Z_detailed_address">
+	                                <dt>
+	                                    <em class="Z_xh">*</em>
+	                                    详细地址:
+	                                </dt>
+	                                <dd>
+	                                    <input type="text" value class="Z_text Z_addinput" maxlengh="30">
+	                                    <span class="Z_wrong_tips Z_none">请填写详细地址，5~30字</span>
+	                                </dd>
+	                            </dl>
+	                            <div class="Z_number clear">
+	                                <dl>
+	                                    <dt>
+	                                        <em class="Z_xh">*</em>
+	                                        手机号码:
+	                                    </dt>
+	                                    <dd>
+	                                        <input type="text" value class="Z_text" maxlengh="11">
+	                                        <em class="Z_tips">或</em>
+	                                    </dd>
+	                                </dl>
+	                                <dl class="Z_fixed_line">
+	                                    <dt>
+	                                        固定电话:
+	                                    </dt>
+	                                    <dd>
+	                                        <input type="text" value class="Z_text" maxlengh="17">
+	                                        <em class="Z_tips" style="line-height: 25px;">手机号码和固定电话请至少输入一个</em>
+	                                    </dd>
+	                                </dl>
+	                            </div>
+	                            <label class="Z_setup_default">
+	                                <input type="checkbox" class="Z_checkbox" value="0">
+	                                设置为默认地址
+	                            </label>
+	                            <input type="button" class="Z_savebtn Z_w120-btn" value="确认收货地址" id="x_newbtn">
+	                        </div>
+
+	                    </li>
+	                </ul>
+	                {% endif%}
+	            </div>
+	            <!-- 配送方式 -->
+	            <div class="Z_container">
+	                <div class="Z_container_head">
+	                    <div class="Z_title">配送方式</div>
+	                </div>
+	                <ul class="Z_method_peisong clear">
+	                    <li value="2" style="cursor:pointer;" class="Z_current">
+	                        送货上门
+	                        <i class="Z_ico"></i>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- 支付方式 -->
+	            <div class="Z_container">
+	                <div class="Z_container_head">
+	                    <div class="Z_title">支付方式</div>
+	                </div>
+	                <ul class="Z_method_peisong clear">
+	                    <li value="2" style="cursor:pointer;" class="Z_current">
+	                        网上支付
+	                        <i class="Z_ico"></i>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- 发票信息 -->
+	            <div class="Z_container">
+	                <div class="Z_container_head">
+	                    <div class="Z_title">发票信息</div>
+	                </div>
+	                <div class="Z_invoice-title">
+	                    <span>不开发票</span>
+	                    <a href="#">修改</a>
+	                </div>
+	            </div>
+	            <!-- 购物车商品信息 -->
+	            <div class="Z_container">
+	                <div class="Z_container_head">
+	                    <div class="Z_title">确认订单信息</div>
+	                </div>
+	                <div class="L_app_foor" id="app">
+	                    <table>
+				            <tr>
+				                <th style="text-align:left;padding-left:5px;">店铺</th>
+				                <th>单价（元）</th>
+				                <th>数量</th>
+				                <th>优惠</th>
+				                <th>小计（元）</th>
+				            </tr>
+				            <tr v-for="(item,index) in list2">
+				            	<td class="L_clear">
+					            	<div>
+					            		<a href=""><img :src="item.url" alt=""></a>
+					            	</div>
+					            	<div>
+					            		<h3>${item.describe}</h3>
+					            		<a href="" title="7天退换"></a>
+					            		<p>${item.color}</p>
+					            		<p>${item.taozhuang}</p>
+					            	</div>
+				            	</td>
+				            	<td>${item.pirce}</td>
+								<td>
+									<span>${item.count}</span>
+								</td>
+								<td>${item.zhekou}</td>
+								<td>${jiage(index)}</td>
+				            </tr>
+						</table>
+						<div class="L_app_sum">
+							<p>商品总价(不含运费)：<span class="xsumprice">¥${total2}</span></p>
+						</div>
+	                </div>
+	            </div>
+	        </form>
+	        <!-- 总价 -->
+	        <!-- <div class="Z_total_price clear">
+	            <span class="Z_price">
+	                实付额（含运费）：
+	                <em>¥9.00</em>
+	            </span>
+	            <span>
+	                商家承诺支付货款后
+	                <em>24小时</em>
+	                内发货
+	            </span>
+	        </div> -->
+	        <!-- 提交按钮 -->
+	        <div class="clear">
+
+	            <div class="Z_fail_submit"></div>
+	        </div>
+    </div>
+	</main>
+	<footer>
+		<ul class="L_clear">
+			<li><a href="">关于商城</a><span>|</span></li>
+			<li><a href="">营销中心</a><span>|</span></li>
+			<li><a href="">服务中心</a><span>|</span></li>
+			<li><a href="">联系我们</a><span>|</span></li>
+			<li><a href="">发展历程</a><span>|</span></li>
+			<li><a href="">媒体报道</a></li>
+		</ul>
+		<p>©2017中关村在线 版权所有. 京ICP备09041801号-182 <a href="">京ICP证010391号</a></p>
+		<ol class="L_clear">
+			<li><a href=""><img src="/public/images/foot01.png" alt=""></a></li>
+			<li><a href=""><img src="/public/images/foot02.png" alt=""></a></li>
+			<li><a href=""><img src="/public/images/foot03.png" alt=""></a></li>
+		</ol>
+	</footer>
+
+	<script src="/public/data/L_cat.js"></script>
+	<script src="/public/data/x_orders.js"></script>
+</body>
+</html>
+{%endblock%}

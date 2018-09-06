@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		pre{background:#eee;border:1px solid #ddd;border-left:4px solid #f60;padding:15px;margin-top: 15px;}
+		.case{margin-top: 15px;width:400px;position: absolute;}
+		.bMap{position: relative;}
+		.bMap .map-warp{position: absolute;left:0;width:100%;height:400px;top:34px;display: none;}
+		.bMap input{width:100%;height:30px;line-height: 30px;border:1px solid #d7d7d7;}
+		.tangram-suggestion-main{z-index: 9999}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=EZPCgQ6zGu6hZSmXlRrUMTpr"></script>
+	<script type="text/javascript" src="/public/jquery.min.js"></script>
+	<script type="text/javascript" src="/public/map.jquery.min.js"></script>
+</head>
+<body>
+
+<div class="case">
+	 <div class="bMap" id='case2'></div>
+</div>
+</body>
+<script>
+	$(function(){
+		$("#case2").bMap({name:"address",address:"广州兄弟连教育"});
+	})
+</script>
+</html>

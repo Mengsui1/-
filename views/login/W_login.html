@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="/public/css/iconfont.css" />
+		<link rel="stylesheet" href="/public/css/reset.css" />
+		<link rel="stylesheet" href="/public/css/W_login.css" />
+	</head>
+	<body style="background: #fafafa;">
+	{{ username }}
+		<div class="W_wrapper">
+			<div class="W_w_top clear">
+				<div class="W_w_topLeft clear">
+					<a href="" class="clear W_wrapper_link">
+						<img src="/public/images/W_img9.png" alt="" />
+						<span>中关村旗下网上商城</span>
+					</a>
+				</div>
+				<div class="W_w_topRight">
+					<span>还没有Z商城帐号 ? </span>
+					<a href="/api/nregister">立即注册</a>
+				</div>
+			</div>
+			<form action="javasscript:;">
+				<div class="W_login clear">
+					<div class="W_login_img">
+						<a href="">
+							<img src="/public/images/W_img9.jpg" alt="" />
+						</a>
+					</div>
+					<div class="W_login_main">
+						<div class="W_l_m_box">
+							<div class="W_lmb_tit clear" >
+								<h3 class="W_login_active" id="W_shang">登录Z商城</h3>
+								<h3 id="W_jia">商家登录</h3>
+							</div>
+							<div class="W_lmb_box">
+								<!--商城登录-->
+								<div class="W_lmb_bOne">
+									<div class="W_login_wrong">登录失败！用户名或密码错误</div>
+									<div class="W_lmb_bOne_t">
+										<input id="x_login_username" type="text" placeholder="请输入用户名" />
+										<input id="x_login_password" type="password" placeholder="请输入密码" />
+										<div class="W_lmb_bOne_tw clear">
+												
+											<a class="W_login_phone" href=""><i class='iconfont'>&#xe621;</i>手机动态码登录</a>
+											<a class="W_login_wangpass" href="/Retrieve">忘记密码 ? </a>
+										</div>
+										<button class="W_login_btn" type="button" id="loginB">登录</button>
+									</div>
+									<div class="W_lmb_bOne_m clear">
+										<span class="W_login_line"></span>
+										<p>合作帐号登录</p>
+										<span class="W_login_line"></span>
+									</div>
+									<div class="W_lmb_bOne_b">
+										<div class="iconfont clear">
+											<a href="">
+												&#xe62e;
+											</a>
+											<a href="">
+												&#xe64b;
+											</a>
+											<a href="">
+												&#xe602;
+											</a>
+											<a href="">
+												&#xe676;
+											</a>
+											<a href="">
+												&#x3487;
+											</a>
+										</div>
+									</div>
+								</div>
+								<!--商家登录-->
+								<div class="W_lmb_bOne" style="display: none;">
+									<div class="W_login_wrong">登录失败！用户名或密码错误</div>
+									<div class="W_lmb_bOne_t">
+										<input type="text" placeholder="用户名" />
+										<input type="password" placeholder="密码" />
+										<div class="W_lmb_bOne_tw clear">
+											<a class="W_login_wangpass" href="">忘记密码 ? </a>
+										</div>
+										<button class="W_login_btn" type="button">登录</button>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="W_footer">
+				<div class="W_foot clear">
+					<div class="W_foot_left clear">
+						<a href="">关于Z商城</a>
+						<span>|</span>
+						<a href="">联系我们</a>
+						<span>|</span>
+						<a href="">帮助中心</a>
+					</div>
+					<div class="W_foot_right">
+						&copy;2017. 中关村在线 版权所有
+					</div>
+				</div>
+			</div>
+				
+		</div>
+	</body>
+	<script src="/public/js/jquery.min.js"></script>
+	<script src="/public/js/x_login.js"></script>
+</html>

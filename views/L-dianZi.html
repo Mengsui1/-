@@ -1,0 +1,292 @@
+	{% include 'W_head_index.html' %}
+	<link rel="stylesheet" href="/public/css/L-dianZi.css" type="text/css">
+	<script src="/public/js/L-dianZi.js"></script>
+
+	<main id = "L_app">
+		<div id="L_lunbo">
+		<!-- 轮播图其实也是数据库取的图片 -->
+			<ul class="L_tu">
+				{%for lun in lunbo%}
+				<li><a href="/index/details?hover=1&id={{lun._id.toString()}}"><img src="{{lun.indexImg}}" alt=""></a></li>
+				{%endfor%}
+			</ul>
+			<ol class="L_dian">
+				<li><a href="javascript:;">1</a></li>
+				<li class="L_to-color"><a href="javascript:;">2</a></li>
+			</ol>
+			<ol class="L_zhishi">
+				<li><a href="javascript:;"><span class="iconfont">&#xe502;</span></a></li>
+				<li><a href="javascript:;"><span class="iconfont">&#xe609;</span></a></li>
+			</ol>
+		</div>
+		<!-- 服务 -->
+		<div class="L_server">
+			<ul class="L_clear">
+				<li>
+					<a href="javascript:;">
+						<div>
+							<span class="iconfont">&#xe695;</span>
+						</div>
+						<div>
+							<p>行货保证</p>
+							<small>全新行货</small>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<div>
+							<span class="iconfont">&#xe614;</span>
+						</div>
+						<div>
+							<p>发票保障</p>
+							<small>商品全部提供发票</small>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<div>
+							<span class="iconfont">&#xe616;</span>
+						</div>
+						<div>
+							<p>48小时发货</p>
+							<small>支付后，48小时内发货</small>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<div>
+							<span class="iconfont">&#xe603;</span>
+						</div>
+						<div>
+							<p>顺风包邮</p>
+							<small>满399商家顺丰包邮</small>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<div>
+							<span class="iconfont">&#xe60e;</span>
+						</div>
+						<div>
+							<p>无忧退换</p>
+							<small>支持七天无理由退换货</small>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 部分推荐 -->
+		<div class="L_recommend L_clear" id="L_page01">
+			<div class="L_recommend_head L_clear">
+				<div><h3>DIY达人 · 推荐</h3></div>
+				<div><p>每周都有最酷主机介绍给您</p></div>
+			</div>
+			<div class="L_recommend_food">
+				<ul>
+					{%for shou in shoufeng%}
+					<li>
+						<a href="/index/details?hover=1&id={{shou._id.toString()}}">
+						<img src="{{shou.indexImg}}" alt="">
+						</a>
+						<span class="iconfont">&#xe503;关注(<small>接口</small>)</span>
+					</li>
+					{% endfor%}
+				</ul>
+			</div>
+		</div>
+
+		<!-- 楼层1f -->
+		<div id="L_oneFloor">
+			<div class="L_oneFloor_head L_clear">
+				<div class="L_oneFloor_head_left L_clear">
+					<div><h4><small>1F</small>主机特卖</h4></div>
+					<div><p>总有一款适合你</p></div>
+				</div>
+				<div class="L_oneFloor_head_right">
+					<ul class="L_clear L_one_head">
+						<li class="L_link_one"><a href="javascript:;" class="L_bgColor">性能/游戏</a></li>
+						<li class="L_link_one"><a href="javascript:;">家用/办公</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="L_oneFloor_food L_clear">
+				<div class="L_oneFloor_food_left">
+					<a href="/index/details?hover=1&id={{fOne._id.toString()}}"><img src="{{fOne.indexImg}}" alt=""></a>
+				</div>
+				<div class="L_oneFloor_food_content">
+					<ul class="L_clear" id="Fone">
+						{%for f1 in fTo%}
+						<li>
+							<a class="titImg" href="/index/details?hover=1&id={{f1._id.toString()}}"><img  src="{{f1.mainpic[0]}}" alt=""></a>
+							<div class="title">
+								<a class="title_link" href="/index/details?hover=1&id={{f1._id.toString()}}">{{f1.title}}</a>
+							</div>
+							<div class="price-bar">
+								<span class="price">￥<em>{{f1.price}}</em></span>
+							</div>
+						</li>	
+						{%endfor%}
+					</ul>
+				</div>
+				<div class="L_oneFloor_food_right">
+					<p>特色服务</p>
+					<ul>
+						<li>
+							<div style="background:url('/public/images/diy_bg.png') no-repeat center -175px;"></div>
+							<div>
+								<h4>主机组装测试</h4>
+								<span>所售主机全部经过调试并测试稳定后发货</span>
+							</div>
+						</li>
+						<li>
+							<div style="background:url('/public/images/diy_bg.png') no-repeat center -240px;"></div>
+							<div>
+								<h4>全程运保服务</h4>
+								<span>包装箱全部通过抗压抗摔测试，运输损坏商家承担</span>
+							</div>
+						</li>
+						<li>
+							<div style="background:url('/public/images/diy_bg.png') no-repeat center -310px;"></div>
+							<div>
+								<h4>终身技术维护</h4>
+								<span>提供免费的技术支持服务，咨询、疑难处理</span>
+							</div>
+						</li>
+						<li>
+							<div style="background:url('/public/images/diy_bg.png') no-repeat center -373px;"></div>
+							<div>
+								<h4>3年免费保修</h4>
+								<span>签收电脑三年内，非人为损坏情况下免费维修</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 楼层2f -->
+		<div id="L_oneFloor">
+			<div class="L_oneFloor_head L_clear">
+				<div class="L_oneFloor_head_left L_clear">
+					<div><h4><small>2F</small>硬件专区</h4></div>
+					<div><p>升个级吧</p></div>
+				</div>
+				<div class="L_oneFloor_head_right">
+					<ul class="L_clear L_two_head">
+						<li class="link_two"><a href="" class="L_bgColor">显卡</a></li>
+						<li class="link_two"><a href="">主板</a></li>
+						<li class="link_two"><a href="">CPU</a></li>
+						<li class="link_two"><a href="">内存</a></li>
+						<li class="link_two"><a href="">机箱</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="L_oneFloor_food L_clear">
+				<div class="L_oneFloor_food_left">
+					<a href="/index/details?hover=1&id={{fTwo._id.toString()}}"><img src="{{fTwo.indexImg}}" alt=""></a>
+				</div>
+				<div class="L_oneFloor_food_content">
+					<ul class="L_clear" id="Ftwo">
+						{%for f2 in fTo1%}
+						<li>
+							<a class="titImg" href="/index/details?hover=1&id={{f2._id.toString()}}"><img  src="{{f2.mainpic[0]}}" alt=""></a>
+							<div class="title">
+								<a class="title_link" href="/index/details?hover=1&id={{f2._id.toString()}}">{{f2.title}}</a>
+							</div>
+							<div class="price-bar">
+								<span class="price">￥<em>{{f2.price}}</em></span>
+							</div>
+						</li>	
+						{%endfor%}
+						
+					</ul>
+				</div>
+				<div class="L_twoFloor_food_right">
+					<p>销量TOP</p>
+					<ul class="L_one L_two">
+						{%for f3 in fTo3%}
+						<li class="L_sale2 L_clear">
+							<div class="L_sale_title">
+								<div>
+									<a href="/index/details?hover=1&id={{f3._id.toString()}}">{{f3.title}}</a>
+								</div>
+								<p>¥<span>{{f3.price}}</span></p>
+								<div>已售：<span>{{f3.xl}}</span></div>
+							</div>
+							<div>
+								<a href="/index/details?hover=1&id={{f3._id.toString()}}">
+									<img src="{{f3.mainpic[0]}}" alt="">
+								</a>
+							</div>							
+						</li>
+						{%endfor%}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 楼层3f -->
+		<div id="L_oneFloor">
+			<div class="L_oneFloor_head L_clear">
+				<div class="L_oneFloor_head_left L_clear">
+					<div><h4><small>3F</small>外设专区</h4></div>
+					<div><p></p></div>
+				</div>
+				<div class="L_oneFloor_head_right">
+					<ul class="L_clear L_three_head">
+						<li class="link_three"><a href="" class="L_bgColor">鼠标</a></li>
+						<li class="link_three"><a href="">键盘</a></li>
+						<li class="link_three"><a href="">显示器</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="L_oneFloor_food L_clear">
+				<div class="L_oneFloor_food_left">
+					<a href="/index/details?hover=1&id={{fThree._id.toString()}}"><img src="{{fThree.indexImg}}" alt=""></a>
+				</div>
+				<div class="L_oneFloor_food_content">
+					<ul class="L_clear" id="Fthree">
+						{%for f3 in fTo2%}
+						<li>
+							<a class="titImg" href="/index/details?hover=1&id={{f3._id.toString()}}"><img  src="{{f3.mainpic[0]}}" alt=""></a>
+							<div class="title">
+								<a class="title_link" href="/index/details?hover=1&id={{f3._id.toString()}}">{{f3.title}}</a>
+							</div>
+							<div class="price-bar">
+								<span class="price">￥<em>{{f3.price}}</em></span>
+							</div>
+						</li>	
+						{%endfor%}
+						
+					</ul>
+				</div>
+				<div class="L_twoFloor_food_right">
+					<p>销量TOP</p>
+					<ul class="L_one L_three">
+						{%for f3 in fTo4%}
+						<li class="L_sale2 L_clear">
+							<div class="L_sale_title">
+								<div>
+									<a href="/index/details?hover=1&id={{f3._id.toString()}}">{{f3.title}}</a>
+								</div>
+								<p>¥<span>{{f3.price}}</span></p>
+								<div>已售：<span>{{f3.xl}}</span></div>
+							</div>
+							<div>
+								<a href="/index/details?hover=1&id={{f3._id.toString()}}">
+									<img src="{{f3.mainpic[0]}}" alt="">
+								</a>
+							</div>							
+						</li>						{%endfor%}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	{% include 'L_foot.html' %}
+
+</body>
+</html>

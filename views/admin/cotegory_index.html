@@ -1,0 +1,187 @@
+ {% extends 'W_message.html' %} {% block main %}
+<style>
+	.W_tab {
+		width: 100%;
+		margin: 20px 0px;
+		position: relative;
+	}
+	h3{
+		font-family: "仿宋";
+	}
+	
+	.W_tab:last-of-type td {
+		text-align: center;
+	}
+	
+	ol {
+		position: relative;
+	}
+	
+	th {
+		height: 40px;
+		text-align: center;
+		border: 1px solid #000;
+	}
+	
+	td {
+		padding: 0px 5px;
+		border: 1px solid #ccc;
+		text-align: text;
+		font-size: 16px;
+		font-family: '仿宋';
+		overflow: hidden;
+	}
+	
+	td input[type=radio] {
+		float: left;
+		margin-top: 14px;
+		margin-right: 5px;
+		margin-left: 10px;
+	}
+	
+	.W_root {
+		width: 300px;
+	}
+	
+	td label {
+		float: left;
+	}
+	
+	td:last-of-type {
+		text-align: center;
+		width: 60px;
+		padding: 0px;
+		position: relative;
+	}
+	
+	.W_hideTit {
+		position: absolute;
+		text-align: center;
+		height: 40px;
+		width: 60%;
+		top: 0px;
+		left: 300px;
+		line-height: 40px;
+		font-size: 26px;
+		font-family: '仿宋';
+		font-weight: 900;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+	
+	td:last-of-type a {
+		display: inline-block;
+		line-height: 40px;
+		text-decoration: none;
+		font-size: 20px;
+		color: red;
+		font-weight: 600;
+	}
+	
+	td:last-of-type a:hover {
+		background: #cac;
+	}
+	
+	th {
+		background: #ccc
+	}
+	#W_select{
+		float:left;
+		width:100px;
+		height:30px;
+		font-size:16px;
+		line-height:30px;
+		text-align:center;
+		margin:2px;
+	}
+</style>
+
+<h3>商品列表</h3>
+<ol class="breadcrumb">
+	<li>
+		<a href="/user">管理首页</a>
+	</li>
+	<li><span>商品列表</span></li>
+	{%if userInfo1.isAdmin != '1'%}
+	<a style="float:right;margin-right:50px;color:red;font-size:16px;" data-toggle="modal" data-target=".bs-example-modal-lg" href="/user/cotegory_add">添加商品</a>
+	<a style="float:right;margin-right:50px;color:red;font-size:16px;" href="/user/cotegory_see">查询商品</a>
+	{%endif%}
+</ol>
+ {% if Good1.length != 0 %}
+<table class="W_tab">
+
+	<tr>
+		<!--<th>商品编号</th>-->
+		<!--<th>商品首页位置</th>-->
+		<!--<th>商品首页图片</th>-->
+		<th>商品销量</th>
+		<th>商品类型</th>
+		<th>商品图片</th>
+		<th>商品名标题</th>
+		<th>商品价格</th>
+		<th>商品库存</th>
+		<th>添加/修改时间</th>
+		<th>操作</th>
+
+	</tr>
+
+	<!--模板中遍历后台分配的分类数据-->
+	{% for good in Good1 %}
+
+	<tr class="table-hover">
+		<!--<td class="">{{good._id.toString()}}</td>-->
+		<!--<td>{{good.index}}</td>-->
+		<!--<td>{{good.indexImg}}</td>-->
+		{% if good.xl == ''%}
+		<td>0</td>
+		{%else%}
+		<td>{{good.xl}}</td>
+		{%endif%}
+		
+		{% if good.tid == '1'%}
+		<td>手机</td>
+		{%elseif good.tid == '2'%}
+		<td>电脑</td>
+		{%elseif good.tid == '3'%}
+		<td>DIY</td>
+		{%elseif good.tid == '4'%}
+		<td>外设</td>
+		{%elseif good.tid == '5'%}
+		<td>数码</td>
+		{%elseif good.tid == '6'%}
+		<td>智能</td>
+		{%elseif good.tid == '7' %}
+		<td>其他</td>
+		{%endif%}
+
+		<td>
+			
+			<img width="40" height="40" style="vertical-align: middle;" src="{{good.mainpic[0]}}" alt="" />
+			
+		</td>
+		<td>{{good.title}}</td>
+		<td>{{good.price}}元</td>
+		<td>{{good.nums}}件</td>
+		<td>{{good.date}}</td>
+		{%if userInfo1.isAdmin != '1'%}
+		<td>
+			<a href="/user/cotegory_del?id={{good._id.toString()}}">删除</a>
+			<a data-toggle="modal" data-target=".xiu-example-modal-lg" href="/user/cotegory_xiu?id={{good._id.toString()}}">修改</a>
+		</td>
+		{%else%}
+			<td>无</td>
+		{%endif%}
+	</tr>
+
+	{% endfor %}
+
+</table>
+
+{% include 'page.html' %} {%else%}
+<div style="text-align:center;">
+	<h2 style="color:red;margin:40px 0px;font-family: '仿宋';">数据库中暂无此类商品，如有需要请添加!!!</h2>
+
+	<a class="btn btn-success btn-lg" data-toggle="modal" data-target=".bs-example-modal-lg" href="/user/cotegory_add">添加商品</a>
+</div>
+
+{%endif%} {% endblock %}

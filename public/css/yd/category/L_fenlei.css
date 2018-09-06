@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.L_style {
+  border: none !important;
+  background-color: #fff !important;
+}
+header {
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+  padding: 0.29333333rem 0;
+  background-color: #F9F9F9;
+}
+header div {
+  float: left;
+}
+header .head-left {
+  margin-left: 0.26666667rem;
+}
+header .head-left a {
+  font-size: 0.90666667rem !important;
+  font-weight: 600;
+}
+header .head-right {
+  margin-left: 5.86666667rem;
+  font-size: 0.69333333rem !important;
+  color: #333;
+}
+header .head-right h3 {
+  font-weight: normal;
+}
+main > div {
+  float: left;
+}
+main .main-left li {
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  height: 2.4rem;
+  width: 4.53333333rem;
+  background-color: #F9F9F9;
+}
+main .main-left a {
+  color: #333;
+  font-weight: 900;
+  font-size: 0.74666667rem;
+  line-height: 2.4rem;
+}
+main .main-right .Choice {
+  width: 14.56rem;
+  padding-top: 1.28rem;
+  padding-left: 0.64rem;
+  display: none;
+}
+main .main-right .Choice h3 {
+  font-size: 0.74666667rem;
+  font-weight: normal;
+  color: #999;
+  margin-bottom: 0.32rem;
+}
+main .main-right .Choice li {
+  float: left;
+  width: 4.53333333rem;
+  padding-right: 0.26666667rem;
+  padding-bottom: 0.42666667rem;
+  text-align: center;
+}
+main .main-right .Choice li p {
+  color: #333;
+  font-weight: 900;
+  font-size: 0.64rem;
+}
+main .main-right .Choice li img {
+  width: 4.53333333rem;
+}

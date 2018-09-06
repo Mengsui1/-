@@ -1,0 +1,269 @@
+header {
+  background: #F5F5F5;
+}
+/*顶部nav*/
+.S_top_nav {
+  width: 1100px;
+  height: 29px;
+  background: #F5F5F5;
+  margin: 0 auto;
+  position: relative;
+  /*顶部nav  左侧*/
+  /*顶部nav  右侧*/
+}
+.S_top_nav .S_top_navL {
+  width: 230px;
+  height: 29px;
+  float: left;
+  font-size: 12px;
+  line-height: 29px;
+}
+.S_top_nav .S_top_navL span:nth-child(1) {
+  width: 70px;
+  height: 29px;
+  display: inline-block;
+  float: left;
+}
+.S_top_nav .S_top_navL span:nth-child(2) {
+  width: 100px;
+  height: 29px;
+  display: inline-block;
+  background: blue;
+  float: left;
+}
+.S_top_nav .S_top_navL .S_lasta {
+  display: inline-block;
+  width: 30px;
+  height: 29px;
+  color: #3366CC;
+  float: right;
+}
+.S_top_nav .S_top_navR {
+  float: right;
+}
+.S_top_nav .S_top_navR ul {
+  /*买家中心*/
+  /*隐藏部分的显示效果*/
+  /*hover效果*/
+}
+.S_top_nav .S_top_navR ul li {
+  float: left;
+  font-size: 12px;
+  margin-left: 16px;
+}
+.S_top_nav .S_top_navR ul li a {
+  line-height: 29px;
+}
+.S_top_nav .S_top_navR ul li:nth-child(2) {
+  /*买家中心 -- 隐藏部分*/
+}
+.S_top_nav .S_top_navR ul li:nth-child(2) i {
+  width: 12px;
+  height: 10px;
+  display: inline-block;
+  background: url(../images/diy_bg.png) no-repeat -55px -150px;
+}
+.S_top_nav .S_top_navR ul li:nth-child(2) div {
+  display: none;
+  width: 100px;
+  height: 60px;
+  background: white;
+  position: absolute;
+  border-left: 1px solid #EAEAEA ;
+  border-right: 1px solid #EAEAEA ;
+  border-bottom: 1px solid #EAEAEA ;
+}
+.S_top_nav .S_top_navR ul li:nth-child(2) div a {
+  color: #333;
+}
+.S_top_nav .S_top_navR ul li:nth-child(2) div a b {
+  margin-left: 10px;
+  color: red;
+}
+.S_top_nav .S_top_navR ul li:nth-child(2) div a:hover {
+  color: #CC0000;
+}
+.S_top_nav .S_top_navR ul li:nth-child(2) div a:hover b {
+  color: #CC0000;
+}
+.S_top_nav .S_top_navR ul li:nth-child(2):hover div {
+  display: block;
+}
+.S_top_nav .S_top_navR ul li:nth-child(6):hover div {
+  display: block;
+}
+.S_top_nav .S_top_navR ul li:nth-child(8):hover div {
+  display: block;
+}
+.S_top_nav .S_top_navR ul li:nth-child(2):hover {
+  background: white;
+}
+.S_top_nav .S_top_navR ul li:nth-child(6):hover {
+  background: white;
+}
+.S_top_nav .S_top_navR ul li:nth-child(8):hover {
+  background: white;
+}
+.S_top_nav .S_top_navR ul li:nth-child(2):hover i {
+  background: url(../images/diy_bg.png) no-repeat -55px -165px;
+}
+.S_top_nav .S_top_navR ul li:nth-child(5) {
+  margin-top: 5px;
+  color: #ccc;
+}
+.S_top_nav .S_top_navR ul li:nth-child(6) {
+  /*手机商城隐藏部分*/
+}
+.S_top_nav .S_top_navR ul li:nth-child(6) i {
+  width: 12px;
+  height: 10px;
+  display: inline-block;
+  background: url(../images/diy_bg.png) no-repeat -55px -150px;
+}
+.S_top_nav .S_top_navR ul li:nth-child(6) b {
+  display: inline-block;
+  color: #C40000;
+  height: 20px;
+}
+.S_top_nav .S_top_navR ul li:nth-child(6) .S_phonebuy {
+  display: none;
+  width: 160px;
+  height: 160px;
+  background: white;
+  border-left: 1px solid #EAEAEA ;
+  border-right: 1px solid #EAEAEA ;
+  border-bottom: 1px solid #EAEAEA ;
+  position: absolute;
+}
+.S_top_nav .S_top_navR ul li:nth-child(6) .S_phonebuy a {
+  width: 130px;
+  height: 130px;
+  display: inline-block;
+  margin-left: 15px;
+  margin-top: 15px;
+  background: url(../images/shop_wechat.png) no-repeat;
+  background-size: 100% 100%;
+}
+.S_top_nav .S_top_navR ul li:nth-child(6):hover i {
+  background: url(../images/diy_bg.png) no-repeat -55px -165px;
+}
+.S_top_nav .S_top_navR ul li:nth-child(8) {
+  /*联系客服 -- 隐藏部分*/
+}
+.S_top_nav .S_top_navR ul li:nth-child(8) i {
+  width: 12px;
+  height: 10px;
+  display: inline-block;
+  background: url(../images/diy_bg.png) no-repeat -55px -150px;
+}
+.S_top_nav .S_top_navR ul li:nth-child(8) .S_call_hid {
+  display: none;
+  width: 85px;
+  height: 25px;
+  background: white;
+  color: #333;
+  padding: 5px 10px;
+  position: absolute;
+  line-height: 25px;
+  right: 0;
+  border-bottom: 1px solid #EAEAEA;
+  border-left: 1px solid #EAEAEA;
+  border-right: 1px solid #EAEAEA;
+}
+.S_top_nav .S_top_navR ul li:nth-child(8):hover i {
+  background: url(../images/diy_bg.png) no-repeat -55px -165px;
+}
+.S_top_nav .S_top_navR ul li:nth-child(1):hover a {
+  text-decoration: underline;
+  color: #CC0000;
+}
+.S_top_nav .S_top_navR ul li:nth-child(3):hover a {
+  text-decoration: underline;
+  color: #CC0000;
+}
+.S_top_nav .S_top_navR ul li:nth-child(4):hover a {
+  color: #CC0000;
+  text-decoration: underline;
+}
+.S_top_nav .S_top_navR ul li:nth-child(7):hover a {
+  text-decoration: underline;
+  color: #CC0000;
+}
+/*logo栏*/
+.S_head_logobg {
+  background: #C40000;
+  width: 100%;
+  height: 82px;
+}
+.S_head_logobg .S_logo {
+  width: 1100px;
+  height: inherit;
+  margin: 0 auto;
+}
+.S_head_logobg .S_logo a:nth-child(1) {
+  width: 154px;
+  height: inherit;
+  display: inline-block;
+  float: left;
+}
+.S_head_logobg .S_logo a:nth-child(1) i {
+  width: inherit;
+  height: 43px;
+  display: inline-block;
+  margin-top: 20px;
+  background: url(../images/logo.png) no-repeat;
+}
+.S_head_logobg .S_logo a:nth-child(2) {
+  width: 28px;
+  height: inherit;
+  display: inline-block;
+  color: white;
+  float: left;
+  line-height: 82px;
+  margin-left: 40px;
+  font-size: 13px;
+}
+.S_head_logobg .S_logo a:nth-child(3) {
+  width: 42px;
+  height: inherit;
+  display: inline-block;
+  float: left;
+  color: white;
+  line-height: 82px;
+  font-size: 13px;
+  margin-left: 30px;
+}
+.S_head_logobg .S_logo a:nth-child(3) p {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  position: absolute;
+  background: white;
+  color: #CC0000;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  border-radius: 50%;
+  top: 55px;
+}
+.S_head_logobg .S_logo .S_logo_search {
+  width: 270px;
+  height: 30px;
+  float: right;
+  margin-top: 26px;
+}
+.S_head_logobg .S_logo .S_logo_search input {
+  float: left;
+  width: 180px;
+  height: 20px;
+  padding: 5px 15px;
+  border: none;
+  display: inline-block;
+}
+.S_head_logobg .S_logo .S_logo_search button {
+  float: left;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  border: none;
+}

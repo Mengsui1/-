@@ -1,0 +1,69 @@
+<div id="W_head">
+	<div class="W_head clear">
+		<div class="W_head_left">
+			<span class="W_head_left_s">
+						<a href="/index">商城首页</a>
+					</span> {% if title %}
+			<!-- 登录后状态 -->
+			<span class="W_head_left_s">
+						您好
+						<a href="/index/core" class="W_blue">{{title.username}}</a>
+					</span>
+			<span class="W_head_left_s">
+						<a href="/logout" class="W_blue W_out">退出</a>
+					</span> {% else %}
+			<!-- 未登录状态 -->
+			<span class="W_head_left_s">
+						Hi~欢迎来到Z商城，请
+						<a href="/api/login" class="W_blue">登录</a>
+					</span>
+			<span class="W_head_left_s">
+						<a href="/api/nregister" class="W_blue">免费注册</a>
+					</span> {% endif %}
+		</div>
+		<span style="display:none" class="L_span">{{title._id}}</span>
+		<ul class="W_head_right clear">
+			<li>
+				<a href="/index/core" id="L_onclick" target="_blank">个人中心</a>
+			</li>
+			<li>
+				<a href="/admin/buyhome" target="_blank">我的订单</a>
+			</li>
+			<li class="W_head_top">
+				<a class="W_head_top_a" href="/admin/buyhome">买家中心</a>
+				<i class="iconfont W_head_top_icon">&#xe501;</i>
+				<!-- <div class="W_mai_center W_h_box">
+					<a href="#" style="display:none;">我的优惠券&nbsp;&nbsp;<em>8</em></a>
+					<a href="#">关注的店铺&nbsp;&nbsp;<em>30</em></a>
+					<a href="#">关注的商品&nbsp;&nbsp;<em>48</em></a>
+				</div> -->
+			</li>
+			<li>
+				<a href="/cat/index">购物车</a>
+			</li>
+			<li>
+				<a href="/index/helps">帮助中心</a>
+			</li>
+			<li style="margin:0px 5px;padding:0px;">|</li>
+			<li class="W_head_top">
+				<i class="iconfont W_phone">&#xe621;</i>
+				<a class="W_head_top_a" href="javascript:;">手机商城</a>
+				<i class="iconfont W_head_top_icon">&#xe501;</i>
+
+				<div class="W_ma_img W_h_box">
+					<img width="130" height="130" src="/public/images/shop_wechat.png" alt="" />
+				</div>
+			</li>
+			<li>
+				<a href="javascript:;">中关村在线</a>
+			</li>
+			<li class="W_head_top">
+				<a class="W_head_top_a" href="javascript:;">联系客服</a>
+				<i class="iconfont W_head_top_icon">&#xe501;</i>
+				<div class="W_kefu W_h_box">
+					400-688-1999
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

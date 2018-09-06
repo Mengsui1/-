@@ -1,0 +1,231 @@
+{% extends 'W_message.html' %} {% block main %}
+<style>
+	.W_tab {
+		width: 100%;
+		margin: 20px 0px;
+		position: relative;
+	}
+	h3{
+		font-family: "仿宋";
+	}
+	
+	.W_tab:last-of-type td {
+		text-align: center;
+	}
+	
+	ol {
+		position: relative;
+	}
+	
+	th {
+		height: 40px;
+		text-align: center;
+		border: 1px solid #000;
+	}
+	
+	td {
+		padding: 0px 5px;
+		border: 1px solid #ccc;
+		text-align: text;
+		font-size: 16px;
+		font-family: '仿宋';
+		overflow: hidden;
+	}
+	
+	td input[type=radio] {
+		float: left;
+		margin-top: 14px;
+		margin-right: 5px;
+		margin-left: 10px;
+	}
+	
+	.W_root {
+		width: 300px;
+	}
+	
+	td label {
+		float: left;
+	}
+	
+	td:last-of-type {
+		text-align: center;
+		width: 60px;
+		padding: 0px;
+		position: relative;
+	}
+	
+	.W_hideTit {
+		position: absolute;
+		text-align: center;
+		height: 40px;
+		width: 60%;
+		top: 0px;
+		left: 300px;
+		line-height: 40px;
+		font-size: 26px;
+		font-family: '仿宋';
+		font-weight: 900;
+		overflow: hidden;
+	}
+	
+	td:last-of-type a {
+		display: inline-block;
+		line-height: 40px;
+		text-decoration: none;
+		font-size: 20px;
+		color: red;
+		font-weight: 600;
+	}
+	
+	td:last-of-type a:hover {
+		background: #cac;
+	}
+	
+	th {
+		background: #ccc
+	}
+	#W_select{
+		float:left;
+		width:100px;
+		height:30px;
+		font-size:16px;
+		line-height:30px;
+		text-align:center;
+		margin:2px;
+	}
+</style>
+<script>
+$(function(){
+		//商品查询Vue中ajax异步查询
+	var app = new Vue({
+		delimiters:['${','}'],
+		
+		el:'.find_cote',
+
+		data:{
+			findSql:null,
+			list:['其他','手机','电脑','DIY','数码','外设','智能'],
+			show: false,
+			message: '请输入你要查找数据的关键字与类型!!!'
+		},
+		methods:{
+			find:function(){
+				if($('#find_ipt').val() == ''){
+					alert('请输入搜索条件');
+					return;
+				}
+				var that = this;
+				//ajax发送请求
+	    		$.ajax({
+	                type: 'post',
+	                data:{
+	                	name:$('#find_ipt').val(),
+	                	W_select:$('#W_select').val()
+	                },
+	                url: '/user/cotegory_find',
+	                dataType:'json',
+	                success: function (result) {
+	                	if(result.length > 0){
+	                		that.findSql = result;
+	                		that.show =true;
+	                		that.message = '请输入你要查找数据的关键字与类型!!!';
+	                	}else{
+	                		that.findSql = null;
+	                		that.show = false;
+	                		that.message = '未找到搜索的商品，请重新查找!!!';
+	                	}
+	                	
+	                }
+	            });
+
+			}
+		}
+	})
+});
+</script>
+<ol class="breadcrumb">
+	<li>
+		<a href="/user">管理首页</a>
+	</li>
+	<li><a href="/user/cotegory_index">商品列表</a></li>
+	<li><span>商品查询</span></li>
+	<a style="float:right;margin-right:50px;color:red;font-size:16px;" data-toggle="modal" data-target=".bs-example-modal-lg" href="/user/cotegory_add">添加商品</a>
+</ol>
+
+<div class="find_cote">
+ <h3>关键字查找商品</h3>
+ <div class="clear" >
+ 	<div style="float:left;">
+ 		<select name="商品分类查找" id="W_select">
+			<option value="index">首页位置</option>
+			<option value="tid">编号商品类</option>
+			<option value="indexImg">首页图片</option>
+			<option value="xl">销量</option>
+			<option value="title">标题</option>
+			<option value="descript">描述</option>
+			<option value="shop">卖家</option>
+			<option value="nums">总数</option>
+			<option value="price">价格</option>
+			<option value="color">颜色</option>
+			<option value="peijian">配件</option>
+			<option value="brand">品牌</option>
+
+		</select>
+ 	</div>
+ 	<div style="float:left;">
+ 		<div class="input-group">
+			<input type="text" id="find_ipt" class="form-control" placeholder="请输入关键字">
+			<span class="input-group-btn">
+		        <button @click="find" class="btn btn-default" type="button">查询</button>
+		    </span>
+		</div>
+		
+ 	</div>
+ 	
+ </div>
+<h2  v-show="!show" style="font-family: '仿宋';margin:50px;color:red;text-align: center;">
+	${message}
+</h2>
+<table class="W_tab" id="Wfind_tab" v-show="show">
+
+	<tr>
+		<th>id</th>
+		<th>商品首页位置</th>
+		<!--<th>商品首页图片</th>-->
+		<th>商品销量</th>
+		<th>商品类型</th>
+		<th>商品图片</th>
+		<th>商品名标题</th>
+		<th>商品价格</th>
+		<th>商品库存</th>
+		<th>添加/修改时间</th>
+		<th>操作</th>
+	</tr>
+	<tr v-for="item in findSql">
+		<td>${item._id}</td>
+		<td>${item.index}</td>
+		<!--<td>${item.indexImg}</td>-->
+		<td>${item.xl}</td>
+		<td>${list[item.tid]}</td>
+		<td>
+			<img width="40" height="40" style="vertical-align: middle;" v-bind:src="item.mainpic[0]" alt="" />
+		</td>
+		<td>${item.title}</td>
+		<td>${item.price}元</td>
+		<td>${item.nums}件</td>
+		<td>${item.date}</td>
+		{%if userInfo1.isAdmin != '1'%}
+		<td>
+			<a v-bind:href="'/user/cotegory_del?id='+item._id">删除</a>
+			<a data-toggle="modal" data-target=".xiu-example-modal-lg" v-bind:href="'/user/cotegory_xiu?id='+item._id">修改</a>
+		</td>
+		{%else%}
+			<td>无</td>
+		{%endif%}
+	</tr>
+
+</table>
+
+
+</div>
+{% endblock %}

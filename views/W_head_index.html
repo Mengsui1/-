@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="/public/css/reset.css" />
+		<link rel="stylesheet" href="/public/css/iconfont.css" />
+		<link rel="stylesheet" href="/public/css/W_head_index.css" />
+		<script src="/public/js/jquery.min.js"></script>
+		<script src="/public/js/W_head_index.js"></script>
+		<script src="/public/js/W_move.js"></script>
+		<link rel="stylesheet" href="/public/css/W_body_index.css" />
+
+	</head>
+
+	<body>
+		{% include 'head.html' %}
+		<div class="W_search clear">
+			<div class="W_search_main">
+				<div class="W_search_img">
+					<!--跳转首页-->
+					<a href="#"></a>
+				</div>
+				<div class="W_search_quick">
+					<a href="/admin/buyhome">
+						<i class="iconfont">&#xe615;</i>
+						<span>我的订单</span>
+					</a>
+					<a href="javascript:;">
+						<i class="iconfont">&#xe6ea;</i>
+						<span>我的优惠券</span>
+					</a>
+					<a href="/cat/index">
+						<i class="iconfont">&#xe64a;</i>
+						<span class="W_cat">0</span>
+						<span>购物车</span>
+					</a>
+				</div>
+				<div class="W_search_form">
+					<form action="">
+						<div class="W_search_form_box clear">
+							<input class="W_search_ipt_text" type="text" placeholder="找找你想要的商品" />
+							<input class="W_search_btn" type="button" value="搜索" />
+							<div class="W_search_link">
+								<a href="#">11.11同城购 ￥4188抢iPhone 8P</a>
+								<a href="#">三星Note8</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="W_nav">
+			<div class="W_nav_main clear">
+				<div class="W_nav_mainH">
+					<i class="iconfont W_icon_main">&#xe6b2;</i>
+					<span>全部分类</span>
+
+					<ul class="W_nav_mainH_list">
+						<li>
+							<i class="iconfont W_icon_left">&#xe642;</i>
+							<a href="/index/tuan?num=1&hover=1" target="_blank">
+								手机
+							</a>
+							<i class="iconfont W_icon_right">&#xe609;</i>
+						</li>
+						<li>
+							<i class="iconfont W_icon_left">&#xe6d3;</i>
+							<a href="/index/tuan?num=2&hover=1" target="_blank">
+								电脑
+							</a>
+							<i class="iconfont W_icon_right">&#xe609;</i>
+						</li>
+						<li>
+							<i class="iconfont W_icon_left">&#xe60a;</i>
+							<a href="/index/tuan?num=3&hover=1" target="_blank">
+								DIY
+							</a>
+							<i class="iconfont W_icon_right">&#xe609;</i>
+						</li>
+						<li>
+							<i class="iconfont W_icon_left">&#xe740;</i>
+							<a href="/index/tuan?num=4&hover=1" target="_blank">
+								数码
+							</a>
+							<i class="iconfont W_icon_right">&#xe609;</i>
+						</li>
+						<li>
+							<i class="iconfont W_icon_left">&#xe636;</i>
+							<a href="/index/tuan?num=5&hover=1" target="_blank">
+								外设
+							</a>
+							<i class="iconfont W_icon_right">&#xe609;</i>
+						</li>
+						<li>
+							<i class="iconfont W_icon_left">&#xe504;</i>
+							<a href="/index/tuan?num=6&hover=1" target="_blank">
+								智能
+							</a>
+							<i class="iconfont W_icon_right">&#xe609;</i>
+						</li>
+						<li>
+							<i class="iconfont W_icon_left">&#xe6fe;</i>
+							<a href="/index/tuan?num=7&hover=1" target="_blank">
+								其他
+							</a>
+							<i class="iconfont W_icon_right">&#xe609;</i>
+						</li>
+					</ul>
+				</div>
+				<ul class="W_nav_mainL clear" data-hover="{{hover}}">
+					<li class="W_nav_mainL_active">
+						<a href="/index?hover=0" target="_blank">首&nbsp;&nbsp;&nbsp;&nbsp;页</a>
+					</li>
+					<li>
+						<a href="/index/tuan?hover=1" target="_blank">团&nbsp;&nbsp;&nbsp;&nbsp;购</a>
+					</li>
+					<li>
+						<a href="/index/dian?hover=2" target="_blank">电子竞技</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div style="width:1200px;margin:0 auto;">
+			<!-- 模板替换 -->
+			{%block main%}{%endblock%}
+		</div>
+	</body>
+
+</html>

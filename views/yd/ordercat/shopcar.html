@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>购物车</title>
+	<link rel="stylesheet" href="/public/css/yd/ordercat/header.css" />
+	<link rel="stylesheet" href="/public/css/yd/ordercat/footer.css" />
+	<link rel="stylesheet" href="/public/css/yd/ordercat/iconfont.css" />
+	<script src="/public/js/jquery.min.js"></script>
+	
+</head>
+<body style="overflow-x: none;">
+	<div id="box">
+	<header>
+		<div>
+			<a class="iconfont" href="javascript:history.back();">&#xe693;</a>
+			<span>购物车 ( 0 ) </span>
+		</div>
+		<div id="flip">
+			<i class="iconfont">&#xe8e9;</i>
+			<span>购买前,我们推荐您阅读</span>
+			<i class="iconfont">&#xe692;</i>
+		</div>
+		<div id="panelparent">
+			<div id="panel">
+			<ol>
+				<li>
+					在您购买过程中,系统会给您填写的手机号发送确认短信,以方便您查询订单以及付款,请您务必保留。
+				</li>
+				<li>
+					您的货款将打到中关村商城账户，在您确认收货后货款才会打到商家账户，保障消费者权益最大化。
+				</li>
+				<li>
+					自商家发货起的10天内，如您收到商品并确认无误请您确认收货，商家发货超过10天如您未确认收货，货款将打到商家账户。
+				</li>
+			</ol>
+			<p>如有疑问，请致电中关村商城官方客服电话：	</p>
+			<a href="####"><i class="iconfont">&#xe8be;</i>400-688-1999</a>
+		</div>
+		</div>
+	</header>
+	<div class="che">
+		<p><i class="iconfont">&#xe63f;</i></p>
+		<p>购物车空空如也,快去逛逛吧！</p>
+		<a href="####">去逛逛</a>
+	</div>
+	<!---->
+	<div style="margin-top:150px"></div>
+	<!--尾部-->
+	<footer>
+		<a href="/yd/shouye">
+			<label >
+				<i class="iconfont" >&#xe61c;</i>
+				<span >首页</span>
+			</label>
+		</a>
+		<a href="/yd/fenlei">
+			<label>
+				<i class="iconfont">&#xe699;</i>
+				<span>分类</span>
+			</label>
+		</a>
+		<a href="/yd/gouwu">
+			<label>
+				<i class="iconfont" style="color:#FF1111">&#xe63f;</i>
+				<span style="color:#FF1111">购物车</span>
+			</label>
+		</a>
+		<a href="/yd/me">
+			<label>
+				<i class="iconfont">&#xe6a3;</i>
+				<span>我</span>
+			</label>
+		</a>
+	</footer>
+	</div>
+</body>
+<script>
+	var html = document.getElementsByTagName('html')[0];
+	var W = html.clientWidth;
+	// console.log(W);
+	html.style.fontSize = W / 20 + 'px';
+	
+	$(document).ready(function(){
+	  $("#flip").click(function(){
+	    $("#panel").slideToggle("500");
+	    $("#panelparent").slideToggle("30");
+	  });
+	});
+</script>
+</html>

@@ -1,0 +1,25 @@
+<h3 style="padding-top:30px;text-align:center;">前台用户信息修改</h3>
+
+<form style="padding:20px;" action="/user/users_moneyXiu" method="post">
+	<input type="hidden" name="id" value="{{result._id.toString()}}" />
+	<div class="form-group">
+		<label for="name">username</label>
+		<input type="text" class="form-control" name="name" id="name" value="{{result.username}}">
+	</div><div class="form-group">
+		<label for="password">旧密码</label>
+		<input type="text" class="form-control" name="password" id="password" placeholder="请输入旧密码">
+	</div>
+	</div><div class="form-group">
+		<label for="newpassword">新密码</label>
+		<input type="text" class="form-control" name="newpassword" id="newpassword" placeholder="请输入新密码">
+	</div>
+	<div class="form-group">
+		<label for="dis">是否可用</label>
+		<input type="text" class="form-control" name="dis" id="dis" placeholder="可用或不输人" value="可用">
+	</div>
+	<div class="form-group">
+		<label for="phone">注册手机号码</label>
+		<input type="tel" required class="form-control" name="phone" id="phone" placeholder="请输入注册新手机号码" value="{{result.phone}}">
+	</div>
+	<button type="submit" class="btn btn-success form-control">保存</button>
+</form>

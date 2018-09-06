@@ -1,0 +1,109 @@
+.W_indexf {
+  height: 240px;
+  border-top: 1px solid #ededed;
+  margin-top: 20px;
+}
+.W_indexf .W_indexf_top {
+  width: 1200px;
+  margin: 29px auto 0;
+}
+.W_indexf .W_indexf_top dl {
+  float: left;
+  width: 175px;
+}
+.W_indexf .W_indexf_top dl dt {
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 14px;
+}
+.W_indexf .W_indexf_top dl dd {
+  margin-bottom: 10px;
+  color: #666;
+  font-size: 14px;
+}
+.W_indexf .W_indexf_top dl dd a i {
+  color: #F10215;
+  margin-right: 3px;
+  font-size: 20px;
+}
+.W_indexf .W_indexf_top dl dd a:hover {
+  color: #F10215;
+  text-decoration: underline;
+}
+.W_indexf .W_indexf_top .W_indexf_ma {
+  width: 130px;
+  float: left;
+  margin-left: 12px;
+  text-align: center;
+}
+.W_indexf .W_indexf_top .W_indexf_ma p {
+  font-size: 12px;
+}
+.W_indexf .W_indexf_top .W_indexf_ma .W_indexf_ma_code {
+  margin: -6px 0px 10px;
+}
+.W_indexf .W_indexf_top .W_indexf_ma .W_indexf_ma_code img {
+  display: inline-block;
+  width: 106px;
+  height: 106px;
+}
+.W_pubf {
+  padding: 25px 0 30px;
+  background: #2d2d2d;
+  font-size: 14px;
+}
+.W_pubf .W_pubf_foot {
+  width: 1200px;
+  margin: 0 auto;
+}
+.W_pubf .W_pubf_foot .W_lable {
+  color: #555;
+}
+.W_pubf .W_pubf_foot .W_pf_t {
+  margin: 0 0 0 -10px;
+  padding: 7px 0 0;
+  font: 12px/24px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+  color: #666;
+}
+.W_pubf .W_pubf_foot .W_pf_t a {
+  margin: 0 10px;
+  color: #fff;
+  white-space: normal;
+  word-break: keep-all;
+}
+.W_pubf .W_pubf_foot .W_pf_t a:hover {
+  text-decoration: underline;
+}
+.W_pubf .W_pubf_foot .W_pf_m {
+  margin: 0 0 0 -10px;
+  padding: 20px 0 0;
+  font: 12px/24px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+  color: #666;
+}
+.W_pubf .W_pubf_foot .W_pf_m a {
+  margin: 0 10px;
+  color: #999;
+  white-space: normal;
+  word-break: keep-all;
+}
+.W_pubf .W_pubf_foot .W_pf_b {
+  margin: 0 0 0 -10px;
+  padding: 20px 0 0;
+  font: 12px/24px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+  color: #666;
+}
+.W_pubf .W_pubf_foot .W_pf_b span {
+  margin-left: 5px;
+  padding: 0 0 0 15px;
+  color: #999;
+}
+.W_pubf .W_pubf_foot .W_pf_b span a {
+  margin: 0 10px;
+  color: #999;
+  white-space: normal;
+  word-break: keep-all;
+}
+.W_pubf .W_pubf_foot .W_pf_b span a:hover {
+  text-decoration: underline;
+}

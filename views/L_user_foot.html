@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/public/css/L_user_foot.css">
+	<script src="/public/js/L_user_foot.js"></script>
+</head>
+<body>
+
+	<!-- 个人信息 -->
+	<div class="L_form L_personal ">
+		<div class="L_personal_head L_bt_box">
+			<h3 class="L_bt">基本信息</h3>
+			<p><span class="iconfont">&#xe60a;</span><a href="####" class="L_click">修改</a></p>
+		</div>
+		<div class="L_personal_content">
+				<ul>
+					<li><span>昵称 :</span>{{objMessage.username}}</li>
+					<li><span>登陆名 :</span>{{id.username}}</li>
+					<li><span>等级 :</span>Lv.1</li>
+					<li><span>性别 :</span>{{objMessage.sex}}</li>
+					<li><span>所在地 :</span>广东</li>
+					<li><span>婚姻状况 :</span>{{objMessage.Marriage}}</li>
+					<li><span>生日 :</span>{{objMessage.Birthday}}</li>
+					<li><span>注册时间 :</span>2017-11-20 11:35:35</li>
+					<li><span>最后登陆 :</span>2017-11-23 09:27:56</li>
+				</ul>
+		</div>
+		<div class="L_personal_foot">
+			<div class="L_bt_box">
+				<h3 class="L_bt">个人成就</h3>
+			</div>
+			<div class="L_personal_foot_bottom">
+				<div>
+					<span>论坛贡献 :</span>
+					<ul class="L_clear">
+						<li><a href="">0</a><p>帖子</p></li>
+						<li><a href="">0</a><p>精华</p></li>
+						<li><a href="">0</a><p>回复</p></li>
+					</ul>
+				</div>
+				<div>
+					<span>问答贡献 :</span>
+					<ul class="L_clear">
+						<li><a href="">0</a><p>提问</p></li>
+						<li><a href="">0</a><p>问答</p></li>
+						<li><a href="">0</a><p>被邀请</p></li>
+						<li><a href="">0</a><p>问答积分</p></li>
+						<li><a href="">0</a><p>已兑换</p></li>
+					</ul>
+					<p><a href="">如何赚取问答积分？</a></p>
+				</div>
+				<div>
+					<span>Z金豆 :</span>
+					<ul class="L_clear">
+						<li><a href="">10</a><p>Z金豆</p></li>
+						<li><a href="">0</a><p>已兑换</p></li>
+					</ul>
+					<p><a href="">如何赚取金豆？</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 个人信息修改 -->
+	<div class="L_personal L_block" >
+		<div class="L_personal_head L_bt_box">
+			<h3 class="L_bt">基本信息</h3>
+			<p><span class="iconfont">&#xe60a;</span><a href="####" class="L_click">修改</a></p>
+		</div>
+		<div class="L_personal_content">
+				<form action="/only" method="post" enctype="multipart/form-data">
+					<input type="hidden" name="userId" value="">
+					<ul>
+						<li><span>昵称 :</span><input type="text" name="user"></li>
+						<li><span>登陆名 :</span>{{id.username}}</li>
+						<li><span>等级 :</span>Lv.1</li>
+						<li>
+							<span>性别 :</span>
+							<select name="Sex" id="">
+								<option value="男">男</option>
+								<option value="女">女</option>
+							</select>
+						</li>
+						<li>
+							<span>所在地 :</span>
+							<select name="sheng" id="sheng"></select>
+							<select name="shi" id="shi">
+								<option value="null">-请选择市-</option>
+							</select>
+							<select name="qu" id="qu">
+								<option value="null">-请选择区-</option>
+							</select>
+						</li>
+						<li>
+							<span>婚姻状况 :</span>
+							<select name="Marriage" id="">
+								<option value="已婚">已婚</option>
+								<option value="未婚">未婚</option>
+							</select>
+						</li>
+						<li>
+							<span>生日 :</span>
+								<select name="year" id="">
+									<option value="1996">1996</option>
+									<option value="1997">1997</option>
+								</select>
+								<select name="mon" id="">
+									<option value="12">12</option>
+									<option value="11">11</option>
+								</select>
+								<select name="day" id="">
+									<option value="01">01</option>
+									<option value="02">02</option>
+								</select>
+						</li>
+						<li><span>注册时间 :</span>2017-11-20 11:35:35</li>
+						<li><span>最后登陆 :</span>2017-11-23 09:27:56</li>
+					</ul>
+					<input type="submit" value="保存修改" class="submit">
+				</form>
+		</div>
+		<div class="L_personal_foot">
+			<div class="L_bt_box">
+				<h3 class="L_bt">个人成就</h3>
+			</div>
+			<div class="L_personal_foot_bottom">
+				<div>
+					<span>论坛贡献 :</span>
+					<ul class="L_clear">
+						<li><a href="">0</a><p>帖子</p></li>
+						<li><a href="">0</a><p>精华</p></li>
+						<li><a href="">0</a><p>回复</p></li>
+					</ul>
+				</div>
+				<div>
+					<span>问答贡献 :</span>
+					<ul class="L_clear">
+						<li><a href="">0</a><p>提问</p></li>
+						<li><a href="">0</a><p>问答</p></li>
+						<li><a href="">0</a><p>被邀请</p></li>
+						<li><a href="">0</a><p>问答积分</p></li>
+						<li><a href="">0</a><p>已兑换</p></li>
+					</ul>
+					<p><a href="">如何赚取问答积分？</a></p>
+				</div>
+				<div>
+					<span>Z金豆 :</span>
+					<ul class="L_clear">
+						<li><a href="">10</a><p>Z金豆</p></li>
+						<li><a href="">0</a><p>已兑换</p></li>
+					</ul>
+					<p><a href="">如何赚取金豆？</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 上传用户头像 -->
+	<div class="L_form L_from_photo L_block" >
+		<div class="L_bt_box">
+			<h3 class="L_bt">修改头像</h3>
+		</div>
+		<div>
+			<form action="/upload" class="L_clear" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="userId" value="">
+				<div class="L_file_photo">
+					<div class="L_img">
+						<p>
+							选择一张本地高质量图片上传为头像<br>
+							仅支持jpg、png格式，且文件小于2M
+						</p>
+						<a href="javascript:;">
+							<img src="" alt="" class="photo">
+						</a>
+					</div>
+					<a href="javascript:;" class="file">选择文件
+    					<input type="file" name="upfile" id="file">
+					</a>
+				</div>
+				<div class="L_yl">
+					<h3>头 像 预 览</h3>
+					<div>
+						<img src="" alt="" class="photo">
+					</div>
+					<input type="submit" value="保存">
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- 修改密码 -->
+	<div class="L_form L_password L_block" >
+		<div class="L_bt_box">
+			<h3 class="L_bt">修改密码</h3>
+		</div>
+		<div class="L_ts">
+			<div>
+				<a href=""><img src="/public/images/zoler.jpg" alt="" class="photo"></a>
+			</div>
+			<div>
+				<p>Hi，qq_11l6914j4538</p>
+				<span>绑定手机号并设置密码，以后可以用来直接登录中关村在线</span>
+			</div>
+		</div>
+		<div class="L_foot_form">
+			<form action="">
+				<div>
+					<span>用户名:</span>
+					<input type="text" name="user">
+					<small></small>
+				</div>
+				<div>
+					<span>原密码:</span>
+					<input type="text" name="oldpassword">
+					<small></small>
+				</div>
+				<div>
+					<span>新密码:</span>
+					<input type="text" name="newpassword">
+					<small></small>
+				</div>
+				<div>
+					<span>确认密码:</span>
+					<input type="text" disabled="disabled">
+					<small></small>
+				</div>
+				<div>
+					<span></span>
+					<button class="submit" disabled="disabled" id="L_btn">提交</button>
+					<!-- <input type="submit" class="submit" disabled="disabled" id="L_btn"> -->
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- 其他 -->
+	<div class="L_qita L_form L_block">
+		<div class="L_bt_box">
+			<ul class="L_qita_bt L_clear">
+				<li><a href="javascript:;" class="L_qita_color">联系方式</a></li>
+				<li><a href="javascript:;">工作信息</a></li>
+				<li><a href="javascript:;">兴趣爱好</a></li>
+				<li><a href="javascript:;">实名认证</a></li>
+			</ul>
+		</div>
+		<!-- 联系 -->
+		<div class="L_qita_foot L_lx" >
+			<form action="">
+				<div>
+					<span>正件名称 :</span>
+					<select>
+						<option value="身份证">身份证</option>
+					</select>
+				</div>
+				<div>
+					<span>证件名称 :</span>
+					<input type="text">
+				</div>
+				<div>
+					<span>证件号码 :</span>
+					<input type="text">
+				</div>
+				<div>
+					<span>联系地址 :</span>
+					<input type="text">
+				</div>
+				<div>
+					<span>邮编 :</span>
+					<input type="text">
+				</div>
+				<div>
+					<span>手机 :</span>
+					<input type="text">
+				</div>
+				<div>
+					<span>电话 :</span>
+					<input type="text">
+				</div>
+				<div>
+					<span>QQ号码 :</span>
+					<input type="text">
+				</div>
+				<div>
+					<span>MSN :</span>
+					<input type="text">
+				</div>
+				<div>
+					<span>个人网址 :</span>
+					<input type="text">
+				</div>
+				<div>
+					<span></span>
+					<input type="submit" class="submit">
+				</div>
+			</form>
+		</div>
+		<!-- 工作信息 -->
+		<div class="L_qita_foot L_gongzuo L_block" >
+			<form action="">
+				<div>
+					<span>所在公司</span>
+					<input type="text">
+				</div>
+				<div>
+					<span>你所在职位描述</span>
+					<textarea id="jobDesc" tabindex="2" name="jobDesc" class="textarea"></textarea>
+				</div>
+				<div>
+					<span>你所在的行业</span>
+					<select name="" id="">
+						<option value="其他">其他</option>
+						<option value="WEB前段开发">WEB前段开发</option>
+						<option value="会计">会计</option>
+						<option value="打工仔">打工仔</option>
+						<option value="捡瓶子">捡瓶子</option>
+					</select>
+				</div>
+				<div>
+					<span>公司人员规模</span>
+					<select name="" id="">
+						<option value="50">1~50</option>
+						<option value="100">51~100</option>
+					</select>
+				</div>
+				<div>
+					<span>公司产值规模</span>
+					<select name="" id="">
+						<option value="100">0~100万</option>
+						<option value="200">100~200万</option>
+					</select>
+				</div>
+				<div>
+					<span>你的个人收入 :</span>
+					<select name="" id="">
+						<option value="5000">0~5000</option>
+						<option value="10000">5000~10000</option>
+					</select>
+				</div>
+				<div>
+					<span></span>
+					<input type="submit" class="submit">
+				</div>
+			</form>
+		</div>
+		<!-- 兴趣爱好 -->
+		<div class="L_qita_foot L_xingqu L_block">
+			<form action="">
+				<div>
+					<span>我喜欢的歌曲 :</span>
+					<textarea name="" id="">
+					</textarea>
+				</div>
+				<div>
+					<span>最喜欢的IT品牌 :</span>
+					<textarea name="" id="">
+					</textarea>
+				</div>
+				<div>
+					<span>最喜欢的其他品牌 :</span>
+					<textarea name="" id="">
+					</textarea>
+				</div>
+				<div>
+					<span>我喜欢的书 :</span>
+					<textarea name="" id="">
+					</textarea>
+				</div>
+				<div>
+					<span>我喜欢的电影 :</span>
+					<textarea name="" id="">
+					</textarea>
+				</div>
+				<div>
+					<span>最喜欢的游戏 :</span>
+					<textarea name="" id="">
+					</textarea>
+				</div>
+				<div>
+					<span>我喜欢的运动 :</span>
+					<textarea name="" id="">
+					</textarea>
+				</div>
+				<div>
+					<span>我喜欢的食物 :</span>
+					<textarea name="" id="">
+					</textarea>
+				</div>
+				<div>
+					<span>最喜欢的一句话:</span>
+					<textarea name="" id="">
+					</textarea>
+				</div>
+				<div>
+					<span>崇拜的人 :</span>
+					<textarea name="" id="">
+					</textarea>
+				</div>
+				<div>
+					<span></span>
+					<input type="submit" class="submit">
+				</div>
+			</form>
+		</div>
+	</div>
+	
+</body>
+</html>

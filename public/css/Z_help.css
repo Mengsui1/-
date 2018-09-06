@@ -1,0 +1,142 @@
+
+#Z_title {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0 0;
+    height: 22px;
+    font: 12px/22px sumsin;
+    color: #666;
+}
+#Z_title a {
+    color: #03589e;
+    margin: 0 8px;
+    font-family: arial;
+}
+#Z_title a:hover {
+    color: #c00;
+    border-bottom: 1px solid #c00;
+}
+.Z_main {
+    width: 1200px;
+    margin: 30px auto 30px;
+}
+.Z_main > .Z_box {
+    width: 100%;
+    margin: 10px 0 0;
+    border: 1px solid #E6E6E6;
+}
+.Z_main > .Z_box > .Z_title {
+    padding: 0 10px;
+    background: #FAFAFA;
+    border-bottom: 1px solid #E6E6E6;
+}
+.Z_main > .Z_box > .Z_title h3 {
+    margin: 0;
+    font: 14px/32px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    font-size: 18px;
+}
+.clear::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+.Z_self_service {
+    padding: 25px 0 15px 20px;
+}
+.Z_self_service li {
+    width: 110px;
+    float: left;
+    margin: 0 18px 0 0;
+}
+.Z_self_service li a {
+    padding: 82px 0 0;
+    display: block;
+    font: 14px/22px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    text-align: center;
+    color: #666;
+    background: url(../images/ico-2.png) no-repeat;
+}
+.Z_self_service .Z_order_query a {
+    background-position: 0 0;
+}
+.Z_self_service .Z_activist a {
+    background-position: -180px 0;
+}
+.Z_self_service .Z_change_password a {
+    background-position: -450px 0;
+}
+.Z_self_service .Z_user_center a {
+    background-position: -90px 0;
+}
+.Z_self_service li:hover a {
+    opacity: 0.8;
+}
+.Z_box .Z_tab-bar {
+    height: 38px;
+    border-bottom: 1px solid #e7e7e7;
+
+}
+.Z_box .Z_tab-bar li {
+    float: left;
+    margin: 0 19px;
+    font: bold 14px/38px arial;
+    color: #666;
+    cursor: pointer;
+}
+.Z_box .Z_tab-bar .Z_cur {
+    position: relative;
+    margin: 0 19px -1px;
+    height: 37px;
+    color: #333;
+    border-bottom: 2px solid #c00;
+}
+
+.Z_quick-box {
+    height: 110px;
+}
+.Z_quick-guide {
+    padding: 10px 20px;
+}
+.Z_quick-guide ul {
+    float: left;
+    width: 210px;
+}
+.Z_quick-guide li {
+    font: 12px/30px "arial";
+}
+.Z_quick-guide li a {
+    color: #03589e;
+}
+.Z_quick-guide li a:hover {
+    color: #c00;
+    border-bottom: 1px solid #c00;
+}
+
+.Z_question-box {
+    padding: 10px 20px;
+}
+.Z_question ul {
+    float: left;
+    width: 354px;
+}
+.Z_question-box li {
+    background: url(../images/bg-1.png) no-repeat;
+    padding: 0 10px;
+    font: 12px/36px "arial";
+}
+.Z_question .Z_question-box li {
+    font: 12px/30px "arial";
+    background-position: -31px -237px;
+}
+.Z_question-box li a {
+    color: #03589e;
+}
+.Z_question-box li a:hover {
+    color: #c00;
+    border-bottom: 1px solid #c00;
+}
+
+
+
+
+

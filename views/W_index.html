@@ -1,0 +1,248 @@
+ {% include 'W_head_index.html' %} {%block main%}
+<script src="/public/js/W_lunbo.js"></script>
+<script src="/public/js/W_index.js"></script>
+
+
+
+<!--主体内容-->
+<div class="W_main ">
+	<!--主体轮播图-->
+	
+	<div class="W_main_body clear ">
+		
+		<div class="W_m_b_lun ">
+			<!--切换的图片-->
+			<ul class="W_m_b_l_list clear " id="W_m_b_l_list">
+				{%for goodL in goodLun%}
+				<li>
+					<a href="/index/details?hover=1&id={{goodL._id.toString()}}"><img src="{{goodL.indexImg}}" alt=" " /></a>
+				</li>
+				{%endfor%}
+			</ul>
+			<!--轮播图小按钮-->
+			<ol class="W_m_b_l_dian clear ">
+				<li style="background:rgba(200,20,20,.8);"></li>
+				<li></li>
+				<li></li>
+			</ol>
+			<!--轮播图的左右按钮-->
+			<span class="W_lun_btn W_btn_left " id="W_btn_left">
+						<i class="iconfont ">&#xe502;</i>
+					</span>
+			<span class="W_lun_btn W_btn_right " id="W_btn_right">
+						<i class="iconfont ">&#xe609;</i>
+					</span>
+		</div>
+		<div class="W_m_b_right ">
+			{%for lunL in lunbo%}
+			<a href="/index/details?hover=1&id={{lunL._id.toString()}}"><img src="{{lunL.indexImg}}" alt=" " /></a>
+			{%endfor%}
+		</div>
+	</div>
+
+	<div class="W_m_b_center ">
+		<a href="javascript:;">
+			<ul class="clear ">
+				<li><i class="W_m_b_center_icon "></i><span>正品保障</span></li>
+				<li><i class="W_m_b_center_icon "></i><span>先行赔付</span></li>
+				<li><i class="W_m_b_center_icon "></i><span>发票保障</span></li>
+				<li><i class="W_m_b_center_icon "></i><span>24h发货</span></li>
+				<li><i class="W_m_b_center_icon "></i><span>无忧退换</span></li>
+			</ul>
+		</a>
+	</div>
+
+	<!--点击回到顶部-->
+
+	<div class="W_m_tit" id="W_m_tit">
+		<div class="W_btn_top" id="W_btn_top">
+			<i class="iconfont">
+						&#xe604;
+					</i>
+		</div>
+		<!--今日团-->
+		<div class="W_m_tit_top clear">
+			<h3>今日团</h3>
+			<ul class="W_m_list clear">
+				<li>
+					<a href="/index/tuan?num=1&hover=1&pa" target="_blank">
+						手机
+						<i>({{mathArr[0]}})</i>
+
+					</a>
+				</li>
+				<li>
+					<a href="/index/tuan?num=2&hover=1&pa" target="_blank">
+						电脑
+						<i>({{mathArr[1]}})</i>
+					</a>
+				</li>
+				<li>
+					<a href="/index/tuan?num=3&hover=1&pa" target="_blank">
+						DIY
+						<i>({{mathArr[2]}})</i>
+					</a>
+				</li>
+				<li>
+					<a href="/index/tuan?num=4&hover=1&pa" target="_blank">
+						数码
+						<i>({{mathArr[3]}})</i>
+					</a>
+				</li>
+				<li class="W_li_waishe">
+					<a class="W_li_waishe_a&hover=1" href="/index/tuan?num=5&hover=1&pa" target="_blank">
+						外设
+						<i>({{mathArr[4]}})</i>
+						<!--<i class="iconfont">&#xe501;</i>-->
+					</a>
+					<!--<div class="W_m_list_waishe">
+						<div class="W_m_list_waishe_box clear">
+							<a href="javascript:;"><span>数码</span><i>(13)</i></a>
+							<a href="javascript:;"><span>投影机</span><i>(1)</i></a>
+							<a href="javascript:;"><span>电脑外设</span><i>(22)</i></a>
+						</div>
+						<b></b>
+					</div>-->
+				</li>
+				<li>
+					<a href="/index/tuan?num=6&hover=1&pa" target="_blank">
+						智能
+						<i>({{mathArr[5]}})</i>
+					</a>
+				</li>
+				<li>
+					<a href="/index/tuan?num=7&hover=1&pa" target="_blank">
+						其他
+						<i>({{mathArr[6]}})</i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--排序-->
+		<div class="W_m_tit_bottom ">
+			<ul class="W_m_tit_ul clear">
+				<li>
+					<a class="active paixu" href="/index/tuan?hover=1">默认</a>
+				</li>
+				<li>
+					<a data-xu="{{xu}}" data-pa="{{pa}}" class="paixu" href="/index/tuan?hover=1&pa=xl&xu=-1">销量<i class="iconfont">&#xe501;</i></a>
+				</li>
+				<li>
+					<a class="paixu" href="/index/tuan?hover=1&pa=price&xu=1">价格<i class="iconfont">&#xe604;</i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--商品列表-->
+	<ul class="W_commodity_list clear">
+		{% for goods in result%}
+		<li class="W_commodity_li">
+			<a class="W_commodity_li_link" href="/index/details?hover=1&id={{goods._id.toString()}}">
+				<div class="W_item_pic">
+					<img src="{{goods.mainpic[0]}}" alt="" />
+				</div>
+				<div class="W_item_info">
+					<div class="W_item_desc">
+						<p class="W_item_name">{{goods.title}}</p>
+						<span class="W_item_intro">{{goods.descript}}</span>
+					</div>
+					<div class="W_item_detail clear">
+						<div class="W_item_detail_left">
+							<div class="W_item_price">
+								<span class="W_item_price_x">
+											<em>￥</em><span>{{goods.price}}</span>
+								</span>
+								<span class="W_item_price_l">
+											<em>￥</em><span>{{parseInt(goods.price) + parseInt(goods.price/40)}}</span>
+								</span>
+							</div>
+							<span class="W_ls_price">
+										<span>立省{{parseInt(goods.price/40)}}元</span>
+							</span>
+						</div>
+						<div class="W_item_detail_btn">
+							<span>马上抢</span>
+						</div>
+					</div>
+				</div>
+				<div class="W_show_time clear">
+					<i class="iconfont">&#xe6dd;</i>
+					<div class="W_countdown">
+						剩余:
+						<span class="W_day">00</span> 天
+						<span class="W_hour">00</span> 时
+						<span class="W_minute">00</span> 分
+						<span class="W_second">00</span> 秒
+					</div>
+				</div>
+			</a>
+		</li>
+		{%endfor%}
+	</ul>
+	{% include 'admin/page.html' %}
+
+	<!--更多团购商品-->
+	<div class="W_taun">
+		<a href="javascript:;">更多团购商品 &gt;&gt;</a>
+	</div>
+
+	<!--开团预告-->
+	<div class="W_tuaning clear">
+		<h3>即将开团</h3>
+
+		<a href="javescript:;">更多团预告 &gt;&gt;</a>
+	</div>
+
+	<!--开团提醒-->
+	<ul class="W_commodity_list clear">
+		{% for good in kaituan%}
+		<li class="W_commodity_li">
+			<a class="W_commodity_li_link" href="/index/details?hover=1&id={{good._id.toString()}}">
+				<div class="W_item_pic">
+					<img src="{{good.mainpic[0]}}" alt="" />
+				</div>
+				<div class="W_item_info">
+					<div class="W_item_desc">
+						<p class="W_item_name">{{good.title}}</p>
+						<span class="W_item_intro">{{good.descript}}</span>
+					</div>
+					<div class="W_item_detail clear">
+						<div class="W_item_detail_left">
+							<div class="W_item_price">
+								<span class="W_item_price_x">
+											<em>￥</em><span>{{good.price}}</span>
+								</span>
+								<span class="W_item_price_l">
+											<em>￥</em><span>{{parseInt(good.price) + parseInt(good.price/70)}}</span>
+								</span>
+							</div>
+							<span class="W_ls_price">
+										<span>立省{{parseInt(good.price/70)}}元</span>
+							</span>
+						</div>
+						<div class="W_item_detail_btn">
+							<span>开团提醒</span>
+						</div>
+					</div>
+				</div>
+				<div class="W_show_time clear">
+					<i class="iconfont">&#xe6dd;</i>
+					<div class="W_countdown">
+						剩余:
+						<span class="W_day">00</span> 天
+						<span class="W_hour">00</span> 时
+						<span class="W_minute">00</span> 分
+						<span class="W_second">00</span> 秒
+					</div>
+				</div>
+			</a>
+		</li>
+		{%endfor%}
+		
+	</ul>
+
+</div>
+
+
+{% include 'W_index_foot.html' %} {%endblock%}

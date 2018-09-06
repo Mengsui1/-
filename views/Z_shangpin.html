@@ -1,0 +1,209 @@
+ {% include 'W_head_index.html' %} {%block main%}
+<link rel="stylesheet" href="/public/css/Z_shangpin.css" type="text/css">
+<link rel="stylesheet" href="/public/css/W_body_index.css" type="text/css">
+<style>
+	
+	.S_lis{
+		background:rgba(0,0,0,.6);
+	}
+	.W_m_tit .W_m_tit_top .W_m_list .S_lis a{
+		color:white;
+	}
+	.W_m_tit .W_m_tit_top .W_m_list .S_lis a:hover{
+		color:white;
+		text-decoration:none;
+	}
+</style>
+<div class="W_m_tit" id="W_m_tit">
+	
+
+	<!--今日团-->
+	<div class="W_m_tit_top clear">
+		<ul class="W_m_list clear" data-num="{{num}}">
+			<li>
+				<a href="/index/tuan?hover=1&pa">
+					全部
+				</a>
+			</li>
+			<li>
+				<a href="/index/tuan?num=1&hover=1&pa">
+					手机
+					<i>({{mathArr[0]}})</i>
+
+				</a>
+			</li>
+			<li>
+				<a href="/index/tuan?num=2&hover=1&pa">
+					电脑
+					<i>({{mathArr[1]}})</i>
+				</a>
+			</li>
+			<li>
+				<a href="/index/tuan?num=3&hover=1&pa">
+					DIY
+					<i>({{mathArr[2]}})</i>
+				</a>
+			</li>
+			<li>
+				<a href="/index/tuan?num=4&hover=1&pa">
+					数码
+					<i>({{mathArr[3]}})</i>
+				</a>
+			</li>
+			<li class="W_li_waishe">
+				<a class="W_li_waishe_a&hover=1&pa" href="/index/tuan?num=5&hover=1">
+					外设
+					<i>({{mathArr[4]}})</i>
+					<!--<i class="iconfont">&#xe501;</i>-->
+				</a>
+				<!--<div class="W_m_list_waishe">
+					<div class="W_m_list_waishe_box clear">
+						<a href="javascript:;"><span>数码</span><i>(13)</i></a>
+						<a href="javascript:;"><span>投影机</span><i>(1)</i></a>
+						<a href="javascript:;"><span>电脑外设</span><i>(22)</i></a>
+					</div>
+					<b></b>
+				</div>-->
+			</li>
+			<li>
+				<a href="/index/tuan?num=6&hover=1&pa">
+					智能
+					<i>({{mathArr[5]}})</i>
+				</a>
+			</li>
+			<li>
+				<a href="/index/tuan?num=7&hover=1&pa">
+					其他
+					<i>({{mathArr[6]}})</i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!--排序-->
+	<div class="W_m_tit_bottom ">
+		<ul class="W_m_tit_ul clear">
+			<li>
+				<a class="active paixu" href="/index/tuan?num={{num}}&hover=1">默认</a>
+			</li>
+			<li>
+				<a data-xu="{{xu}}" data-pa="{{pa}}" class="paixu" href="/index/tuan?num={{num}}&hover=1&pa=xl&xu=1">销量<i class="iconfont">&#xe501;</i></a>
+
+			</li>
+			<li>
+				<a class="paixu" href="/index/tuan?num={{num}}&hover=1&pa=price&xu=-1">价格<i class="iconfont">&#xe604;</i></a>
+
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--商品列表-->
+<ul class="W_commodity_list clear">
+	{% for goods in result%}
+	<li class="W_commodity_li">
+		<a class="W_commodity_li_link" href="/index/details?hover=1&id={{goods._id.toString()}}">
+			<div class="W_item_pic">
+				<img src="{{goods.mainpic[0]}}" alt="" />
+			</div>
+			<div class="W_item_info">
+				<div class="W_item_desc">
+					<p class="W_item_name">{{goods.title}}</p>
+					<span class="W_item_intro">{{goods.descript}}</span>
+				</div>
+				<div class="W_item_detail clear">
+					<div class="W_item_detail_left">
+						<div class="W_item_price">
+							<span class="W_item_price_x">
+											<em>￥</em><span>{{goods.price}}</span>
+							</span>
+							<span class="W_item_price_l">
+											<em>￥</em><span>129</span>
+							</span>
+						</div>
+						<span class="W_ls_price">
+										<span>立省60元</span>
+						</span>
+					</div>
+					<div class="W_item_detail_btn">
+						<span>马上抢</span>
+					</div>
+				</div>
+			</div>
+			<div class="W_show_time clear">
+				<i class="iconfont">&#xe6dd;</i>
+				<div class="W_countdown">
+					剩余:
+					<span class="W_day">00</span> 天
+					<span class="W_hour">00</span> 时
+					<span class="W_minute">00</span> 分
+					<span class="W_second">00</span> 秒
+				</div>
+			</div>
+		</a>
+	</li>
+	{%endfor%}
+</ul>
+<script>
+//列表块的特效
+	$('.W_commodity_li_link').on('mousemove', function(e){
+		var W_evn = e || window.event;
+		var W_this = $(this).get()[0];
+		var W_X = W_evn.offsetX - $(this).width() / 2;
+		var W_Y = W_evn.offsetY - $(this).height() / 2;
+		
+		W_this.style.transform = 'rotateY('+W_X/30+'deg)';
+	});
+	
+	$('.W_commodity_li_link').on('mouseout', function(e){
+		var W_evn = e || window.event;
+		var W_this = $(this).get()[0];
+		W_this.style.transform = 'rotate(0deg)';
+	});
+	
+	//排序切换
+	var Wpai = document.getElementsByClassName('paixu');
+	var Wpaipa = Wpai[1].getAttribute('data-pa'); 
+	var Wpaixu = Wpai[1].getAttribute('data-xu'); 
+	if(Wpaipa == ''){
+		for(var i = 0; i < Wpai.length; i++){
+			Wpai[i].setAttribute('class','paixu');
+		}
+		Wpai[0].setAttribute('class','active paixu');
+	}else if(Wpaipa == 'xl'){
+		for(var i = 0; i < Wpai.length; i++){
+			Wpai[i].setAttribute('class','paixu');
+		}
+		Wpai[1].setAttribute('class','active paixu');
+		if(Wpaixu<0){
+			Wpai[1].setAttribute('href','/index/tuan?hover=1&pa=xl&xu=1&num={{num}}');
+			Wpai[1].children[0].innerHTML = '&#xe604;';
+		}else{
+			Wpai[1].setAttribute('href','/index/tuan?hover=1&pa=xl&xu=-1&num={{num}}');
+			Wpai[1].children[0].innerHTML = '&#xe501;';
+		}
+	}else if(Wpaipa == 'price'){
+		for(var i = 0; i < Wpai.length; i++){
+			Wpai[i].setAttribute('class','paixu');
+		}
+		Wpai[2].setAttribute('class','active paixu');
+		if(Wpaixu>0){
+			Wpai[2].setAttribute('href','/index/tuan?hover=1&pa=price&xu=-1&num={{num}}');
+			Wpai[2].children[0].innerHTML = '&#xe501;';
+		}else{
+			Wpai[2].setAttribute('href','/index/tuan?hover=1&pa=price&xu=1&num={{num}}');
+			Wpai[2].children[0].innerHTML = '&#xe604;';
+		}
+	}
+	//分类特效
+	var S_num = $('.W_m_list').attr('data-num');
+	// $('.W_m_list > li').eq(S_num).addClass('S_lis').end().sibling().removeClass();
+	
+
+</script>
+<div style="width:1200px;margin:0 auto;">
+	{% include 'admin/page.html' %}
+</div>
+
+
+
+{% include 'W_index_foot.html' %} {%endblock%}

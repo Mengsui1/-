@@ -1,0 +1,127 @@
+
+
+{% block main %}
+
+    <ol class="breadcrumb">
+        <li>管理首页</li>
+        <li><a href="/user/cotegory_index">商品列表</a></li>
+        <li><span>添加商品</span></li>
+    </ol>
+
+
+<h3>分类添加</h3>
+
+{%endblock%}
+
+
+
+{% block main %}
+<style>
+	form{
+		padding:10px;
+	}
+	label{
+		float:left;
+		text-align:right;
+	}
+	input[type=text]{
+		float:left;
+		
+	}
+	.form-group{
+
+		margin:5px auto 0px;
+	}
+
+	
+</style>
+
+<ol class="breadcrumb">
+    <li><a href="/user">管理首页</a></li>
+    <li><span>添加商品</span></li>
+</ol>
+
+<form role="form" action="/user/cotegory_add" method="post">
+	<div class="form-group clear">
+        <label for="index">在首页哪块显示</label>
+        <select style="width:200px;" name="index" id="index">
+        	<option value="everyThing">everyThing</option>
+        	<option value="轮播">轮播</option>
+        	<option value="团轮播">团轮播</option>
+        	<option value="团购">团购</option>
+        	<option value="智选">智选</option>
+        	<option value="品牌">品牌</option>
+        	<option value="电子">电子</option>
+        	<option value="数码">数码</option>
+        	<option value="电轮播">电轮播</option>
+        	<option value="手风琴">手风琴</option>
+        	<option value="1F">1F</option>
+        	<option value="2F">2F</option>
+        	<option value="3F">3F</option>
+        	<option value="开团">开团</option>
+        </select>
+    </div>
+    <div class="form-group clear">
+        <label for="xl">销量:</label>
+        <input type="text" class="form-control" name="xl" placeholder="请输入商品销量...">
+    </div>
+    <div class="form-group clear">
+        <label for="indexImg">首页图片路径:</label>
+        <input type="text" class="form-control" name="indexImg" placeholder="请输入首页商品路径...">
+    </div>
+    <div class="form-group clear">
+        <label for="name">标题:</label>
+        <input type="text" class="form-control" name="title" placeholder="请输入商品标题...">
+    </div>
+     <div class="form-group clear">
+        <label for="name">描述:</label>
+        <input type="text" class="form-control" name="descript" placeholder="请输入描述...">
+    </div>
+     <div class="form-group clear">
+        <label for="name">卖家:</label>
+        <input type="text" class="form-control" name="shop" placeholder="请输入卖家店名...">
+    </div>
+     <div class="form-group clear">
+        <label for="name">总数:</label>
+        <input type="text" class="form-control" name="nums" placeholder="请输入总数...">
+    </div>
+     <div class="form-group clear">
+        <label for="name">价格:</label>
+        <input type="text" class="form-control" name="price" placeholder="请输入价格...">
+    </div>
+    <div class="form-group clear">
+        <label for="name">颜色组:</label>
+        <input type="text" class="form-control"  name="color" placeholder="请输入中文颜色多个用;隔开...">
+    </div>
+    <div class="form-group clear">
+        <label for="name">配件:</label>
+        <input type="text" class="form-control"  name="peijian" placeholder="请输入配件名...">
+    </div>
+    <div class="form-group clear">
+        <label for="name">详情图组:</label>
+        <input type="text" class="form-control"  name="mainpic" placeholder="请输入图片组地址;隔开...">
+    </div>
+     <div class="form-group clear">
+        <label for="name">品牌:</label>
+        <input type="text" class="form-control"  name="brand" placeholder="请输入品牌..." />
+    </div>
+     <div class="form-group clear">
+        <label for="name">是否上架了:</label>
+        <input type="text" class="form-control"  name="goodStatus" placeholder="请输入数字不没上...">
+    </div>
+     <div class="form-group clear">
+        <label for="name">商品类别:</label>
+        <input type="text" class="form-control"  name="tid" placeholder="请输入分类商品编号1-6...">
+    </div>
+     
+
+    <button type="submit" class="btn btn-block btn-success">提交</button>
+</form>
+
+{%endblock%}
+
+
+
+
+
+

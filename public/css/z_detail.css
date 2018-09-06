@@ -1,0 +1,999 @@
+
+.Z_main {
+    width:1200px;
+    margin: 0 auto;
+}
+/*左侧*/
+.Z_main > .Z_left {
+    width: 200px;
+    float: left;
+}
+.Z_main > .Z_left .Z_modbox {
+    margin: 10px 0 0;
+    border: 1px solid #ededed;
+}
+.Z_main > .Z_left .Z_left_title {
+    padding: 0 10px;
+    height: 32px;
+        font: 14px/32px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    border-bottom: 1px solid #ededed;
+    background: #fafafa;
+}
+.Z_main > .Z_left .Z_sales_news {
+    padding: 0 10px 6px;
+    overflow: hidden;
+    position: relative;
+}
+.Z_main > .Z_left .Z_sales_news > li {
+    margin: -1px 0 0;
+    padding: 10px 0;
+    border-top: 1px solid #f2f2f2;
+}
+.Z_main > .Z_left .Z_sales_news > li a {
+    color: #333;
+}
+.Z_main > .Z_left .Z_sales_news > li .Z_price {
+    height: 22px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #999;
+}
+.Z_main > .Z_left .Z_sales_news > li a img {
+    width: 168px;
+}
+.Z_main > .Z_left .Z_sales_news > li .Z_price .Z_sale_price {
+    color: #c00;
+    font-weight: bold;
+}
+.Z_main > .Z_left .Z_sales_news > li .Z_price .Z_yuan_price {
+    padding: 0 0 0 10px;
+    text-decoration: line-through;
+    color: #999;
+}
+.Z_main > .Z_left .Z_sales_news > li .Z_title {
+    display: block;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    font-size: 12px;
+}
+.Z_main > .Z_left .Z_sales_news > li .Z_title:hover a {
+    color: #c00;
+}
+
+
+/*右侧*/
+.Z_main > .Z_right {
+    float: right;
+    width: 990px;
+}
+.Z_suck_top {
+    zoom: 1;
+}
+.Z_suck_top .Z_tabbar_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    background: #fafafa;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+}
+
+.Z_main > .Z_right .Z_tabbar ul {
+    margin: 10px 0 0;
+    height: 36px;
+    border: 1px solid #ededed;
+    background: #fafafa;
+}
+.Z_suck_top .Z_tabbar_nav ul {
+    margin: 0 auto !important;
+    width: 999px;
+    box-sizing: content-box;
+    padding: 0 0 0 201px;
+    border: 0 none !important;
+}
+.Z_main > .Z_right .Z_tabbar ul > li {
+    float: left;
+    border-right: 1px solid #ededed;
+}
+.Z_main > .Z_right .Z_tabbar ul .cur {
+    margin: -1px 0 -1px -1px;
+    padding: 0 0 2px;
+    position: relative;
+    height: 34px;
+    background: #fff;
+    border: 1px solid #ededed;
+    border-top: 2px solid #c00;
+    border-bottom: none;
+}
+.Z_main > .Z_right .Z_tabbar ul > li a {
+    padding: 0 15px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    font: 14px/36px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    white-space: nowrap;
+}
+.Z_main > .Z_right .Z_tabbar ul > li a:hover {
+    color: #c00;
+}
+.Z_main > .Z_right .Z_tabbar .cur a, .Z_main > .Z_right .Z_tabbar .cur a:hover {
+    display: block;
+    font: 14px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #333;
+    text-decoration: none;
+}
+.Z_main > .Z_right .Z_tabbar ul > li em {
+    padding: 0 0 0 5px;
+    font-weight: bold;
+    color: #c00;
+}
+.Z_main > .Z_right .Z_tabbar ul > li .Z_phone {
+    position: relative;
+}
+.Z_main > .Z_right .Z_tabbar ul > li .Z_phone a {
+    position: relative;
+    padding: 0 25px 0 38px;
+    background: url(../images/bg.png) no-repeat;
+    background-position: -24px -1230px;
+    color: #c00;
+}
+.Z_main > .Z_right .Z_tabbar ul > li .Z_phone .Z_ico {
+    position: absolute;
+    top: 15px;
+    right: 16px;
+    width: 5px;
+    height: 3px;
+    font: 0/0 arial;
+    background: url(../images/bg.png) no-repeat;
+    background-position: 0 -1241px;
+}
+.Z_main > .Z_right .Z_tabbar ul > li .Z_phone:hover .Z_ico {
+    background-position: 0 -1254px;
+}
+.Z_main > .Z_right .Z_tabbar ul > li .Z_phone .Z_code {
+    display: none;
+    position: absolute;
+    top: 34px;
+    left: -1px;
+    padding: 10px 14px;
+    border: 1px solid #ededed;
+    border-top: none;
+    border-top-color: #fff;
+    background: #fff;
+}
+.Z_main > .Z_right .Z_tabbar ul > li .Z_phone:hover .Z_code {
+    display: block;
+}
+.Z_main > .Z_right .Z_tabbar ul > li .Z_phone .Z_code img {
+    display: block;
+    width: 91px;
+    height: 91px;
+}
+.Z_main > .Z_right .Z_tabbar ul .Z_buy_btn {
+    float: right;
+    border: 0 none;
+}
+.Z_main > .Z_right .Z_tabbar ul .Z_buy_btn .Z_btn {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 36px;
+    background: #c00;
+    color: #fff;
+    font: 14px/36px "Microsoft YaHei","5FAE8F6F96C59ED1";
+    text-align: center;
+}
+.Z_main > .Z_right .Z_tabbar ul .Z_buy_btn .Z_btn:hover {
+    background: #B90000;
+}
+.Z_main > .Z_right .Z_container {
+    float: left;
+    width: 790px;
+}
+.Z_main > .Z_right .Z_container .Z_attributes_list {
+    margin: 10px 0 0;
+}
+.Z_main > .Z_right .Z_container .Z_attributes_list > li {
+    margin: 0 0 8px;
+    padding: 4px 0;
+    font: 12px/22px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.Z_main > .Z_right .Z_container .Z_attributes_list span {
+    font-weight: bold;
+}
+.Z_main > .Z_right .Z_container .Z_service_title {
+    width: 790px;
+    height: 33px;
+    background: url(../images/sevice-title-new.png);
+    font: 20px/33px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.Z_main > .Z_right .Z_container .Z_service_title .Z_title {
+    display: inline-block;
+    padding: 0 0 0 10px;
+    font: 20px/33px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    width: 160px;
+    text-align: center;
+    color: #c00;
+}
+.Z_main > .Z_right .Z_container .Z_service_title .Z_english_title {
+    display: inline-block;
+    font: 20px/33px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    padding: 0 0 0 50px;
+    color: #fff;
+}
+.Z_main > .Z_right .Z_container .Z_goods_detail .Z_service_content {
+    padding: 5px 0px;
+    font: 14px/54px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #646464;
+    width: 790px;
+    overflow: hidden;
+}
+.Z_main > .Z_right .Z_container .Z_goods_detail .Z_service_content .Z_baoyou{
+    display: block;
+    height: 162px;
+    margin-top: 16px;
+    text-align: center;
+    color: rgb(255, 0, 0);
+    font-size: 35px;
+}
+.Z_main > .Z_right .Z_container .Z_goods_detail .Z_service_content .Z_youhui{
+    display: block;
+    height: 50px;
+    text-align: center;
+    color: rgb(255, 0, 0);
+    font-size: 35px;
+}
+.Z_main > .Z_right .Z_container .Z_goods_detail .Z_kongbai {
+    width: 100%;
+    height: 413px;
+    /*border: 1px solid red;*/
+}
+/* 评价 */
+.Z_main > .Z_right .Z_container .Z_pingjia {
+    padding: 10px 0 0;
+}
+.Z_main > .Z_right .Z_container .Z_pingjia .Z_pingjia_head .Z_comment_goodsrate {
+    padding: 15px 0 15px 15px;
+}
+.Z_main > .Z_right .Z_container .Z_pingjia .Z_pingjia_head .Z_comment_goodsrate .Z_goods_num {
+    float: left;
+    width: 150px;
+    height: 73px;
+    padding: 11px 0 0;
+    border-right: 1px solid #e6e6e6;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+}
+.Z_main > .Z_right .Z_container .Z_pingjia .Z_pingjia_head .Z_comment_goodsrate .Z_goods_num em {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    color: #c00;
+    font-size: 24px;
+}
+.Z_main > .Z_right .Z_container .Z_pingjia .Z_pingjia_head .Z_comment_goodsrate .Z_goods_num em b {
+    font-size: 38px;
+}
+.Z_main > .Z_right .Z_container .Z_pingjia .Z_pingjia_head .Z_comment_goodsrate .Z_goods_num_list {
+    float: left;
+}
+.Z_main > .Z_right .Z_container .Z_pingjia .Z_pingjia_head .Z_comment_goodsrate .Z_goods_num_list > li {
+    box-sizing: content-box;
+    float: left;
+    position: relative;
+    padding: 5px 0 0 126px;
+    width: 76px;
+    height: 79px;
+    
+}
+.Z_main > .Z_right .Z_container .Z_pingjia .Z_pingjia_head .Z_comment_goodsrate .Z_goods_num_list > li .Z_comment_rate {
+    position: absolute;
+    top: 5px;
+    left: 40px;
+    width: 78px;
+    height: 78px;
+    background: url(../images/rate-bg.png) no-repeat;
+    overflow: hidden;
+}
+.Z_goods_num_list > li .Z_comment_rate .Z_rate_num {
+    position: absolute;
+    width: 78px;
+    line-height: 78px;
+    color: #c00;
+    font-size: 14px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+.Z_goods_num_list li .Z_comment_rate .Z_bg, .Z_goods_num_list li .Z_comment_rate .Z_front {
+    width: 39px;
+    height: 78px;
+    position: absolute;
+    top: 0;
+    background: url(../images/rate-bg.png) no-repeat;
+}
+
+.Z_comment_rate .Z_rotate {
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    left: 0;
+    top: 0;
+}
+.Z_goods_num_list > li .Z_comment_rate .Z_rotate {
+    filter: none !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+.Z_goods_num_list > li .Z_comment_rate .Z_rotate_left {
+    z-index: 9;
+}
+.Z_goods_num_list > li .Z_comment_rate .Z_rotate_right {
+    z-index: 12;
+}
+.Z_comment_rate .Z_front {
+    z-index: 10;
+}
+.Z_goods_num_list > li .Z_comment_rate .Z_rotate .Z_left {
+    left: 0;
+    background: url(../images/rate-cur.png) no-repeat left top;
+}
+.Z_goods_num_list > li .Z_comment_rate .Z_rotate .Z_right {
+    left: 39px;
+    background: url(../images/rate-cur.png) no-repeat right top;
+}
+
+.Z_main > .Z_right .Z_container .Z_pingjia .Z_pingjia_head .Z_comment_goodsrate .Z_goods_num_list > li .Z_nums {
+    width: 76px;
+    padding: 22px 0 0;
+    font-size: 14px;
+    color: #999;
+    line-height: 18px;
+}
+.Z_main > .Z_right .Z_container .Z_pingjia .Z_pingjia_head .Z_comment_goodsrate .Z_goods_num_list > li .Z_nums em {
+    display: block;
+    padding: 0 0 0 11px;
+    color: #666;
+}
+.Z_main > .Z_right .Z_container .Z_pingjia .Z_pingjia_head .Z_comment_filter {
+    height: 30px;
+    padding: 0 5px;
+    background: #fafafa;
+}
+.Z_pingjia_head .Z_comment_filter span {
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 30px;
+    color: #666;
+    cursor: pointer;
+}
+.Z_pingjia_head .Z_comment_filter span.cur {
+    color: #c00;
+}
+
+.Z_container .Z_pingjia .Z_pingjia_details .Z_review_list .Z_comment_content .Z_comment_item {
+    position: relative;
+    padding: 16px 30px 17px;
+    border-bottom: 1px solid #ededed;
+}
+.Z_container .Z_pingjia .Z_pingjia_details .Z_review_list .Z_comment_content .Z_comment_item .Z_comment_author {
+    height: 24px;
+    line-height: 24px;
+    color: #999;
+}
+.Z_comment_item .Z_comment_author .Z_comment_star, .Z_comment_item .Z_comment_author .Z_comment_star em {
+    background: url(../images/comment-icos.png) no-repeat;
+}
+.Z_container .Z_pingjia .Z_pingjia_details .Z_review_list .Z_comment_content .Z_comment_item .Z_comment_author .Z_comment_star {
+    float: left;
+    position: relative;
+    width: 80px;
+    height: 14px;
+    margin: 4px 0 0;
+    font-size: 0;
+    overflow: hidden;
+    background-position: 0 -23px;
+    background-repeat: repeat-x;
+}
+.Z_comment_item .Z_comment_author .Z_comment_star em {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 14px;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+}
+.Z_comment_item .Z_author {
+    float: right;
+}
+.Z_comment_item .Z_author .Z_name {
+    padding: 0 20px 0 4px;
+}
+.Z_comment_item .Z_comment_text {
+    font-size: 12px;
+    padding: 6px 0 0;
+    color: #666;
+}
+.Z_comment_item .Z_comment_time {
+    padding: 5px 0 0;
+    color: #999;
+}
+.Z_comment_item .Z_comment_time span {
+    padding: 0 15px 0 0;
+}
+
+
+/* 分页 */
+.Z_fenye_box {
+    width: 100%;
+    height: 79px;
+    line-height: 79px;
+    text-align: center;
+}
+
+
+/* 交易记录 */
+.Z_container .Z_purchase_record {
+    margin: 10px 0 0;
+}
+.Z_container .Z_purchase_record .Z_title, .Z_container .Z_message_mod .Z_title {
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 14px;
+    background: #c00;
+}
+.Z_container .Z_purchase_record .Z_title h4, .Z_container .Z_message_mod .Z_title h4 {
+    font-size: 14px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 100;
+}
+.Z_container .Z_detail_head_filter {
+    padding: 10px 15px 0 15px;
+    height: 34px;
+    background: #fff;
+    border: 1px solid #ededed;
+    box-sizing: content-box;
+}
+.Z_container .Z_detail_head_filter .Z_checks {
+    float: left;
+    line-height: 26px;
+}
+.Z_container .Z_checks {
+    padding: 0;
+}
+.Z_container .Z_checks label {
+    margin-right: 20px;
+    margin-bottom: 0;
+    cursor: default;
+    color: #333;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1" !important;
+}
+.Z_container .Z_checks .Z_cur {
+    color: #c30;
+}
+.Z_container .Z_purchase_record table {
+    width: 718px;
+    margin-top: 10px;
+    border: 0 none;
+    border-collapse: collapse;
+}
+.Z_cell_buyer {
+    width: 96px;
+}
+.Z_cell_sku {
+    width: 171px;
+}
+.Z_cell_price {
+    width: 88px;
+    color: #c00;
+}
+.Z_cell_amount {
+    width: 45px;
+}
+.Z_cell_time {
+    width: 128px;
+    color: #999;
+}
+
+.Z_container .Z_purchase_record th {
+    padding: 0 16px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: left;
+    color: #333;
+    background-color: #f8f8f8;
+    font-weight: 100;
+}
+.Z_container .Z_purchase_record td {
+    font-size: 12px;
+    padding: 16px 16px;
+    border-bottom: 1px solid #f2f2f2;
+    line-height: 18px;
+    vertical-align: top;
+}
+
+/* 咨询 */
+.Z_detail_head_filter .Z_ask_link {
+    float: right;
+    line-height: 26px;
+    color: #36c;
+}
+.Z_ask_list li {
+    padding: 16px 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle ;
+}
+.Z_ask_list li .Z_user_infor {
+    height: 18px;
+    line-height: 18px;
+}
+.Z_ask_list li .Z_user_infor em {
+    margin-right: 4px;
+    color: #999;
+}
+.Z_ask_list li .Z_user_infor .Z_time {
+    margin-left: 24px;
+    color: #999;
+}
+.Z_ask_list li .Z_question {
+    margin: 8px 170px 0 0;
+    line-height: 18px;
+}
+.Z_ask_list li .Z_reply {
+    margin-top: 20px;
+    padding-right: 170px;
+    position: relative;
+    color: #c60;
+    line-height: 18px;
+}
+.Z_ask_list li .Z_reply .Z_time {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #999;
+}
+
+/* 发表咨询 */
+.Z_enter_message {
+    position: relative;
+    margin: 25px 0 0;
+}
+.Z_enter_message .Z_detail_head .Z_close {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    width: 11px;
+    height: 11px;
+    background: url(../images/icon20150707.png) no-repeat;
+    background-position: -12px -160px;
+    cursor: pointer;
+}
+.Z_messagebox {
+    border: 1px solid #e6e6e6;
+    border=top: 0 none;
+}
+.Z_messagebox textarea {
+    display: block;
+    width: 718px;
+    height: 153px;
+    padding: 5px 15px;
+    box-sizing: content-box;
+    border: 0 none;
+    resize: none;
+    cursor: text;
+    font: 12px/22px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #666;
+}
+.Z_messagebox .Z_question_foot {
+    position: relative;
+    padding: 0 117px 0 10px;
+    font-size: 12px;
+    height: 37px;
+    line-height: 37px;
+    border: 1px solid #e6e6e6;
+}
+.Z_messagebox .Z_question_foot label {
+    float: left;
+    color: #666;
+}
+.Z_messagebox .Z_question_foot label input {
+    margin: 0 5px 0 0;
+    position: relative;
+    top: -2px;
+}
+.Z_messagebox .Z_question_foot span {
+    float: left;
+    color: #999;
+}
+.Z_messagebox .Z_question_foot .Z_nopublish_btn, .Z_messagebox .Z_question_foot .Z_publish_btn {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    height: 37px;
+    width: 104px;
+    line-height: 37px;
+    text-align: center;
+}
+.Z_nopublish_btn, .Z_nopublish_btn:hover {
+    background: #f2f2f2;
+    color: #ccc;
+    text-decoration: none;
+    cursor: default;
+}
+.Z_messagebox .Z_question_foot .Z_number {
+    float: right;
+    padding: 0 20px 0 0;
+    box-sizing: content-box;
+}
+.Z_messagebox .Z_question_foot .Z_number em {
+    color: #c00;
+}
+.Z_publish_btn {
+    background: #cd0100;
+    color: #fff;
+}
+
+/* 参数 */
+.Z_parameter {
+    padding: 10px 0 0;
+    box-sizing: content-box;
+}
+.Z_parameter table {
+    border: 1px solid #dbe8f4;
+    border-collapse: collapse;
+}
+.Z_parameter th {
+    height: 24px;
+    padding: 2px 0 2px 20px;
+    text-align: left;
+    background: #f1fafe;
+    border: 1px solid #dbe8f4;
+}
+.Z_parameter td {
+    height: 24px;
+    padding: 2px 10px;
+    border: 1px solid #dbe8f4;
+    color: #666;
+}
+.Z_parameter .Z_parameter_title {
+    width: 130px;
+    background: #f1fafe;
+    text-align: right;
+}
+.Z_parameter .Z_parameter_infor {
+    background: #fff;
+    text-align: left;
+}
+.Z_parameter .Z_parameter_infor a {
+    color: blue;
+}
+
+
+/* 服务保障 */
+.Z_service_guarantee {
+    padding: 0 50px;
+    box-sizing: content-box;
+}
+.Z_service_guarantee .Z_service_banner {
+    width: 650px;
+    height: 144px;
+    background: url(../images/bz-title.png) no-repeat;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+.Z_service_guarantee .Z_service_banner .Z_add_plus {
+    display: inline-block;
+    position: relative;
+    top: -4px;
+}
+.Z_service_guarantee .Z_service-title {
+    position: relative;
+    padding: 0 0 0 60px;
+    box-sizing: content-box;
+    height: 50px;
+    font: 18px/50px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #00c576;
+}
+.Z_service_guarantee .Z_service-title i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: url(../images/ico.png) no-repeat;
+}
+.Z_service_guarantee .Z_service-title .Z_ico-13 {
+    background-position: 0 -660px;
+}
+.Z_service_guarantee .Z_service-title .Z_ico-1 {
+    background-position: 0 0;
+}
+.Z_service_guarantee .Z_service-title .Z_ico-3 {
+    background-position: 0 -110px;
+}
+.Z_service_guarantee .Z_service-title .Z_ico-7 {
+    background-position: 0 -330px;
+}
+.Z_service_guarantee .Z_service-title .Z_ico-8 {
+    background-position: 0 -385px;
+}
+.Z_service_guarantee .Z_service-title .Z_ico-9 {
+    background-position: 0 -440px;
+}
+.Z_service_guarantee .Z_service-title .Z_ico-10 {
+    background-position: 0 -495px;
+}
+.Z_service_guarantee .Z_service-title .Z_ico-11 {
+    background-position: 0 -550px;
+}
+.Z_service_guarantee .Z_service-title .Z_ico-12 {
+    background-position: 0 -605px;
+}
+
+.Z_service_guarantee .Z_service_content {
+    padding: 0 0 20px;
+    font: 14px/24px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #646464;
+}
+.Z_service_guarantee .Z_service_content p {
+    padding: 10px 0;
+}
+.Z_service_guarantee .Z_service_content dl {
+    padding: 10px 0;
+} 
+.Z_service_guarantee .Z_service_content dt {
+    padding: 0 0 5px;
+    color: #333;
+    font-weight: 500;
+}
+.Z_service_guarantee .Z_service_content .Z_punishment-way {
+    width: 100%;
+    margin: 10px 0 0;
+    box-sizing: content-box;
+    border-collapse: collapse;
+    border: 1px solid #00c576;
+}
+.Z_service_guarantee .Z_service_content .Z_punishment-way th, .Z_refund_way th {
+    background: #d3f5e8;
+    border: 1px solid #00c576;
+    color: #333;
+    text-align: center;
+    font: 14px/20px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.Z_service_guarantee .Z_service_content .Z_punishment-way td, .Z_refund_way td {
+    border: 1px solid #00c576;
+    color: #7a7a7a;
+    text-align: center;
+    font: 14px/24px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.x_goods_detail li{
+	font-size:14px;
+}
+.x_goods_detail span{
+	font-size:14px;
+}
+
+.Z_service_guarantee .Z_service_content .Z_punishment-way .Z_cell-1 {
+    width: 80px;
+}
+.Z_service_guarantee .Z_service_content .Z_punishment-way .Z_cell-2 {
+    width: 185px;
+    padding: 10px;
+}
+.Z_service_guarantee .Z_service_content .Z_punishment-way .Z_cell-3 {
+    width: 194px;
+    padding: 10px;
+}
+.Z_service_guarantee .Z_service_content .Z_punishment-way .Z_cell-4 {
+    width: 133px;
+    padding: 10px;
+}
+.Z_refund_way .Z_cell-1, .Z_refund_way .Z_cell-2, .Z_refund_way .Z_cell-3 {
+    width: 195px;
+    padding: 5px 10px;
+}
+.Z_refund_limit li {
+    list-style: inside;
+}
+
+/* 右侧导航栏 */
+.Z_side {
+    float: right;
+    width: 198px;
+    border-bottom: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #ededed;
+    border-top: 0 none;
+    background: #fafafa;
+    box-sizing: content-box;
+}
+.Z_suck_top .Z_side {
+    /*position: fixed;*/
+    top: 36px;
+    left: 50%;
+    margin: 0 0 0 400px;
+    float: none ;
+    z-index: 49;
+    overflow: hidden;
+}
+.Z_side .Z_quick_menu {
+    margin: 20px 0;
+    padding: 0 30px;
+    overflow: hidden;
+    zoom: 1;
+    height: 100%;
+    z-index: 111;
+}
+.Z_side .Z_quick_menu ul {
+    margin: -14px 0;
+}
+.Z_side .Z_quick_menu ul > li {
+    height: 45px;
+    font: 14px/45px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    vertical-align: middle;
+}
+.Z_side .Z_quick_menu ul > li a {
+    display: block;
+    padding: 0 0 0 22px;
+    background: url(../images/quick-menu.png) no-repeat;
+    color: #333;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+.Z_side .Z_quick_menu ul > li .Z_cur {
+    background-position: 0 -45px;
+    color: #c00;
+}
+.Z_side .Z_quick_menu ul > li:hover a {
+    background-position: 0 -45px;
+    color: #c00;
+}
+
+/* 侧面按钮 */
+.Z_consult_layer {
+    position: fixed;
+    z-index: 99;
+    top: 192px;
+    left: 50%;
+    background:white;
+    margin: 0 0 0 615px;
+    box-sizing: content-box;
+}
+.Z_quick_dove, .Z_qq_consult {
+	background-color: #fff;
+    background: url(../images/W_bg.png) no-repeat;
+    display: block;
+    padding: 41px 0 11px;
+    width: 78px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    border: 1px solid #ededed;
+
+    position: relative;
+    color: #333;
+}
+.Z_quick_dove {
+    background-position: 50% -976px;
+}
+.Z_qq_consult {
+    background-position: 50% -1056px;
+}
+.Z_consult_layer a:hover{
+	opacity: 0.7;
+}
+
+/* 返回顶部 */
+.widget {
+    margin: 0 0 0 615px !important;
+    left: 50%;
+}
+#Z_pubFreeBack {
+    position: fixed;
+    right: 15px;
+    bottom: 35px;
+    width: 54px;
+    font-size: 14px;
+}
+.Z_backtop, .Z_feedback {
+    background: url(../images/backtop.png) no-repeat;
+    background-color: #d0625c;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+.Z_backtop {
+    display: block;
+    width: 30px;
+    height:35px;
+    box-sizing: content-box;
+    margin: 1px 0 0;
+    padding: 12px 15px;
+    text-align: center;
+    font: 14px/18px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+    color: #fff;
+}
+
+
+
+
+/* 底部 */
+footer {
+    margin: 30px 0 0;
+    border-top: 1px solid #d9d9d9;
+}
+.Z_wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+.Z_wrapper .Z_foot_head {
+    border: 0 none;
+    padding: 20px 0; 
+}
+.Z_wrapper .Z_foot_head .Z_cooperation, .Z_wrapper .Z_foot_head .Z_hotline {
+    float: right;
+    padding: 0 0 0 60px;
+    background: url(../images/footer.png) no-repeat;
+}
+.Z_wrapper .Z_foot_head .Z_cooperation {
+    box-sizing: content-box;
+    width: 145px;
+    background-position: 0 -215px;
+}
+.Z_wrapper .Z_foot_head dt {
+    font: bold 14px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+    color: #666;
+}
+.Z_wrapper .Z_foot_head .Z_cooperation dt, .Z_wrapper .Z_foot_head .Z_hotline dt {
+    padding: 0;
+    font-size: 16px;
+}
+.Z_wrapper .Z_foot_head dd p {
+    font: 12px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.Z_wrapper .Z_foot_head dd .Z_btn {
+    display: block;
+    margin: 6px 0 0;
+    width: 80px;
+    height: 26px;
+    font: 12px/26px SimSun;
+    color: #fff;
+    text-align: center;
+    background: #f33;
+    border-radius: 2px;
+}
+.Z_wrapper .Z_foot_head dd .Z_btn span {
+    padding: 0 5px 0 0;
+    font-family: "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.Z_wrapper .Z_foot_head .Z_hotline {
+    box-sizing: content-box;
+    width: 210px;
+    background-position: 0 -90px;
+}
+.Z_wrapper .Z_foot_head dl {
+    float: left;
+    width: 175px;
+}
+
+
+
+
+
+
+
+

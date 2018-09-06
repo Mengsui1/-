@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+header {
+  width: 100%;
+  height: 2.08rem;
+  background-color: #CD2934;
+}
+header > div {
+  float: left;
+}
+header > div:first-child {
+  margin-left: 0.26666667rem;
+}
+header > div:first-child a {
+  color: #fff;
+  font-size: 1.06666667rem;
+  line-height: 2.08rem;
+}
+header > div:nth-child(2) {
+  margin-left: 5.33333333rem;
+}
+header > div:nth-child(2) p {
+  font-size: 1.06666667rem;
+  color: #fff;
+  line-height: 2.08rem;
+}
+header > div:last-child {
+  float: right;
+  margin-right: 0.26666667rem;
+}
+header > div:last-child a {
+  color: #fff;
+  font-size: 1.06666667rem;
+  line-height: 2.08rem;
+}
+.user {
+  width: 100%;
+  height: 6.29333333rem;
+  background-color: #E5D8D9;
+  text-align: center;
+  overflow: hidden;
+}
+.user > div {
+  width: 2.93333333rem;
+  margin: 0 auto;
+  border: 4px solid #ebebf4;
+  border-radius: 3.14666667rem;
+  height: 2.93333333rem;
+  overflow: hidden;
+  margin-top: 0.26666667rem;
+}
+.user > div img {
+  width: 100%;
+  height: 100%;
+}
+.user p {
+  font-size: 0.8rem;
+  margin-top: 0.26666667rem;
+}
+main {
+  background-color: #F2F3F5;
+}
+main > div {
+  background-color: #fff;
+}
+main h3 {
+  background-color: #fff;
+  font-size: 0.74666667rem;
+  display: inline-block;
+  font-weight: 400;
+  height: 1.76rem;
+  line-height: 1.65333333rem;
+  border-bottom: 4px solid #e03f3f;
+  margin-left: 0.26666667rem;
+}
+main .dingdan {
+  background-color: #fff;
+  border-top: 1px solid #e6e6e6;
+  padding: 0.69333333rem 0;
+}
+main .dingdan li {
+  text-align: center;
+  width: 19.9%;
+  float: left;
+}
+main .dingdan li a {
+  font-size: 1.06666667rem;
+  display: block;
+  color: #333;
+}
+main .dingdan li p {
+  font-size: 0.69333333rem;
+}
+main .dingdan li:last-child {
+  border-left: 1px dashed #ccc;
+}
+main .leibiao {
+  background-color: #fff;
+  margin-top: 0.53333333rem;
+  padding-left: 0.26666667rem;
+}
+main .leibiao li {
+  border-bottom: 1px solid #ccc;
+  height: 2.02666667rem;
+  line-height: 2.02666667rem;
+}
+main .leibiao li p {
+  float: left;
+  font-size: 0.8rem;
+}
+main .leibiao li a {
+  float: right;
+  font-size: 0.74666667rem;
+  margin-right: 0.26666667rem;
+  
+}

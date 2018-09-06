@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<title>移动端首页</title>
+	<link rel="stylesheet" href="/public/css/yd/index/iconfont.css">
+	<link rel="stylesheet" href="/public/css/yd/index/S_header.css">
+	 <link rel="stylesheet" href="/public/css/yd/index/footer.css"> 
+	 <link rel="stylesheet" href="/public/css/yd/index/S_pagemain.css"> 
+	<script src='/public/js/yd/index/transfrom.js'></script>
+	<script src="/public/js/jquery.min.js"></script>
+	<style>
+		/*轮播*/
+		*{
+			margin:0;
+			padding:0;
+		}
+		img{
+			width:100%;
+		}
+		li{
+			float:left;
+			list-style:none;
+		}
+		li > img {
+			vertical-align: bottom;
+		}
+		#ul1{
+			position:relative;
+			transition:0.5s;
+			left:0;
+		}
+		#box{
+			position:relative;
+			width:100%;
+			/*background:blue;*/
+			overflow:hidden;
+		}
+		#ul2{
+			position:absolute;
+			left: 42%;
+			bottom:20px;
+		}
+		#ul2 li{
+			width:10px;
+			height:10px;
+			background: #cc0000;
+			float:left;
+			border-radius:50%;
+			margin-left:4px;
+			opacity:0.3;
+		}
+	</style>
+</head>
+<body style="overflow-x:none;background:#F5F5F5">
+	<!-- 头部 -->
+	<header>
+		<div>
+			<a href=""><img src="/public/images/ydimg/index/lg.png"/></a>
+		</div>
+		<div>
+			<label>
+				<a href="">北京</a><i class="iconfont">&#xe692;</i>
+			</label>
+		</div>
+		<div>
+			<i class="iconfont">&#xe6a4;</i>
+			<span>iphone7</span>
+		</div>
+		<div>
+			<i class="iconfont">&#xe6a3;</i>
+		</div>
+	</header>
+	<div id='box'>
+		<ul id="ul1">
+			<li>
+				<img src="/public/images/ydimg/index/ChMkJ1odPICIZCidAAIFRKWEpqAAAihqAB6eDIAAgVc455.jpg" alt="">
+			</li>
+			<li>
+				<img src="/public/images/ydimg/index/ChMkJloT6W6IaUHOAAHMaJlv73EAAiWrgBFUusAAcyA722.jpg" alt="">
+			</li>
+			<li>
+				<img src="/public/images/ydimg/index/ChMkJloWZKKIGWvBAAMQyTFyQXYAAiZywDWF5oAAxDh813.jpg" alt="">
+			</li>
+			<li>
+				<img src="/public/images/ydimg/index/ChMkJ1odPICIZCidAAIFRKWEpqAAAihqAB6eDIAAgVc455.jpg" alt="">
+			</li>
+			<li>
+				<img src="/public/images/ydimg/index/ChMkJloT6W6IaUHOAAHMaJlv73EAAiWrgBFUusAAcyA722.jpg" alt="">
+			</li>
+			<li>
+				<img src="/public/images/ydimg/index/ChMkJloWZKKIGWvBAAMQyTFyQXYAAiZywDWF5oAAxDh813.jpg" alt="">
+			</li>
+			<li>
+				<img src="/public/images/ydimg/index/ChMkJ1odPICIZCidAAIFRKWEpqAAAihqAB6eDIAAgVc455.jpg" alt="">
+			</li>
+			<li>
+				<img src="/public/images/ydimg/index/ChMkJloWZKKIGWvBAAMQyTFyQXYAAiZywDWF5oAAxDh813.jpg" alt="">
+			</li>
+			<li>
+				<img src="/public/images/ydimg/index/ChMkJ1odPICIZCidAAIFRKWEpqAAAihqAB6eDIAAgVc455.jpg" alt="">
+			</li>
+		</ul>
+		<ul id="ul2"> 
+			<li style="opacity:1;"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+<!--主体-->
+	<!--8个a标签-->
+	<div class="main">
+		<a href="####">
+			<i class="iconfont" style="background:#ED4F4E">&#xe606;</i>
+			<span>&nbsp;团&nbsp;购</span>
+		</a>
+		<a href="####">
+			<i class="iconfont" style="background:#F56564">&#xe68d;</i>
+			<span>Z智选</span>
+		</a><a href="####">
+			<i class="iconfont" style="background: #51D1C0;">&#xe8d6;</i>
+			<span>&nbsp;维&nbsp;修</span>
+		</a>
+		<a href="####">
+			<i class="iconfont" style="background: #FF6519;">&#xe6de;</i>
+			<span>&nbsp;领&nbsp;券</span>
+		</a>
+		<a href="####">
+			<i class="iconfont" style="background: #FF9219;">&#xe8bc;</i>
+			<span>&nbsp;手&nbsp;机</span>
+		</a>
+		<a href="####">
+			<i class="iconfont" style="background: #F764AA;">&#xe605;</i>
+			<span>&nbsp;电&nbsp;脑</span>
+		</a>
+		<a href="####">
+			<i class="iconfont" style="background: #67C4EE;">&#xe6ae;</i>
+			<span>&nbsp;&nbsp;DIY</span>
+		</a>
+		<a href="####">
+			<i class="iconfont" style="background: #77D9A5;">&#xe672;</i>
+			<span>&nbsp;相&nbsp;机</span>
+		</a>
+	</div>
+	<!--精选好点-->
+	<div class="good">
+		<div class="g_tit">
+			<h3>精选好店</h3>
+			<i class="iconfont">&#xe694;</i><a href="####">更多</a>
+		</div>
+		<div class="g_tuijian">
+			<div>
+				<a href=""><img src="/public/images/ydimg/index/ChMkJ1nEbiaIVJfpAAAuP-QI4IUAAgshwPAT6YAAC5X984.jpg"/></a>
+				<p>印象通讯潮...</p>
+				<p>新店开业,...</p>
+				<p>ZOL推荐商家</p>
+			</div>
+			<div>
+				<a href=""><img src="/public/images/ydimg/index/ChMkJ1nEaxWIE7q1AAAnQhZbAOgAAgsggJOlbkAACda125.jpg"/></a>
+				<p>爱科生活</p>
+				<p>到店大礼包</p>
+				<p>ZOL推荐商家</p>
+			</div>
+		</div>
+	</div>
+	<!--身边好物-->
+	<div class="side">
+		<div class="side_tit">
+			<h3>身边好物</h3>
+			<span>身边好物就在这里</span>
+		</div>
+		<ul>
+			<li>
+				<a href="####"><img src="/public/images/ydimg/index/ChMkJliz_e-Icy7AAAGm2z0BeegAAaPNgE4y7wAAabz878.jpg"/></a>
+				<p>【现货包...</p>
+				<p>金属一体</p>
+				<p>去看看</p>
+			</li>
+			<li>
+				<a href="####"><img src="/public/images/ydimg/index/ChMkJ1bnfmWIE7E6AAD9V7KWzGsAANowgJetswAAP1v672.jpg"/></a>
+				<p>索尼（so...</p>
+				<p>&nbsp;</p>
+				<p>去看看</p>
+			</li>
+			<li>
+				<a href="####"><img src="/public/images/ydimg/index/ChMkJ1nB9oiITmp1AAIcR3ftcYsAAgnywG6Ej0AAhxf685.jpg"/></a>
+				<p>【Lenovo...</p>
+				<p>【薄出位...</p>
+				<p>去看看</p>
+			</li>
+			<li>
+				<a href="####"><img src="/public/images/ydimg/index/Cg-4WVUnwHKIemtYAAB7kyP0whIAABSswITZIQAAHur714.jpg"/></a>
+				<p>索尼（so...</p>
+				<p>光学防抖</p>
+				<p>去看看</p>
+			</li>
+		</ul>
+	</div>
+	<!--Z推荐  文字新闻轮播-->
+	<div class="news">
+		<div>
+			<a href="####"><img src="/public/images/ydimg/index/z-rec-ico.png"/></a>
+		</div>
+		<div class="L_box">
+			<ul class="L_ul1">
+				<li>
+					<p>摆脱电脑 HTC基于谷歌Daydrea...</p>
+					<p>外媒pocket-lint报道，有消息称HTC...</p>
+				</li>
+				<li>
+					<p>摆脱电脑 HTC基于谷歌Daydrea...</p>
+					<p>外媒pocket-lint报道，早就有消息称HTC...</p>
+				</li>
+				<li>
+					<p>摆脱电脑 HTC基于谷歌Daydrea...</p>
+					<p>外媒pocket-lint报道，早就有消息称HTC...</p>
+				</li>
+				<li>
+					<p>摆脱电脑 HTC基于谷歌Daydrea...</p>
+					<p>外媒pocket-lint报道，有消息称HTC...</p>
+				</li>
+				<li>
+					<p>摆脱电脑 HTC基于谷歌Daydrea...</p>
+					<p>外媒pocket-lint报道，早就有消息称HTC...</p>
+				</li>
+				<li>
+					<p>摆脱电脑 HTC基于谷歌Daydrea...</p>
+					<p>外媒pocket-lint报道，早就有消息称HTC...</p>
+				</li>
+			</ul>
+			<ul class="L_ul2">
+				<li style="background:red"></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<!--今日推荐  团购-->
+	<div class="tuangou">
+		<div class="tuan_top">
+			<div class="tuan_tit">
+				<span>团购</span>
+				<i class="iconfont">&#xe694;</i><a href="####" class="gengduo">更多</a>
+			</div>
+			<a href="" class="prc">
+				<img src="/public/images/ydimg/index/ChMkJ1nDXXyIbrDKAAByE_ikGScAAgrGgHpn38AAHIr521.jpg" alt="" />
+			</a> 
+		</div>
+		<!--团购下半部分的prc-->
+		<div class="tuan_bom">
+			<ul>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJ1ohI8yIeNOZAAA5mJKyvPcAAiqtAI91ZcAADmw249.jpg"/></a>
+					<p>
+						<span>￥2588</span>
+						<span><del>￥2888</del></span>
+					</p>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJ1oKYpaIIC0DAADHIRp5Qg4AAiJRwB0sjsAAMc5088.jpg"/></a>
+					<p>
+						<span>￥2588</span>
+						<span><del>￥2888</del></span>
+					</p>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJ1ohB2SIR4MfAABJBV7CBZEAAiqbgN1T4gAAEkd853.jpg"/></a>
+					<p>
+						<span>￥2588</span>
+						<span><del>￥2888</del></span>
+					</p>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJ1ohB2SIR4MfAABJBV7CBZEAAiqbgN1T4gAAEkd853 (1).jpg"/></a>
+					<p>
+						<span>￥2588</span>
+						<span><del>￥2888</del></span>
+					</p>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJloXxb-IPZV_AAFliOnQOu8AAibfwJgzuYAAWWg010.jpg"/></a>
+					<p>
+						<span>￥2588</span>
+						<span><del>￥2888</del></span>
+					</p>
+				</li>
+				<li>
+					<a href="####" ><img src="/public/images/ydimg/index/ChMkJlnDN1OIERATAAOy9AksUncAAgq1AAh-HkAA7MM111.png" /></a>
+					<p>
+						<span>￥2588</span>
+						<span><del>￥2888</del></span>
+					</p>
+				</li>
+			</ul>
+		</div>
+		<!--同城购-->
+		<div class="tongcheng">
+			<div class="tong_tit">—同城购 —</div>
+			<div class="tong_store ">
+				<a href="####"><img src="/public/images/ydimg/index/ChMkJ1dirqiIBFGOAAANm2eYjDUAASrKwKY-QQAAA2z687.jpg"/></a>
+				<span>爱科生活官方旗舰店</span>
+				<i class="iconfont">&#xe694;</i><a href="####">进店</a>
+			</div>
+			<div class="tong_prc1">
+				<a href="####"><img src="/public/images/ydimg/index/ChMkJ1jU6BuINMVwAAEvehEQ3mQAAbCCgFw9CkAAS-S862.jpg"/></a>
+				<a href="####"><img src="/public/images/ydimg/index/ChMkJljQ8-aIYscHAAFM2MIr1kgAAa72wBdso0AAUzw839.jpg"/></a>
+				<a href="####"><img src="/public/images/ydimg/index/ChMkJlicJeKIIG5lAABR5dPyq5YAAZ0nAD9eiAAAFH9141.jpg"/></a>
+			</div>
+			<div class="tong_prc2">
+				<ul>
+					<li>
+						<a href="####"><img src="/public/images/ydimg/index/ChMkJ1fbVweIKF0cAAFjFRSj0IwAAWE_wCT1TMAAWMt290.jpg"/></a>
+						<p>苹果ipho...</p>
+						<p>￥5158</p>
+					</li>
+					<li>
+						<a href="####"><img src="/public/images/ydimg/index/ChMkJlg_v7-IZalIAANHe7VJLhMAAYNDQGJ8lIAA0eT735.jpg"/></a>
+						<p>oppoA57...</p>
+						<p>￥1099</p>
+					</li>
+					<li>
+						<a href="####"><img src="/public/images/ydimg/index/ChMkJ1gyvfeIRHtZAAOQ6FsFeyYAAX8YwHhbDsAA5EA929.jpg"/></a>
+						<p>华为mate...</p>
+						<p>￥2849</p>
+					</li>
+					<li>
+						<a href="####"><img src="/public/images/ydimg/index/ChMkJ1gGy_KIV6fGAAMym3ClapoAAXBAAKTJWgAAzKz717.jpg"/></a>
+						<p>oppo R9s...</p>
+						<p>￥1899</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--Z智选-->
+		<div class="zhixuan">
+			<div class="Z_tit">Z智选</div>
+			<div class="Z_bigimg">
+				<a href="####"><img src="/public/images/ydimg/index/ChMkJlnd8KmIDA4AAADn8m_h-KkAAhKuQOE2dsAAOgK318.jpg"/></a>
+			</div>
+			<div class="Z_prc">
+				<ul>
+					<li><a href="####"><img src="/public/images/ydimg/index/ChMkJlnDcZaIYM2kAABDAIlJZcYAAgrPQFZg5wAAEMY420.jpg"/></a></li>
+					<li><a href="####"><img src="/public/images/ydimg/index/ChMkJlnDcWSIDXJ8AAA8JrICDtQAAgrPANpgDMAADw-338.jpg"/></a></li>
+					<li><a href="####"><img src="/public/images/ydimg/index/ChMkJ1nDcgyII5wmAABEuXs1ucAAAgrPgN4HNUAAETR865.jpg"/></a></li>
+					<li>
+						<a href="####"><img src="/public/images/ydimg/index/ChMkJ1nDc2qIOnWbAAAqMdKiuW0AAgrQgG0I9UAACpJ584.jpg"/></a>
+						<a href="####"><img src="/public/images/ydimg/index/ChMkJ1nDc6mIGoFsAAAdnI_B7JgAAgrQgK76kwAAB20935.jpg"/></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--品牌精选-->
+		<div class="pinpai">
+			<div class="pin_tit">— 品牌精选 —</div>
+			<ul>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJlnDfBCIOp24AABxFblZzCcAAgrTwEnUqcAAHEt769.jpg"/></a>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJ1i_ntGIUlIXAAY7JAArhD0AAajKwEpoIMABjs8384.png"/></a>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJ1nDfr6IPLeaAAFnP2EKJqAAAgrUwByJoUAAWdX664.jpg"/></a>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJ1nDfvCIdVU-AADy_IiOkcYAAgrUwFqxeMAAPMU313.jpg"/></a>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJlnDfgyIbnUTAAEeG3Qg0fMAAgrUgE06mEAAR4z188.jpg"/></a>
+				</li>
+			</ul>
+		</div>
+		<!--电竞diy-->
+ 		<div class="DIY">
+			<div class="DIY_tit">—电竞DIY—</div>
+			<ul>
+				<li><a href="####"><img src="/public/images/ydimg/index/ChMkJlnDhVGIA7iNAAAzKWwt9koAAgrXANEjp8AADNB671.jpg"/></a></li>
+				<li><a href="####"><img src="/public/images/ydimg/index/ChMkJ1nDhdGIKFH7AAA3mrLZfx8AAgrXQLF6xIAADey155.jpg"/></a></li>
+				<li><a href="####"><img src="/public/images/ydimg/index/ChMkJlnDht6IVt2iAAA4xK07m2AAAgrXwCH2ioAADjc801.jpg"/></a></li>
+			</ul>
+			<ul>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJlmIJAyIceUwAAH6JGsXdMgAAfd8ADiRlYAAfo8946.jpg"/></a>
+					<p>炫彩七代i7</p>
+					<p>荣耀8全网...</p>
+					<span>￥788</span>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJ1lwJvOIDEIuAAE7xUAKwdMAAe4qwDwqZ0AATvd377.jpg"/></a>
+					<p>炫彩七代i7</p>
+					<p>荣耀8全网...</p>
+					<span>￥788</span>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJlnDiuWINkKMAAGaVQUgUR4AAgrZQAZvSMAAZpt070.jpg"/></a>
+					<p>炫彩七代i7</p>
+					<p>荣耀8全网...</p>
+					<span>￥788</span>
+				</li>
+				<li>
+					<a href="####"><img src="/public/images/ydimg/index/ChMkJ1nDi2uIaQagAADoH4dGFMAAAgrZQMVdI0AAOg3488.jpg"/></a>
+					<p>炫彩七代i7</p>
+					<p>荣耀8全网...</p>
+					<span>￥788</span>
+				</li>
+			</ul>
+		</div>
+		<!--数码潮品-->
+		<div class="shuma">
+			<div class="shuma_tit">— 数码潮品 —</div>
+			<ul>
+				<li><a href="####"><img src="/public/images/ydimg/index/ChMkJ1nDjNGIT4LBAABkDzcfWFMAAgrZwKXNUkAAGQn857.jpg"/></a></li>
+				<li><a href="####"><img src="/public/images/ydimg/index/ChMkJ1nDjk2IX-g6AABJw6sAvM4AAgrawCS4b4AAEnb115.jpg"/></a></li>
+				<li><a href="####"><img src="/public/images/ydimg/index/ChMkJlnDjvCIXBDJAABBUNzfy7gAAgrbQHofRMAAEFo591.jpg"/></a></li>
+			</ul>
+		</div>
+		<!--精选优品-->
+		<div class="jingxuan">
+			<div class="jingxuan_tit">精选优品 <span>实体连锁 门店直供</span></div>
+			<ul class="clear">
+				<li class="L_style"><a href="####">手机</a></li>
+				<li><a href="####">电脑</a></li>
+				<li><a href="####">相机</a></li>
+				<li><a href="####">DIY</a></li>
+			</ul>
+		</div>
+			<div class="Choice" style="display:block">
+				<ul class="clear">
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+				</ul>
+			</div>
+			<div class="Choice">
+				<ul class="clear">
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/d01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/d01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/d01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/d01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/d01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/d01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+				</ul>
+			</div>
+			<div class="Choice">
+				<ul class="clear">
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/s01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/s01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/s01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/s01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/s01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/s01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+				</ul>
+			</div>
+			<div class="Choice">
+				<ul class="clear">
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/y01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/y01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/y01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/y01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/y01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+					<li>
+						<a href=""><img src="/public/images/ydimg/index/y01.jpg" alt=""></a>
+						<p>苹果 iPhone 7 Plus（全网通）</p>
+						<span><small>¥</small>9999</span>
+					</li>
+				</ul>
+			</div>
+	<!--轮播-->
+	<!--尾部-->
+	<footer>
+		<a href="/yd/shouye">
+			<label >
+				<i class="iconfont" style="color:#FF1111">&#xe61c;</i>
+				<span style="color:#FF1111">首页</span>
+			</label>
+		</a>
+		<a href="/yd/fenlei">
+			<label>
+				<i class="iconfont">&#xe699;</i>
+				<span>分类</span>
+			</label>
+		</a>
+		<a href="/yd/gouwu">
+			<label>
+				<i class="iconfont">&#xe63f;</i>
+				<span>购物车</span>
+			</label>
+		</a>
+		<a href="/yd/me">
+			<label>
+				<i class="iconfont">&#xe6a3;</i>
+				<span>我</span>
+			</label>
+		</a>
+	</footer>
+</body>
+<script>
+var html = document.getElementsByTagName('html')[0];
+	var W = html.clientWidth;
+	// console.log(W);
+	html.style.fontSize = W / 20 + 'px';
+
+	var oBox = document.getElementById('box');
+	var oUl1 = document.getElementById('ul1');
+	var lis = oUl1.getElementsByTagName('li');
+	var oUl2 = document.getElementById('ul2');
+	var lis2 = oUl2.getElementsByTagName('li');
+	var Width = oBox.offsetWidth;
+	oUl1.style.width = lis.length * Width + 'px';
+	for(var i = 0;i<lis.length;i++){
+		lis[i].style.width = (1/lis.length)*100 +"%";
+	}
+	var startPoint = 0;
+	var startX = 0;
+	var num = 0;
+	var Left=0;
+	var timer = null;
+	oBox.addEventListener('touchstart',function(e){
+		Left = oUl1.offsetLeft;
+		num = -Math.round(Left / Width)
+		if(num == 0){
+			num  = 4;
+			oUl1.style.left = - num * Width + "px"; 
+		}
+		if(num == lis.length - 1){
+			num = 3;
+			oUl1.style.left = - num * Width + 'px';
+		}
+		oUl1.style.transition = 'none';
+		startPoint = e.changedTouches[0].pageX;
+		startX = oUl1.offsetLeft;
+	},false)
+	oBox.addEventListener('touchmove',function(e){
+		var dis = e.changedTouches[0].pageX - startPoint;
+		oUl1.style.left = startX + dis + 'px';
+	},false)
+	oBox.addEventListener('touchend',function(){
+		Left = oUl1.offsetLeft;
+		num = Math.round(Left / Width)
+		oUl1.style.transition='0.5s';
+		
+		oUl1.style.left = num * Width +"px";
+		for(var i = 0;i<lis2.length;i++){
+			lis2[i].style.opacity =  0.3
+		}
+		num = Math.abs(num);
+		var num1 = num;
+		lis2[num1%=4].style.opacity = 1;
+//		console.log(num)
+	},false)
+	auto()
+	function auto(){
+
+		timer = setInterval(function(){
+
+			if(num >= 4){
+				num = 0;
+				oUl1.style.transition="none";
+			}
+			oUl1.style.left = - num * Width + 'px';
+			setTimeout(function(){
+				num++;
+				oUl1.style.transition="0.5s";
+				oUl1.style.left = - num * Width + 'px';
+			},100)
+			for(var i = 0;i<lis2.length;i++){
+					lis2[i].style.opacity ='0.3';
+			}
+			// console.log(num);
+			var num2 = num + 1;
+			lis2[num2%=4].style.opacity = 1;
+		},2000)
+	}
+
+	oBox.addEventListener('touchstart',function(){
+		clearInterval(timer);
+	},false)
+	oBox.addEventListener('touchend',function(){
+		auto()
+	},false)
+
+	$('.jingxuan').find('li').each(function(i){
+		$(this).on('click',function(){
+			$('.jingxuan').find('li').removeAttr('class');
+			$(this).attr('class','L_style');
+			$('.Choice').css('display','none');
+			$('.Choice').eq(i).css('display','block');
+		})
+	})
+
+// ---------------------------------------------
+var L_box = document.getElementsByClassName('L_box')[0];
+	var L_ul1 = document.getElementsByClassName('L_ul1')[0];
+	var L_lis = L_ul1.getElementsByTagName('li');
+	var L_ul2 = document.getElementsByClassName('L_ul2')[0];
+	var L_lis2 = L_ul2.getElementsByTagName('li');
+	var l_Width = L_box.offsetWidth;
+	L_ul1.style.width = L_lis.length * l_Width + 'px';
+	for(var i = 0;i<L_lis.length;i++){
+		L_lis[i].style.width = (1/L_lis.length)*100 +"%";
+	}
+	// 手指初始位置
+	var L_startPoint = 0;
+	//ul 的初始位置
+	var L_startX = 0;
+	var L_num = 0;
+	var L_Left=0;
+	var L_timer = null;
+	L_box.addEventListener('touchstart',function(e){
+		// Left = oUl1.offsetLeft;
+		L_Left=css(L_ul1,'translateX')
+		//点到第一张的时候，把ul移动到第五张的位置
+		L_num = -Math.round(L_Left / l_Width)
+		if(L_num == 0){
+			L_num  = 3;
+			// oUl1.style.left = - num * Width + "px"; 
+			css(L_ul1,'translateX',- L_num * l_Width)
+		}
+		//点到最后一张， 移动到第四张
+		if(L_num == L_lis.length - 1){
+			L_num = 2;
+			// oUl1.style.left = - num * Width + 'px';
+			css(L_ul1,'translateX',- L_num * l_Width)
+		}
+		L_ul1.style.transition = 'none';
+		// 获取点下去手指初始位置
+		L_startPoint = e.changedTouches[0].pageX;
+		//获取oUl点下去的初始位置
+		L_startX = css(L_ul1,'translateX');
+	},false)
+	L_box.addEventListener('touchmove',function(e){
+		// console.log(e.changedTouches[0].pageX)
+		// 手指移动后跟手指点下去的距离差
+		var dis = e.changedTouches[0].pageX - L_startPoint;
+		// console.log(dis);
+		// oUl1.style.left = startX + dis + 'px';
+		css(L_ul1,'translateX',L_startX + dis)
+	},false)
+	L_box.addEventListener('touchend',function(){
+		// 或oUl1 的移出值
+		// Left = oUl1.offsetLeft;
+		L_Left = css(L_ul1,'translateX')
+		// num 判断当前为第几张
+		L_num = Math.round(L_Left / l_Width)
+		L_ul1.style.transition='0.5s';
+		// console.log(Left+'=='+num1+"=="+num);
+		
+		// L_ul1.style.left = num * Width +"px";
+		css(L_ul1,'translateX',L_num * l_Width)
+		for(var i = 0;i<L_lis2.length;i++){
+			L_lis2[i].style.opacity =  0.3
+		}
+		// console.log(num)
+		L_num = Math.abs(L_num);
+		var L_num1 = L_num;
+		L_lis2[L_num1%=4].style.opacity = 1;
+		// console.log(num)
+	},false)
+	//自动播放
+	auto2()
+	function auto2(){
+
+		L_timer = setInterval(function(){
+			// console.log(L_num)
+			if(L_num >= 3){
+				L_num%=3;
+				L_ul1.style.transition="none";
+			}
+			// oUl1.style.left = - num * Width + 'px';
+			css(L_ul1,'translateX',- L_num * l_Width )
+			setTimeout(function(){
+				L_num++;
+				L_ul1.style.transition="0.5s";
+				// oUl1.style.left = - num * Width + 'px';
+				css(L_ul1,'translateX',- L_num * l_Width )
+			},30)
+			for(var i = 0;i<L_lis2.length;i++){
+					L_lis2[i].style.backgroundColor ='#ccc';
+			}
+			// console.log(num);
+			var L_num2 = L_num + 1;
+			L_lis2[L_num2%=3].style.backgroundColor = 'red';
+		},3000)
+	}
+
+	L_box.addEventListener('touchstart',function(){
+		clearInterval(L_timer);
+	},false)
+	L_box.addEventListener('touchend',function(){
+		auto2()
+	},false)
+</script>
+</html>

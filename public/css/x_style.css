@@ -1,0 +1,329 @@
+/*页面头部*/
+	.x_head{
+		width:990px;
+		margin:0 auto;
+		padding: 14px 0px 20px 0px;
+		/*background-color:pink;*/
+	}
+	.x_logo_left{
+		float:left;
+	}
+	.x_logo_left > a {
+		display:block;
+		float:left;	
+	}
+	.x_logo_left > p{
+		float:right;
+		font:14px/44px simsun;
+		color:#666;
+		line-height:45px;
+		padding-left:10px;
+		margin:8px 0px 0px 8px;
+		border-left:1px solid #E6E6E6;
+	}
+	.x_logo_right{
+		float:right;
+		padding-top:21px;
+	}
+	.x_logo_right > p{
+		font-size:14px;
+		color:#333;
+	}
+	.x_logo_right > p > a{
+		display:inline-block;
+		padding:3px 10px;
+		color:#c00;
+		font:normal 14px/14px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+	}
+	.x_logo_right > p > a:hover{
+		background-color:#CD1F1F;
+		color:white;
+		border-radius:1px;
+	}
+/*页面内容*/
+.x_content{
+	width:980px;
+	border:1px solid #E6E6E6;
+	padding-bottom:100px;
+	margin:0 auto;
+}
+.x_content_head{
+	width:890px;
+	padding:16px 0px 16px 90px;
+	font:18px/28px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+	color:#999;
+	background-color:#FAFAFA;
+}
+/*表单填交内容*/
+.x_register_left{
+	width:500px;
+	padding:30px 0px 0px 89px;
+	float:left;
+}
+.x_phone_register{
+	width:500px;
+	height:40px;
+	border-bottom:1px solid #E6E6E6;
+}
+.x_phone_register > p{
+	color:#c00;
+	line-height:36px;
+	width:252px;
+	text-align:center;
+	background-color:white;
+	font:18px/38px "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1";
+	border-top:2px solid #E02D2D;
+	border-left: 1px solid #E6E6E6;
+	border-right:1px solid #E6E6E6;
+}
+.x_phone_register > p > span{
+	font-size:25px;
+	vertical-align:middle;
+}
+/*用户填写信息*/
+.x_register_info{
+	width:500px;
+	padding-top:30px;
+}
+.x_form_one{
+	width:417px;
+	padding-left:83px;
+	margin-bottom:42px;
+	position:relative;
+}
+.x_phonenum{
+	width:83px;
+	display:inline-block;
+	font:14px/40px "Arial";
+	color:#666;
+	text-align:right;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.x_phonenum > i {
+	color:#f30;
+	font:12px "Simsun";
+	padding-right:7px;	
+}
+/*输入框*/
+.x_form_info > .x_input_text {
+	width:290px;
+	padding:8px 5px;
+	border:1px solid #CCCCCC;
+	vertical-align:bottom;
+}
+.x_form_info > .x_input_text:focus{
+	border:1px solid #CC0000;
+}
+.x_form_info > .x_iphone_text {
+	width:290px;
+	padding:8px 5px;
+	border:1px solid #CCCCCC;
+	vertical-align:bottom;
+}
+.x_form_info > .x_iphone_text:focus{
+	border:1px solid #CC0000;
+}
+/*短信*/
+.x_form_info > .x_message_code {
+	width:80px;
+	padding:8px 5px;
+	border:1px solid #CCCCCC;
+	vertical-align:bottom;
+}
+.x_form_info > .x_message_code:focus{
+	border:1px solid #CC0000;
+}
+.x_form_one > p{
+	position: absolute;
+    top: 47px;
+    left: 83px;
+    color: #aaa;
+    font-size:12px;
+}
+.x_form_info > .x_verification_code{
+	width:170px;
+	padding:8px 5px;
+	vertical-align:bottom;
+	border:1px solid #cccccc;
+	vertical-align:top;
+}
+/*输入框*/
+.x_form_info > .x_verification_code:focus{
+	border:1px solid #CC0000;
+}
+.x_picture-verification{
+	display:inline-block;
+	width:100px;
+	height:36px;
+	margin-right:10px;
+	background-color:black;
+	vertical-align:middle;
+}
+.x_form_info > a{
+	color:#134BA0;
+	font-size:12px;
+}
+.x_form_info > a:hover{
+	text-decoration:underline;
+	color:#E60012;
+}
+.x_get_code{
+	display:inline-block;
+	text-align:center;
+	line-height:37px;
+	width:110px;
+	height:37px;
+	border:1px solid #CCCCCC;
+	vertical-align:top;
+	background-color:#F8F8F8;
+	color:#666;
+	cursor:pointer;
+	font-size:12px;
+}
+/*手机号码提示*/
+.x_remind{
+	position: absolute;
+    top: 0;
+    left: 372px;
+    padding: 0 0 0 20px;
+    font: 12px/40px "Arial";
+    color: #ff3333;
+    display:none;
+}
+.x_remind > span{
+	display:inline-block;
+	width:16px;
+	height:20px;
+	background:url('/public/images/regist2.jpg') no-repeat -153px -194px;
+	vertical-align:middle;
+	margin-right:3px;
+}
+/*同意协议*/
+.x_argee{
+	width:500px;
+	padding-left:83px;
+	font-size:12px;
+	color:#999;
+}
+.x_argee > p{
+	display:inline-block;
+}
+.x_argee > p > a{
+	color:#134BA0;
+}
+.x_argee > p > a:hover{
+	color:#E60012;
+	text-decoration:underline;
+}
+.x_argee > input[type="checkbox"] {
+	margin-right:5px;
+}
+
+.x_btn{
+	width:290px;
+	height:40px;
+	margin: 20px 0px 0px 83px;
+	outline-style:none;
+	background-color:#DD2F2F;
+	color:white;
+	border:none;
+	border-radius:2px;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+}
+.x_btn:hover{
+	background-color:#C92222
+}
+/*右边直接登录方式*/
+.x_register_right{
+	width:170px;
+	height:297px;
+	padding:0px 80px 0px 25px;
+	border-left:1px solid #F5F5F5;
+	float:right;
+	margin-top:30px;
+}
+.x_register_right > p{
+	font-size:12px;
+	line-height:20px;
+	color:#666;
+}
+.x_register_right > p > a{
+	color:#134BA0;
+	margin:0px 5px;
+}
+.x_register_right > p > a:hover{
+	text-decoration:underline;
+	color:#E02D2D;
+}
+.x_register_right > ul > li{
+	margin-top:15px;
+}
+.x_register_right > ul > li > a{
+	width:170px;
+	height:36px;
+	display:block;
+	background-color:white;
+}
+.x_register_right > ul > li:nth-child(1) > a{
+	background:url('/public/images/register1.jpg') no-repeat;
+}
+.x_register_right > ul > li:nth-child(2) > a{
+	background:url('/public/images/regist2.jpg') no-repeat 0 0;
+}
+.x_register_right > ul > li:nth-child(3) > a{
+	background:url('/public/images/regist2.jpg') no-repeat 0 -37px;
+}
+.x_register_right > ul > li:nth-child(4) > a{
+	background:url('/public/images/regist2.jpg') no-repeat 0 -74px;
+}
+.x_register_right > ul > li:nth-child(5) > a{
+	background:url('/public/images/regist2.jpg') no-repeat 0 -111px;
+}
+.x_register_right > ul > li > a:hover span{
+	width:170px;
+	height:36px;
+	display:block;
+	background-color:rgba(203,198,198, 0.2);
+}
+/*页面脚部*/
+.x_footer{
+	padding:12px 0px 25px 0px;
+	border-top:1px solid #DCDCDC;
+	margin-top:50px;
+	font-size:12px;
+}
+.x_footer_info {
+	width:990px;
+	margin:0 auto;
+}
+.x_footer_info > ul{
+	display:inline-block;	
+	float:left;
+}
+.x_footer_info > ul > li{
+	float:left;
+}
+.x_footer_info > p{
+	display:inline-block;
+	float:right;
+}
+.x_footer_info > ul > li:nth-child(2) {
+	width:1px;
+	height:10px;
+	background-color:#CFCFDA;
+	margin:4px 10px;
+}
+.x_footer_info > ul > li:nth-child(4) {
+	width:1px;
+	height:10px;
+	background-color:#CFCFDA;
+	margin:4px 10px;
+}
+.x_footer_info > ul > li > a:hover{
+	text-decoration:underline;
+	color:#E60012;
+}

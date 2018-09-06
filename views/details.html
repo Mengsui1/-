@@ -1,0 +1,323 @@
+{% extends 'W_head_index.html' %} {% block main %}
+<link rel="stylesheet" href="/public/css/x_detail.css">
+<link rel="stylesheet" href="/public/css/z_detail.css">
+<script src="/public/js/vue.js"></script>
+<script src="/public/js/x_detail.js"></script>
+<script src="/public/js/get_vuegoods.js"></script>
+<script>
+
+$(function(){
+	
+
+get_vue('.x_hot_buy','1',6);
+	
+});
+	
+</script>
+<div class="x_main">
+	<div class="x_head_detail">
+		<ul id="Good_ul" class="clear" data-gid="{{result._id.toString()}}">
+			<li>
+				<a href="/index/tuan">首页</a>
+			<li><span class="iconfont icon-jiantou"></span></li>
+				
+			</li>
+			{%if result.tid == '1'%}
+			<li>手机</li>
+			<li><span class="iconfont icon-jiantou"></span></li>
+			
+			{%elseif result.tid == '2'%}
+			<li>电脑</li>
+			<li><span class="iconfont icon-jiantou"></span></li>
+			
+			{%elseif result.tid == '3'%}
+			<li>DIY</li>
+			<li><span class="iconfont icon-jiantou"></span></li>
+			
+			{%elseif result.tid == '4'%}
+			<li>外设</li>
+			<li><span class="iconfont icon-jiantou"></span></li>
+			
+			{%elseif result.tid == '5'%}
+			<li>数码</li>
+			<li><span class="iconfont icon-jiantou"></span></li>
+			
+			{%elseif result.tid == '6'%}
+			<li>智能</li>
+			<li><span class="iconfont icon-jiantou"></span></li>
+			
+			{%elseif result.tid == '7'%}
+			<li>其他</li>
+			<li><span class="iconfont icon-jiantou"></span></li>
+			{%endif%}
+			<li>
+				<a href="####">{{result.brand}}</a>
+			</li>
+			
+		</ul>
+	</div>
+
+	<!-- 内容 -->
+	<div class="x_con_detail clear">
+		<!-- 左边内容 -->
+		<div class="x_con_left">
+			<div class="x_goods">
+				<!-- 放大镜 -->
+				<div class="x_goods_big">
+					<div class="x_box">
+						<img src="{{result.mainpic[0]}}" alt="">
+					</div>
+					<div class="x_box_big">
+						
+					</div>
+				</div>
+
+				<!-- 展示图片 -->
+				<div class="x_display_goods">
+					<ul class="x_goods_pic clear">
+						{% for img in result.mainpic%}
+						<li>
+							<img src="{{img}}" alt="">
+						</li>
+						{%endfor%}
+					</ul>
+				</div>
+
+				<!-- 分享 -->
+				<div class="x_share">
+					<span class="iconfont icon-xingzhuang60kaobei2 sp"></span>
+					<a href="####" class="x_sh">关注商品</a>
+					<span class="iconfont icon-fenxiang sp"></span>
+					<a href="####" class="x_sh">分享</a>
+				</div>
+			</div>
+
+			<!-- 货物详情 -->
+			<div class="x_goods_detail">
+				<div class="goods-detail-descript" style="overflow:hidden;">
+					<p class="x_good_title">
+						{{result.title}}
+					</p>
+					<p class="ix_good_award">
+						{{result.descript}}
+					</p>
+					<!-- 活动 -->
+					<div class="subscription-price clear">
+
+						<div class="x_group_buy">
+							<a href="####">
+								<img src="/public/images/logo1.jpg" alt="">
+							</a>
+							<a href="####">
+								<img src="/public/images/logo2.jpg" alt="">
+							</a>
+
+						</div>
+						<div class="x_group_time">
+							距结束仅剩 <i>9</i>天
+							<span>20</span>
+							<span>17</span>
+							<span>30</span>
+						</div>
+					</div>
+
+					<!-- 团购价 -->
+					<div class="x_group_price">
+						<ul class="clear">
+							<li><span>团购价</span>:</li>
+							<li>¥<em id="price">{{result.price}}</em></li>
+							<li><del>{{parseInt(result.price) + result.price/50}}</del></li>
+							<li><span>立省{{result.price/50}}元</span></li>
+						</ul>
+					</div>
+
+					<!-- 配送 -->
+					<div class="x_distribution">
+						<ul class="clear">
+							<li>配&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;送&nbsp;&nbsp;:</li>
+							<li>
+								<div class="x_addhov">
+									<span class="x_ad_name">浙江</span>
+									<span id="icon" class="iconfont icon-shangxiajiantou"></span>
+									<!-- 隐藏地址 -->
+									<div class="x_address">
+										<ul class="x_address_head clear">
+											<li class="x_li_one">
+												<span class="x_li_ones"></span>
+												<span class="iconfont icon-shangxiajiantou"></span>
+											</li>
+
+											<li class="x_li_two">
+												<span class="x_li_twos">请选择</span>
+												<span class="iconfont icon-shangxiajiantou"></span>
+											</li>
+										</ul>
+
+										<!-- 省 -->
+										<ul class="x_address_detail">
+										</ul>
+
+									</div>
+								</div>
+								可送达
+
+							</li>
+							<li><em>支持满399快递包邮</em>
+								<a href="####">去凑单</a>
+							</li>
+						</ul>
+					</div>
+					<!-- 评价 -->
+					<div class="x_discuss">
+						<ul class="clear">
+							<li>评&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价&nbsp;&nbsp;:</li>
+							<li>
+								<a href="####">购买评价
+									<span>555</span>
+								</a>
+							</li>
+							<li class="x_split"></li>
+							<li>
+								<a href="####">成交记录
+									{%if result.xl != ''%}
+									<span>{{result.xl}}</span>
+									{%else%}
+									<span>0</span>
+									{%endif%}
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 服务保障 -->
+					<div class="x_save">
+						<p>服务保障&nbsp;:</p>
+						<div>
+							<p>由
+								<a style="color:blue;" href="####">{{result.shop}}</a>发货并承诺提供以下服务保障</p>
+							<ul class="x_service clear">
+								<li><span class="iconfont icon-baozheng"></span>
+									<a href="####">正品保障</a>
+								</li>
+
+								<li><span class="iconfont icon-shouhou"></span>
+									<a href="####">售后保障</a>
+								</li>
+
+								<li><span class="iconfont icon-wuyoutuihuan"></span>
+									<a href="####">无忧退换</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- 团购商品 -->
+					<div class="x_groups_shop clear">
+						<div>团购商品 :</div>
+						<div class="x_tuan">
+							<span>团</span> 黑色
+						</div>
+					</div>
+
+					<!-- 颜色类别 -->
+					<div class="x_color">
+						<ul class="clear">
+							<li>颜色类别 :</li>
+							{%for color in result.color%}
+							<li class="x_red">
+								<a href="####">{{color}}</a>
+								<span class="x_righticon"><img src="" alt=""></span>
+							</li>
+							{%endfor%}
+						</ul>
+					</div>
+
+					<!-- 套装 -->
+					<div class="x_suit">
+						<ul class="clear">
+							<li class="x_suit_l">套&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;装 :</li>
+							
+							<li class="x_suit_r">
+								<a href="####" class="L_tc">{{result.taozhuang}}</a>
+								<span class="x_righticon">
+									<img src="/public/images/bg.png" alt="">
+								</span>
+								
+							</li>
+							
+
+						</ul>
+						<p>{{result.peijian}}</p>
+					</div>
+
+					<!-- 限购 -->
+					<div class="x_buy_num">
+						<ul class="clear">
+							<li>购买数量 :</li>
+							<li>
+								<span class="L_reduce">-</span>
+								<input type="text" value="1">
+								<span class="L_add">+</span> 件（限购{{result.nums}}件）
+							</li>
+						</ul>
+					</div>
+
+					<!-- 立即购买 -->
+					<div class="x_quikle_buy">
+						<p class="L_addbuy">
+							<a href="####">立即购买</a>
+						</p>
+						<p class="L_addcat">
+							<a href="####">加入购物车</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 右边内容 -->
+		<div class="x_con_right">
+			<div class="x_wide">
+				<a href="####">{{result.shop}}</a>
+			</div>
+			<div class="x_online">
+				<p>在线客服</p>
+				<p><img src="/public/images/qq.gif" alt="">和我联系</p>
+				<div class="clear">
+					<p>客服电话 : </p>
+					<p><span>010-83808387</span><br><span>15201590270</span></p>
+				</div>
+
+				<p>接待时间: <span>9:00-18:00</span></p>
+				<p>店铺30天退款率：<span>8.70%</span></p>
+				<p>店铺动态评分 :</p>
+				<ul class="x_descript">
+					<li>描述:<em>5.0</em> <span>持平</span>同行 0.00%</li>
+					<li>描述:<em>5.0</em> <span>持平</span>同行 0.00%</li>
+					<li>描述:<em>5.0</em> <span>持平</span>同行 0.00%</li>
+				</ul>
+
+				<p>
+					<span>进入店铺</span>
+					<span>关注店铺</span>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- 店铺热卖 -->
+	<div class="x_hot_buy">
+		<div class="x_hot_title">店铺热卖</div>
+		<ul class="x_hot_goods clear" >
+			<li v-for="result in findSql">
+				<a v-bind:href="'/index/details?hover=1&id='+result._id.toString()">
+					<img v-bind:src="result.mainpic[0]" alt="">
+					<span>${result.title}</span>
+				</a>
+				<p>¥<span>${result.price}.00</span></p>
+			</li>
+			
+		</ul>
+	</div>
+
+</div>
+{% include 'z_details.html' %} {%endblock%}

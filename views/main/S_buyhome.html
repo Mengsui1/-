@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="/public/css/S_add.css" />
+	<link rel="stylesheet" href="/public/css/S_buyhome_header.css" />
+	<link rel="stylesheet" href="/public/css/S_buyhome_main.css" />
+	<link rel="stylesheet" href="/public/css/S_buyhome_footer.css" />
+	<link rel="stylesheet" href="/public/css/reset.css" />
+	<link rel="stylesheet" href="/public/css/iconfont.css" />
+	<script type="text/javascript" src="/public/js/vue.js"></script>
+	<link rel="stylesheet" href="/public/css/W_head_index.css" />
+	<script src="/public/js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=EZPCgQ6zGu6hZSmXlRrUMTpr"></script>
+	<script type="text/javascript" src="/public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/public/js/map.jquery.min.js"></script>
+	<title>买家中心</title>
+	<style>
+		
+		pre{background:#eee;border:1px solid #ddd;border-left:4px solid #f60;padding:15px;margin-top: 15px;}
+
+		.case{margin-top: 15px;width:400px;position: absolute;}
+
+		.bMap{position: relative;}
+		.bMap .map-warp{position: absolute;left:0;width:100%;height:400px;top:34px;display: none;}
+		.bMap input{width:100%;height:30px;line-height: 30px;border:1px solid #d7d7d7;}
+		.tangram-suggestion-main{z-index: 9999}
+	</style>
+</head>
+<body style="min-width:1100px;background: #F8F8F8;">
+	<div>
+		<!--顶部-->
+		<header>
+			<!--顶部nav-->
+			{% include '../head.html' %}
+			<!--logo栏-->
+			<div class="S_head_logobg">
+				<div class="S_logo clear">
+					<a href=""><i></i></a>
+					<a href="/index">首页</a>
+					<a href="">消息<p>0</p></a>
+					<div class="S_logo_search clear">
+						<input type="text" placeholder="搜索商品/店铺"/>
+						<button>搜索</button>
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<div class="S_main">
+			<div class="S_main_left">
+				<ul class="S_big_ul">
+					<!--订单中心-->
+					<li>
+						<a href="javascript:;"><i class="iconfont" style="margin-left:-5px">&#xe601;</i>&nbsp;订单中心</a>
+						<ul class="S_small_ul">
+							<li><a href="/admin/buyhome" style="color:#CC0000">我的订单</a></li>
+							<li><a href="javascript:;">团购订单</a></li>
+							<li><a href="javascript:;">评价晒单</a></li>
+							<li><a href="javascript:;">我购买的配置单</a></li>
+						</ul>
+					</li>
+					<!--我的关注-->
+					<li>
+						<a href="javascript:;"><i class="iconfont" style="margin-left:-5px">&#xe503;</i>&nbsp;我的关注</a>
+						<ul class="S_small_ul">
+							<li><a href="javascript:;">关注的商家</a></li>
+							<li><a href="javascript:;">关注的商品</a></li>
+						</ul>
+					</li>
+					<!--我的优惠-->
+					<li>
+						<a href="javascript:;"><i class="iconfont" style="margin-left:-5px">&#xe63c;</i>&nbsp;我的优惠</a>
+						<ul class="S_small_ul">
+							<li><a href="javascript:;">团购优惠券</a></li>
+							<li><a href="javascript:;">我的红包</a></li>
+							<li><a href="javascript:;">店铺优惠券</a></li>
+						</ul>
+					</li>
+					<!--消息中心-->
+					<li>
+						<a href="javascript:;"><i class="iconfont" style="margin-left:-5px">&#xe65b;</i>&nbsp;消息中心</a>
+						<ul class="S_small_ul">
+							<li><a href="javascript:;">我的消息</a></li>
+						</ul>
+					</li>
+					<!--个人设置-->
+					<li>
+						<a href="/index/core"><i class="iconfont" style="margin-left:-5px">&#xe7da;</i>&nbsp;个人设置</a>
+						<ul class="S_small_ul">
+							<li><a href="javascript:;">收货地址管理</a></li>
+							<li><a href="/index/core">ZOL个人中心</a></li>
+						</ul>
+					</li>
+					<!--售后服务-->
+					<li>
+						<a href="javascript:;"><i class="iconfont" style="margin-left:-5px">&#xe504;</i>&nbsp;售后服务</a>
+						<ul class="S_small_ul">
+							<li><a href="javascript:;">投诉维权</a></li>
+							<li><a href="javascript:;">退款/售后</a></li>
+						</ul>
+					</li>
+					<!--特色频道-->
+					<li>
+						<a href="javascript:;"><i class="iconfont" style="margin-left:-5px">&#xe60a;</i>&nbsp;特色频道</a>
+						<ul class="S_small_ul">
+							<li><a href="/index/tuan?hover=1">团购</a></li>
+							<li><a href="/index/dian?hover=2">电子竞技</a></li>
+							<li><a href="javascript:;">手机馆</a></li>
+							<li><a href="javascript:;">Z商城服务说明</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="S_main_right">
+				<!--右侧主体部分的上部分-->
+				<div class="S_main_rt">
+					<ul>
+						<li><a href="">商城订单</a></li>
+						<li><a href="">经销商订单</a><span>?</span></li>
+					</ul>
+					<ul>
+						<li><a href="javascript:;"><i class="iconfont">&#xe6b2;</i><br><span>待付款&nbsp;<b>0</b></span></a></li>
+						<li><a href="javascript:;"><i class="iconfont">&#xe613;</i><br><span>待发货&nbsp;<b>0</b></span></a></li>
+						<li><a href="javascript:;"><i class="iconfont">&#xe60c;</i><br><span>待收货&nbsp;<b>0</b></span></a></li>
+						<li><a href="javascript:;"><i class="iconfont">&#xe90e;</i><br><span>待评价&nbsp;<b>0</b></span></a></li>
+					</ul>
+					<table>
+						<tr>
+							<td style="width:200px">商品信息</td>
+							<td>单价 ( 元 )</td>
+							<td>数量</td>
+							<td>售后</td>
+							<td>实付款(元)</td>
+							<td>全部状态<i></i></td>
+							<td>操作</td>
+						</tr>
+						
+					</table>
+					
+					<div class="S_showpage">
+						<div class="S_dingdan clear">
+							<p class="message">
+								<span>订单号:</span>
+								
+							</p>
+							
+							<p class="message store">
+								<span>店铺:</span>
+								
+							</p>
+						</div>
+						<table class="S_order3">
+							<tr>
+								<td class="cell1">
+									<div class="cell1_box">
+										<a href="" class="pic">
+											<img src="" alt="" />
+										</a>
+										<div class="des">
+											<a href=""></a>
+										</div>
+										<div class="price">
+											
+										</div>
+										<p class="num"></p>
+									</div>
+								</td>
+								<td class="cell2"></td>
+								<td class="cell3"></td>
+								<td class="cell4"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!--右侧主体部分的下部分-->
+				<div class="S_main_rb">
+					<div class="S_rb_tit">
+						<h3>猜你喜欢</h3>
+					</div>
+					<div class="S_rb_prc">
+						<ul>
+							{%for eGood in eGoods%}
+							<li>
+								<a href="/index/details?hover=1&id={{eGood._id.toString()}}" target="_blank">
+									<img src="{{eGood.mainpic[0]}}"/>
+									<p style="text-align:center;"><i>￥</i>{{eGood.price}}</p>
+									<p>{{eGood.title}}</p>
+									<span>{{eGood.xl}}人已购买</span>
+								</a>
+							</li>
+							{%endfor%}
+						</ul>
+					</div>
+				</div>
+			</div>
+
+<!--收货地址和管理-->
+		<div class="S_add">
+			<h3>
+				新增收货地址
+			</h3>
+			<!--收货人-->
+			<div class="S_name">
+				<p>收货人：<i>*</i></p>
+				<input type="text" />
+				<p class="S_shouhuo">ok</p>
+			</div>
+			<!--所在地区-->
+			<div class="S_city" >
+				<p >所在地区： <i>*</i></p>
+
+				<select name="" id="city">
+					<option value="">--请选择--</option>
+				</select>
+				<select name="" id="area">
+					<option value="">--请选择--</option>
+				</select>
+				<div>
+					
+					<!-- 百度地图api导入 -->
+					<div class="S_api_in" style="display:none">
+						<!-- <div id="allmap">
+						</div> -->
+						<div class="case">
+	 						<div class="bMap" id='case2' v-model="text"></div>
+	 						<p class="S_close_api">关闭</p>
+						</div>
+					</div>
+					<input type="" name="" id="" value="{{text}}" placeholder="点击地图里面的地址，复制过来 >> "/>
+					<a href="####" id="S_api">点击添加坐标</a>
+				</div>
+			</div>
+			<!--详细地址-->
+			<div class="S_smalladd">
+				<p>详细地址：<i>*</i></p>
+				<textarea name="" rows="" cols="" style="resize: none;"></textarea>
+				<p class="S_xiangxi">ok</p>
+			</div>
+			<!--邮箱编码-->
+			<div class="S_unicode">
+				<p>邮政编码：<i>*</i></p>
+				<input type="" name="" id="" value="" />
+				<p class="S_youbian">ok</p>
+			</div>
+			<!--家庭固定电话-->
+			<div class="S_hometel">
+				<p>固定电话：</p>
+				<div>
+					<input type="" name="" id="S_ipt1" value="" />&nbsp;&nbsp;-&nbsp;
+					<input type="" name="" id="S_ipt2" value="" />
+				</div>
+				<p class="S_number">ok</p>
+				<span>例如：010-84852254-123（分机号可以忽略）</span>
+			</div>
+			<!--手机号码-->
+			<div class="S_phonetel">
+				<p>手机号：<i>*</i></p>
+				<input type="" name="" id="" value="" />
+				<p class="S_shouji">ok</p>
+			</div>
+			<!--电子邮箱-->
+			<div class="S_email">
+				<p>电子邮箱：<i>*</i></p>
+				<input type="" name="" id="" value="" />
+				<p class="S_youxiang">ok</p>
+			</div>
+			<!--默认地址设置-->
+			<div class="S_moren">
+				<label>
+					<input type="checkbox" name="" class="x_moren" id="" value="" checked/>
+					设置为默认
+				</label>
+			</div>
+			<!--保存-->
+			<div class="S_save">
+				<button id="S_btn">保存</button>
+				<span>您当前已添加0条地址，还可添加10条</span>
+			</div>
+			<!-- 增加的地址 -->
+			{% if show %}
+			<div class="S_appendADD" id="app">
+				<table>
+					<tr>
+						<th>收货人</th>
+						<th>所在省区</th>
+						<th>街道地址</th>
+						<th>邮编</th>
+						<th>电话手机</th>
+						<th>默认</th>
+						<th>操作</th>
+					</tr>
+					{%for user in data %}
+					<tr>
+						<td>{{user.username}}</td>
+						<td class="x_yinoid" style="display:none;">{{user._id.toString()}}</td>
+						<td>{{user.city}}</td>
+						<td>{{user.add}}</td>
+						<td>{{user.postcode}}</td>
+						<td>{{user.tel}}</td>
+						<td>{{user.moren}}</td>
+						<td class="x_delorder"><a href="####">删除</a></td>
+					</tr>
+					{%endfor%}
+				</table>
+				<br>
+				{% include 'page.html' %}
+			</div>
+			{% else %}
+
+			{% endif %}
+		</div>
+
+		</div>
+		
+		<!--尾部-->
+		<footer>
+			<div class="S_foot">
+				<div>
+					<a href="####">中关村在线</a>
+					<a href="####" style="color:#999">|</a>
+					<a href="####">Z商城</a>
+					<a href="####" style="color:#999">|</a>
+					<a href="####">团购</a>
+					<a href="####" style="color:#999">|</a>
+					<a href="####">产品报价</a>
+					<a href="####" style="color:#999">|</a>
+					<a href="####">论坛</a>
+					<a href="####" style="color:#999">|</a>
+					<a href="####">问答</a>
+				</div>
+				<div>
+					<a href="####">关于Z商城</a>
+					<a href="####" >|</a>
+					<a href="####">帮助中心</a>
+					<a href="####">|</a>
+					<a href="####">联系我们</a>
+				</div>
+				<div>
+					<span>
+                            ©2017 中关村在线 版权所有.&nbsp;&nbsp;
+                            <a href="####">京ICP证150096号</a>&nbsp;&nbsp;京ICP备14061128号&nbsp;&nbsp;
+                            <a href="####">京公网安备11010802020026号</a>&nbsp;&nbsp;
+                            <a href="####">网络文化经营许可证京网文[2016]1631-199</a>
+					</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+<script src="/public/js/S_buyhome.js"></script>
+<script>
+	$(function(){
+		$("#case1").bMap();
+		$("#case2").bMap({name:"address",address:"广州兄弟连教育"});
+		$("#case3").bMap({name:"callback",callback:function(address,point){
+			$("#callback").html("您选择的地址是:"+JSON.stringify(address))
+		}});
+	})
+
+</script>
+</html>

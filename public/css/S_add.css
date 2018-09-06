@@ -1,0 +1,431 @@
+/*收货地址*/
+.S_add {
+	width:935px;
+	background:white;
+	margin:0 auto;
+	box-shadow: 1px 2px 10px 0 #ccc;
+	margin-left:165px;
+	overflow:hidden;
+}
+.S_add > div {
+	margin:0 auto;
+	margin-top:13px;
+	/*background:cyan;*/
+}
+/*标题*/
+.S_add > h3 {
+	width:903px;
+	height:46px;
+	margin:0 auto;
+	font-size: 15px;
+	font-weight:100;
+	margin-top:10px;
+	border-bottom:2px solid #EBEBEB;
+	line-height: 46px;
+}
+/*收货人姓名*/
+		.S_add > .S_name {
+			width:903px;
+			height:32px;
+		}
+		.S_add > .S_name > p:nth-child(1) {
+			float:left;
+			margin-left:20px;
+			font-size: 13px;
+			line-height: 32px;
+		}
+		.S_add > .S_name > .S_shouhuo {
+			float:left;
+			color:green;
+			margin-left:20px;
+			margin-top:5px;
+			display: none;	
+		}
+		.S_add > .S_name > p:nth-child(1) > i {
+			margin:0 10px;
+			color:#FF0000;
+			line-height: 32px;
+		}
+		.S_add > .S_name > input {
+			float: left;
+			display:inline-block;
+			height:28px;
+			margin-left: 7px;
+			width:170px;
+		}
+/*所在城市*/
+		.S_add > .S_city {
+			width:903px;
+			height:32px;
+		}
+		.S_add > .S_city > p {
+			font-size: 13px;
+			margin-left: 7px;
+			float: left;
+			line-height: 32px;
+		}
+		.S_add > .S_city > p > i{
+			color:#FF0000;
+			margin:0 7px;
+		}
+		.S_add > .S_city > #city {
+			float: left;
+			margin-left:9px;
+			width:120px;
+			height:32px;
+			position: relative;
+			appearance:none;
+			-moz-appearance:none;
+			-webkit-appearance:none;
+		}
+		.S_add > .S_city > #city > option {
+			width:100%;
+			height:30px;
+			line-height: 30px;
+			cursor: pointer;
+			display: inline-block;
+			padding:20px 0;
+		}
+		.S_add > .S_city > #area {
+			float: left;
+			margin-left:9px;
+			width:130px;
+			height:32px;
+			position: relative;
+			appearance:none;
+			-moz-appearance:none;
+			-webkit-appearance:none;
+		}
+		
+		.S_add > .S_city > div:nth-child(4) {
+			float: left;
+			margin-left:9px;
+			width:300px;
+			height:32px;
+		}
+		/*百度地图api 导入*/
+		.S_add > .S_city > div:nth-child(4) > .S_api_in > .case {
+			width: 630px;
+			height: 430px;
+			overflow: hidden;
+			margin:0;
+			font-family:"微软雅黑";
+			position: absolute;
+			top:150px;
+			right:70px;
+			background:white;
+			border:5px solid #ccc;
+			cursor: move;
+		}
+		.S_add > .S_city > div:nth-child(4) > .S_api_in > .case > .bMap {
+			position: relative;
+		}
+		.S_add > .S_city > div:nth-child(4) > .S_api_in > .case > .bMap > .map-warp {
+			position: absolute;left:0;width:100%;height:400px;top:34px;display: none;
+		}
+		.S_add > .S_city > div:nth-child(4) > .S_api_in > .case > p {
+			position: absolute;
+			top:412px;
+			right:-3px;
+			font-size: 12px;
+			width:50px;
+			height:20px;
+			background:#ccc;
+			line-height: 20px;
+			text-align: center;
+			border-radius: 3px;
+			cursor: pointer;
+			z-index: 9999
+		}
+		.S_add > .S_city > div:nth-child(4) > .S_api_in > .case > p:hover {
+			color:red;
+			box-shadow: 1px 1px 10px 0 #333;
+			transition:all .5s;
+		}
+		.S_add > .S_city > div:nth-child(4) > input {
+			width:200px;
+			height:28px;
+			display:inline-block;
+			float: left;
+		}
+		.S_add > .S_city > div:nth-child(4) > a {
+			line-height: 32px;
+			margin-left:10px;
+			font-size: 12px;
+			display:inline-block;
+			float: left;
+			color:#3366CC;
+		}
+/*详细地址*/
+		.S_add > .S_smalladd {
+			width:903px;
+			height:62px;
+		}
+		.S_add > .S_smalladd > p:nth-child(1) {
+			font-size: 13px;
+			margin-left: 7px;
+			float: left;
+			line-height: 62px;
+			margin-left:7px;
+		}
+		.S_add > .S_smalladd > p:nth-child(1) > i{
+			color:#FF0000;
+			margin:0 10px;
+		}
+		.S_add > .S_smalladd > .S_xiangxi {
+			float:left;
+			color:green;
+			margin-left:20px;
+			margin-top:13px;
+			display: none;	
+		}
+		.S_add > .S_smalladd > textarea {
+			width:502px;
+			height:60px;
+			display:inline-block;
+			float: left;
+			margin-left:7px;
+		}
+/*邮政编码*/
+		.S_add > .S_unicode {
+			width:903px;
+			height:32px;
+		}
+		.S_add > .S_unicode > p:nth-child(1) {
+			font-size: 13px;
+			margin-left: 7px;
+			float: left;
+			line-height: 32px;
+		}
+		.S_add > .S_unicode > p:nth-child(1) > i{
+			color:#FF0000;
+			margin:0 7px;
+		}
+		.S_add > .S_unicode > .S_youbian {
+			float:left;
+			color:green;
+			margin-left:20px;
+			margin-top:5px;
+			display: none;	
+		}
+		.S_add > .S_unicode > input {
+			width:220px;
+			height:18px;
+			padding:5px 5px;
+			display:inline-block;
+			float: left;
+			margin-left:13px;
+		}
+/*家庭固定电话*/
+		.S_add > .S_hometel {
+			width:903px;
+			height:32px;
+		}
+		.S_add > .S_hometel > p:nth-child(1) {
+			font-size: 13px;
+			margin-left: 7px;
+			float: left;
+			line-height: 32px;
+		}
+		.S_add > .S_hometel > .S_number {
+			float:left;
+			color:green;
+			margin-left:20px;
+			margin-top:5px;
+			margin-right:20px;
+			display: none;	
+		}
+		.S_add > .S_hometel > div {
+			width: 250px;
+			height:32px;
+			/*background: pink;*/
+			margin-left:32px;
+			float: left;
+		}
+		.S_add > .S_hometel > div > input:nth-child(1) {
+			width:50px;
+			height:28px;
+		}
+		.S_add > .S_hometel > div > input:nth-child(2) {
+			width:150px;
+			height:28px;
+		}
+		.S_add > .S_hometel > span {
+			font-size: 12px;
+			float: left;
+			line-height: 32px;
+			color:#999999;
+		}
+/*手机号码*/
+		.S_add > .S_phonetel {
+			width:903px;
+			height:32px;
+		}
+		.S_add > .S_phonetel > p:nth-child(1) {
+			font-size: 13px;
+			margin-left: 20px;
+			float: left;
+			line-height: 32px;
+		}
+		.S_add > .S_phonetel > p:nth-child(1) > i{
+			color:#FF0000;
+			margin:0 7px;
+		}
+		.S_add > .S_phonetel > .S_shouji {
+			float:left;
+			color:green;
+			margin-left:20px;
+			margin-top:5px;
+			display: none;	
+		}
+		.S_add > .S_phonetel > input {
+			width:220px;
+			height:18px;
+			padding:5px 5px;
+			display:inline-block;
+			float: left;
+			margin-left:13px;
+		}
+/*电子邮箱*/
+		.S_add > .S_email {
+			width:903px;
+			height:32px;
+		}
+		.S_add > .S_email > p:nth-child(1) {
+			font-size: 13px;
+			margin-left: 7px;
+			float: left;
+			line-height: 32px;
+		}
+		.S_add > .S_email > p:nth-child(1) > i{
+			color:#FF0000;
+			margin:0 7px;
+		}
+		.S_add > .S_email > .S_youxiang {
+			float:left;
+			color:green;
+			margin-left:20px;
+			margin-top:5px;
+			display: none;	
+		}
+		.S_add > .S_email > input {
+			width:220px;
+			height:18px;
+			padding:5px 5px;
+			display:inline-block;
+			float: left;
+			margin-left:13px;
+		}
+/*默认按钮*/
+		.S_add > .S_moren {
+			width:500px;
+			height:20px;
+			margin:0 auto;
+			margin-top:20px;
+			margin-left:120px;
+			font-size: 13px;
+			line-height: 18px;
+		}
+		.S_add > .S_moren > label > input {
+			float: left;
+			margin:0 3px;
+			margin-top:3px;
+		}
+/*保存*/
+		.S_add > .S_save {
+			width:500px;
+			height:32px;
+			margin:0 auto;
+			margin-top:20px;
+			margin-bottom:30px;
+			margin-left:120px;
+		}
+		.S_add > .S_save > button {
+			width:70px;
+			height:32px;
+			background:#FF3333;
+			border-radius:5px;
+			font-size: 13px;
+			text-align: center;
+			color:white;
+			border:none;
+		}
+		.S_add > .S_save > span {
+			font-size: 12px;
+			color:#999999;
+			margin-left:10px;
+		}
+/*增加的地址*/
+		.S_add > .S_appendADD {
+			width:500px;
+			/*height:32px;*/
+			margin:0 auto;
+			margin-top:20px;
+			margin-bottom:30px;
+			margin-left:120px;
+		}
+		/*table*/
+		.S_add > .S_appendADD > table {
+			width:902px;
+			border:1px solid #e6e6e6;
+			margin-left:-104px;
+		}
+		.S_add > .S_appendADD > table > tbody > tr {
+			width:100%;
+			height:35px;
+			border:1px solid #E6E6E6;
+			padding: 0;
+		}
+		.S_add > .S_appendADD > table > tbody > tr > th {
+			background:#F7F7F7;
+			display: inline-block;	
+			height: 40px;
+			padding:0;
+			width:76px;
+			/*box-sizing:border-box;*/
+			box-sizing:border-box;
+			line-height: 40px;
+			font-size: 12px;
+			/*text-align: center;*/
+		}
+		.S_add > .S_appendADD > table > tbody > tr > td {
+			/*border:1px solid red;*/
+			border-right: 1px solid #E6E6E6;
+			height:60px;
+			width:76px;
+			text-overflow:ellipsis; white-space:nowrap; overflow:hidden;
+			display:inline-block;
+			box-sizing:border-box;
+			line-height: 60px;
+			font-size: 12px;
+			text-align: center;
+		}
+		.S_add > .S_appendADD > table > tbody > tr > td:last-child{
+			border-right:none;
+		}
+		.S_add > .S_appendADD > table > tbody > tr > th:nth-child(2) {
+			width:130px;
+		}
+		.S_add > .S_appendADD > table > tbody > tr > th:nth-child(3) {
+			width:250px;
+		}
+		.S_add > .S_appendADD > table > tbody > tr > th:nth-child(5) {
+			width:130px;
+		}
+		.S_add > .S_appendADD > table > tbody > tr > th:nth-child(6) {
+			width:161px;
+		}
+		.S_add > .S_appendADD > table > tbody > tr > td:nth-child(2) {
+			width:130px;
+		}
+		.S_add > .S_appendADD > table > tbody > tr > td:nth-child(3) {
+			width:250px;
+		}
+		.S_add > .S_appendADD > table > tbody > tr > td:nth-child(5) {
+			width:130px;
+		}
+		.S_add > .S_appendADD > table > tbody > tr > td:nth-child(6) {
+			width:161px;
+			border-right:none;
+		}
+	

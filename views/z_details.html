@@ -1,0 +1,1196 @@
+ 
+    <script src="/public/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/public/css/z_detail.css" type="text/css">
+	<script src="/public/js/get_vuegoods.js"></script>
+    
+	<style>
+		div,span,p,td,th{
+			font-size:12px;
+		}
+		
+	</style>
+<script>
+
+$(function(){
+get_vue('.vue_shop1','4',10);
+get_vue('.vue_shop2','5',5);
+});
+	
+</script>
+    <!-- 主体部分 -->
+    <div class="Z_main clear">
+        <!-- 左侧 -->
+        <div class="Z_left">
+            <div class="Z_modbox">
+                <div class="Z_left_title">同类热卖推荐</div>
+                <ul class="Z_sales_news vue_shop1">
+                    <li v-for="result in findSql">
+                        <a v-bind:href="'/index/details?hover=1&id='+result._id.toString()" class="Z_lookmore">
+                            <img v-bind:src="result.mainpic[0]">
+                        </a>
+                        <div class="Z_price">
+                            <span class="Z_sale_price">
+                                ￥
+                                <em>${result.price}.00</em>
+                            </span>
+                        </div>
+                        <span class="Z_title">
+                            <a href="#" class="Z_lookmore">${result.title}</a>
+                        </span>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="Z_modbox">
+                <div class="Z_left_title">最新开团</div>
+                <ul class="Z_sales_news vue_shop2">
+                   	<li v-for="result in findSql">
+                        <a v-bind:href="'/index/details?hover=1&id='+result._id.toString()" class="Z_lookmore">
+                            <img v-bind:src="result.mainpic[0]">
+                        </a>
+                        <div class="Z_price">
+                            <span class="Z_sale_price">
+                                ￥
+                                <em>${result.price}.00</em>
+                            </span>
+                        </div>
+                        <span class="Z_title">
+                            <a href="#" class="Z_lookmore">${result.title}</a>
+                        </span>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+        <!-- 右侧 -->
+        <div class="Z_right">
+            <div class="Z_tabbar Z_tabbar_nav">
+                <ul class="clear" id="oUl">
+                    <li class="cur">
+                        <a href="javascript:;" >商品详情</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" >参数</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" >
+                            购买评价
+                            <em>0</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" >
+                            成交记录
+                            <em>0</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" >购买咨询</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" >服务承诺</a>
+                    </li>
+                    <li>
+                        <div class="Z_phone">
+                            <a href="javascript:;">
+                                手机购买
+                                <i class="Z_ico"></i>
+                            </a>
+                            <div class="Z_code">
+                                <img src="/public/images/qrcodegen.png">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="Z_buy_btn" style="display: none;">
+                        <a href="#" style="cursor:pointer;" class="Z_btn">立即购买</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Z_container" id="Z_container">
+                <!-- 资料介绍 -->
+                <div class="Z_goods_detail" style="overflow:hidden; display: block;">
+                    <ul class="Z_attributes_list">
+                        <li>
+                            <span>官方配置：</span>
+                            游戏大鼠标垫
+                        </li>
+                    </ul>
+                    <div class="Z_service_title">
+                        <span class="Z_title">商品介绍</span>
+                        <span class="Z_english_title">Products</span>
+                    </div>
+                    <div class="Z_service_content">
+                        <span class="Z_baoyou">活动期间包邮（新疆 青海 西藏不包邮） 需补22元邮费 ，默认：中通快递，如需发其他快递，请联系客服补差，中通快递不到的，请慎拍</span>
+                    </div>
+                    <div class="Z_service_content">
+                        <span class="Z_youhui">多买多优惠；</span>
+                    </div>
+                    <div class="Z_service_content">
+                        <span class="Z_youhui">（新疆 青海 西藏不包邮） 需补22元邮费 </span>
+                    </div>
+                    <div class="Z_kongbai"></div>
+                    <p>
+                        <img src="/public/images/Cg-4WFSri7CIOKn2AAF8GJO5QmsAASzLAA4Ow4AAXww135.gif" style="float:none;">
+                    </p>
+                    <p>
+                        <img src="/public/images/Cg-4WFSri7GIFZJDAACj9pvblNsAASzLABUP8cAAKQO597.gif" style="float:none;">
+                    </p>
+                    <p>
+                        <img src="/public/images/Cg-4WFSri7KINVU2AAF95Ba4MVEAASzLAB4lj4AAX38874.gif" style="float:none;">
+                    </p>
+                    <p>
+                        <img src="/public/images/Cg-4WFSri7SIH20eAAC4E1HKUU4AASzLACYL5QAALgr634.gif" style="float:none;">
+                    </p>
+                    <p><br/></p>
+                    <p><br/></p>
+                    <p><br/></p>
+                    <p><br/></p>
+                    <p><br/></p>
+                    <p><br/></p>
+                </div>
+                <!-- 评价 -->
+                <div class="Z_pingjia" style="display: block;">
+                    <div class="Z_pingjia_head">
+                        <div class="Z_comment_goodsrate clear">
+                            <div class="Z_goods_num">
+                                <em>
+                                    <b>86</b>
+                                    "%"
+                                </em>
+                                "好评率"
+                            </div>
+                            <ul class="Z_goods_num_list">
+                                <li class="Z_precent">
+                                    <div class="Z_comment_rate">
+                                        <div class="Z_rate_num">86%</div>
+                                        <div class="Z_front"></div>
+                                        <div class="Z_rotate Z_rotate_left" style="display: block;transform: rotate(180deg);">
+                                            <div class="Z_bg Z_left"></div>
+                                        </div>
+                                        <div class="Z_rotate Z_rotate_right"  style="display: block;transform: rotate(130.054deg);">
+                                            <div class="Z_bg Z_right"></div>
+                                        </div>
+                                    </div>
+                                    <div class="Z_nums">
+                                        <em>好评</em>
+                                        "(478人)"
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="Z_comment_rate">
+                                        <div class="Z_rate_num">11%</div>
+                                        <div class="Z_front"></div>
+                                        <div class="Z_rotate Z_rotate_left" style="display: block; transform: rotate(40.8649deg);">
+                                            <div class="Z_bg Z_left"></div>
+                                        </div>
+                                        <div class="Z_rotate Z_rotate_right"  style="display: none;">
+                                            <div class="Z_bg Z_right"></div>
+                                        </div>
+                                    </div>
+                                    <div class="Z_nums">
+                                        <em>中评</em>
+                                        "(63人)"
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="Z_comment_rate">
+                                        <div class="Z_rate_num">4%</div>
+                                        <div class="Z_front"></div>
+                                        <div class="Z_rotate Z_rotate_left" style="display: block; transform: rotate(9.08108deg);">
+                                            <div class="Z_bg Z_left"></div>
+                                        </div>
+                                        <div class="Z_rotate Z_rotate_right"  style="display: none;">
+                                            <div class="Z_bg Z_right"></div>
+                                        </div>
+                                    </div>
+                                    <div class="Z_nums">
+                                        <em>差评</em>
+                                        "(14人)"
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="Z_comment_filter clear">
+                            <span class="cur">
+                                <input type="radio" value="4" name="order-review" checked="checked">
+                                全部评价(555)
+                            </span>
+                            <span>
+                                <input type="radio" value="5" name="order-review">
+                                晒图(3)
+                            </span>
+                            <span>
+                                <input type="radio" value="1" name="order-review">
+                                好评(478)
+                            </span>
+                            <span>
+                                <input type="radio" value="2" name="order-review">
+                                中评(63)
+                            </span>
+                            <span>
+                                <input type="radio" value="3" name="order-review">
+                                差评(14)
+                            </span>
+                        </div>
+                    </div>
+                    <div class="Z_pingjia_details">
+                        <div class="Z_review_list">
+                            <div class="Z_comment_content">
+                                <div class="Z_comment_item">
+                                    <div class="Z_comment_author clear">
+                                        <span class="Z_comment_star">
+                                            <em style="width:100%;"></em>
+                                        </span>
+                                        <div class="Z_author">
+                                            <img src="/public/images/zoler.jpg" width="24" height="24" alt="">
+                                            <span class="Z_name">zh***cc</span>
+                                            <span>来自郑州</span>
+                                        </div>
+                                    </div>
+                                    <div class="Z_comment_text">nice!</div>
+                                    <div class="Z_comment_time">
+                                        <span>2014-11-13 12:44</span>
+                                        <span>undefined</span>
+                                        <span>undefined</span>
+                                    </div>
+                                </div>
+                                <div class="Z_comment_item">
+                                    <div class="Z_comment_author clear">
+                                        <span class="Z_comment_star">
+                                            <em style="width:100%;"></em>
+                                        </span>
+                                        <div class="Z_author">
+                                            <img src="/public/images/zoler.jpg" width="24" height="24" alt="">
+                                            <span class="Z_name">jc***00</span>
+                                            <span>来自天津</span>
+                                        </div>
+                                    </div>
+                                    <div class="Z_comment_text">东西不错，没有味。好评</div>
+                                    <div class="Z_comment_time">
+                                        <span>2014-11-13 12:38</span>
+                                        <span>undefined</span>
+                                        <span>undefined</span>
+                                    </div>
+                                </div>
+                                <div class="Z_comment_item">
+                                    <div class="Z_comment_author clear">
+                                        <span class="Z_comment_star">
+                                            <em style="width:100%;"></em>
+                                        </span>
+                                        <div class="Z_author">
+                                            <img src="/public/images/zoler.jpg" width="24" height="24" alt="">
+                                            <span class="Z_name">ki***02</span>
+                                            <span>来自吉林</span>
+                                        </div>
+                                    </div>
+                                    <div class="Z_comment_text">耳机接口与电脑不太吻合……</div>
+                                    <div class="Z_comment_time">
+                                        <span>2014-11-13 11:26</span>
+                                        <span>undefined</span>
+                                        <span>undefined</span>
+                                    </div>
+                                </div>
+                                <div class="Z_comment_item">
+                                    <div class="Z_comment_author clear">
+                                        <span class="Z_comment_star">
+                                            <em style="width:100%;"></em>
+                                        </span>
+                                        <div class="Z_author">
+                                            <img src="/public/images/zoler.jpg" width="24" height="24" alt="">
+                                            <span class="Z_name">ji***30</span>
+                                            <span>来自郑州</span>
+                                        </div>
+                                    </div>
+                                    <div class="Z_comment_text">发货速度快，鼠标垫好大，可以切两块了，但边缘是包线了，没法切，总体不错，但是有气味</div>
+                                    <div class="Z_comment_time">
+                                        <span>2014-11-13 09:14</span>
+                                        <span>undefined</span>
+                                        <span>undefined</span>
+                                    </div>
+                                </div>
+                                <div class="Z_comment_item">
+                                    <div class="Z_comment_author clear">
+                                        <span class="Z_comment_star">
+                                            <em style="width:100%;"></em>
+                                        </span>
+                                        <div class="Z_author">
+                                            <img src="/public/images/zoler.jpg" width="24" height="24" alt="">
+                                            <span class="Z_name">as***71</span>
+                                            <span>来自青岛</span>
+                                        </div>
+                                    </div>
+                                    <div class="Z_comment_text">东西不错就是窄了点要是在宽点就更好了</div>
+                                    <div class="Z_comment_time">
+                                        <span>2014-11-13 00:02</span>
+                                        <span>undefined</span>
+                                        <span>undefined</span>
+                                    </div>
+                                </div>
+                                <div class="Z_comment_item">
+                                    <div class="Z_comment_author clear">
+                                        <span class="Z_comment_star">
+                                            <em style="width:60%;"></em>
+                                        </span>
+                                        <div class="Z_author">
+                                            <img src="/public/images/zoler.jpg" width="24" height="24" alt="">
+                                            <span class="Z_name">wu***20</span>
+                                            <span>来自广西</span>
+                                        </div>
+                                    </div>
+                                    <div class="Z_comment_text">大是很大，但也不是那种让人惊叹的大，味道很重，久了就会头晕，当然了，卖家会说10元的东西，你还想怎样</div>
+                                    <div class="Z_comment_time">
+                                        <span>2014-11-12 20:43</span>
+                                        <span>undefined</span>
+                                        <span>undefined</span>
+                                    </div>
+                                </div>
+                                <div class="Z_comment_item">
+                                    <div class="Z_comment_author clear">
+                                        <span class="Z_comment_star">
+                                            <em style="width:100%;"></em>
+                                        </span>
+                                        <div class="Z_author">
+                                            <img src="/public/images/zoler.jpg" width="24" height="24" alt="">
+                                            <span class="Z_name">te***ng</span>
+                                            <span>来自湖北</span>
+                                        </div>
+                                    </div>
+                                    <div class="Z_comment_text">很不错，商家按留言发了指定快递，不过临近双11物流有点小慢。这次中关村最给力的配件活动就是这款了，记得买2张可以使用优惠卷更划算！</div>
+                                    <div class="Z_comment_time">
+                                        <span>2014-11-12 19:42</span>
+                                        <span>undefined</span>
+                                        <span>undefined</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                           
+                        </div>
+                                               
+                    </div>  
+                </div>
+                <!-- 交易记录 -->
+                <div class="Z_purchase_record" style="display: block;">
+                    <div class="Z_detail_head">
+                        <div class="Z_title">
+                            <h4>累计成交记录(4719)</h4>
+                        </div>
+                        <div class="Z_detail_head_filter">
+                            <div class="Z_checks">
+                                <label>
+                                    <input type="radio"/>
+                                    近30天成交记录(35件)
+                                </label>
+                                <label class="Z_cur">
+                                    <input type="radio" checked>
+                                    累计成交记录(4719件)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th class="Z_cell_buyer">买家</th>
+                                    <th class="Z_cell_sku">款式和型号</th>
+                                    <th class="Z_cell_price" style="display:none;">价格</th>
+                                    <th class="Z_cell_amount">数量</th>
+                                    <th class="Z_cell_time">成交时间</th>
+                                </tr>
+                                <tr>
+                                    <td class="Z_cell_buyer">zo***20</td>
+                                    <td class="Z_cell_sku">
+                                        <p>包邮游戏鼠标垫大锁边键盘垫办公桌垫大鼠标垫桌垫橡胶布面</p>
+                                        <p>官方标配：红色</p>
+                                    </td>
+                                    <td class="Z_cell_price" style="display:none;">
+                                        ￥
+                                        <em>9</em>
+                                    </td>
+                                    <td class="Z_cell_amount">1</td>
+                                    <td class="Z_cell_time">2017-11-20成交</td>
+                                </tr>
+                                <tr>
+                                    <td class="Z_cell_buyer">1d***24</td>
+                                    <td class="Z_cell_sku">
+                                        <p>包邮游戏鼠标垫大锁边键盘垫办公桌垫大鼠标垫桌垫橡胶布面</p>
+                                        <p>官方标配：红色</p>
+                                    </td>
+                                    <td class="Z_cell_price" style="display:none;">
+                                        ￥
+                                        <em>9</em>
+                                    </td>
+                                    <td class="Z_cell_amount">1</td>
+                                    <td class="Z_cell_time">2017-11-17成交</td>
+                                </tr>
+                                <tr>
+                                    <td class="Z_cell_buyer">ge***ey</td>
+                                    <td class="Z_cell_sku">
+                                        <p>包邮游戏鼠标垫大锁边键盘垫办公桌垫大鼠标垫桌垫橡胶布面</p>
+                                        <p>官方标配：红色</p>
+                                    </td>
+                                    <td class="Z_cell_price" style="display:none;">
+                                        ￥
+                                        <em>9</em>
+                                    </td>
+                                    <td class="Z_cell_amount">1</td>
+                                    <td class="Z_cell_time">2017-11-17成交</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="Z_tfoot">
+                       
+                    </div>
+                </div>
+                <!-- 咨询 -->
+                <div class="Z_message_mod" style="display: block;">
+                    <div class="Z_detail_head">
+                        <div class="Z_title">
+                            <h4>购买咨询(2)</h4>
+                        </div>
+                        <div class="Z_detail_head_filter">
+                            <div class="Z_checks">
+                                <label class="Z_cur">
+                                    <input type="radio" checked>
+                                    全部咨询
+                                </label>
+                                <label>
+                                    <input type="radio">
+                                    商品咨询
+                                </label>
+                                <label>
+                                    <input type="radio">
+                                    库存与配送
+                                </label>
+                                <label>
+                                    <input type="radio">
+                                    支付问题
+                                </label>
+                                <label>
+                                    <input type="radio">
+                                    发票与保修
+                                </label>
+                                <label>
+                                    <input type="radio">
+                                    促销及赠品
+                                </label>
+                                <label>
+                                    <input type="radio">
+                                    其他
+                                </label>
+
+                            </div>
+                            <a class="Z_ask_link">我要咨询</a>
+                        </div>
+                    </div>
+                    <ul class="Z_ask_list">
+                        <li>
+                            <div class="Z_user_infor">
+                                <em>(网友)</em>
+                                xpjl
+                                <span class="Z_time">2016-06-09 17:30:05</span>
+                            </div>
+                            <p class="Z_question">请问这个鼠标垫有多少个颜色啊</p>
+                            <div class="Z_reply">
+                                商家回复：黑色红边和黑色蓝边
+                                <span class="Z_time">2016-06-09 18:09:56</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="Z_user_infor">
+                                <em>(网友)</em>
+                                xpjl
+                                <span class="Z_time">2015-12-15 15:35:52</span>
+                            </div>
+                            <p class="Z_question">邮费要多少钱</p>
+                            <div class="Z_reply">
+                                商家回复：包邮的  偏远地区不包邮
+                                <span class="Z_time">2015-12-18 00:45:28</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <!-- 发表咨询 -->
+                    <div class="Z_enter_message">
+                        <div class="Z_detail_head">
+                            <div class="Z_title">
+                                <h4>发表咨询</h4>
+                                <span class="Z_close"></span>
+                            </div>
+                            <div class="Z_detail_head_filter">
+                                <div class="Z_checks">
+                                    <label class="Z_cur">
+                                        <input type="radio" checked>
+                                        商品咨询
+                                    </label>
+                                    <label>
+                                        <input type="radio">
+                                        库存与配送
+                                    </label>
+                                    <label>
+                                        <input type="radio">
+                                        支付问题
+                                    </label>
+                                    <label>
+                                        <input type="radio">
+                                        发票与保修
+                                    </label>
+                                    <label>
+                                        <input type="radio">
+                                        促销及赠品
+                                    </label>
+                                    <label>
+                                        <input type="radio">
+                                        其他
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Z_messagebox">
+                            <textarea ></textarea>
+                            <div class="Z_question_foot clear">
+                                <label>
+                                    <input type="checkbox">
+                                    仅商家可见
+                                </label>
+                                <span>（选择后，您的留言只有商家可以看到，建议您在询问价格等隐私信息时选择）</span>
+                                <span class="Z_nopublish_btn">发表留言</span>
+                                <span class="Z_number">
+                                    <em>0</em>
+                                    /200
+                                </span>
+                                <a href="#" class="Z_publish_btn">发表留言</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 参数 -->
+                <div class="Z_parameter" style="display: none;">
+                    <table width="100%">
+                        <tbody>
+                            <tr>
+                                <th colspan="2">基本参数</th>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">上市时间</td>
+                                <td class="Z_parameter_infor">2017年07月</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">适用类型</td>
+                                <td class="Z_parameter_infor">经济实用</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">鼠标大小</td>
+                                <td class="Z_parameter_infor">普通鼠</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">工作方式</td>
+                                <td class="Z_parameter_infor">光电</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">连接方式</td>
+                                <td class="Z_parameter_infor">有线</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">鼠标接口</td>
+                                <td class="Z_parameter_infor">USB</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">按键数</td>
+                                <td class="Z_parameter_infor">3个</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">滚轮方向</td>
+                                <td class="Z_parameter_infor">双向滚轮</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">技术参数</th>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">最高分辨率</td>
+                                <td class="Z_parameter_infor">1000dpi</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">按键寿命</td>
+                                <td class="Z_parameter_infor">500万次</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">人体工学</td>
+                                <td class="Z_parameter_infor">对称设计</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">其他参数</th>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">鼠标颜色</td>
+                                <td class="Z_parameter_infor">红色</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">供电模式</td>
+                                <td class="Z_parameter_infor">USB供电</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">系统支持</td>
+                                <td class="Z_parameter_infor">Windows 7，Windows Vista，Windows XP</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">鼠标附件</th>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">包装清单</td>
+                                <td class="Z_parameter_infor">
+                                    鼠标
+                                    <br>
+                                    保修卡
+                                    <br>
+                                    说明书
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">保修信息</th>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">保修政策</td>
+                                <td class="Z_parameter_infor">全国联保，享受三包服务</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">质保时间</td>
+                                <td class="Z_parameter_infor">15个月</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">质保备注</td>
+                                <td class="Z_parameter_infor">7天包退，15天包换，1年保修</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">电话备注</td>
+                                <td class="Z_parameter_infor">9:00-18:00（节假日休息）</td>
+                            </tr>
+                            <tr>
+                                <td class="Z_parameter_title">详细内容</td>
+                                <td class="Z_parameter_infor">售后服务由品牌厂商提供，支持全国联保，可享有三包服务！如出现质量问题或故障，可查询最近的维修点，由厂商的售后解决；也可凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货。超过15 天又在质保期内，可享受免费保修等三包服务！<a href="#">进入官网>></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 服务保障 -->
+                <div class="Z_service_guarantee" style="display: none;">
+                    <div class="Z_service_banner">
+                        Z
+                        <span class="Z_add_plus">+</span>
+                        服务保障说明
+                    </div>
+                    <h4 class="Z_service-title">
+                        <i class="Z_ico-13"></i>
+                        正品保障
+                    </h4>
+                    <div class="Z_service_content">
+                        <p>当您在ZOL商城购买全新产品时，商家承诺所售出商品均为正品行货，如买家所购商品发现假货及非原厂正品商品，买家可以向ZOL商城发起"先行赔付"申请，ZOL商城核实后将进行先行赔付以保障您的合法权益。</p>
+                    </div>
+                    <h4 class="Z_service-title">
+                        <i class="Z_ico-1"></i> 先行赔付 
+                    </h4>
+                    <div class="Z_service_content">
+                        <dl>
+                            <dt>1、先行赔付规则：</dt>
+                            <dd>当您在ZOL商城购买全新产品时，若因该交易导致您的权益受损，且在您直接要求商家处理未果的情况下，您可以向ZOL商城发起"先行赔付"申请，ZOL商城核实后将进行先行赔付以保障您的合法权益。</dd>
+                        </dl>
+                        <dl>
+                            <dt>2、先行赔付条件：</dt>
+                            <dd>
+                                1、只有您在ZOL商城购买并且有购买凭据（购买凭据包括：电子订单、购货发票等）的商品可申请先行赔付；
+                                <br>
+                                2、确保申请赔付的商品必须与卖家销售的商品为同一件；
+                                <br>
+                                <span style="color:#c00;">注：买家不按照ZOL商城的交易流程而完成的交易不在"先行赔付"保障范围内；</span>
+                                <br>
+                                1）未收到货情况下，买家提前确认收货的交易；
+                                <br>
+                                2）未在ZOL商城提交订单，擅自与卖家在线下付款完成的交易；
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>3、先行赔付流程：</dt>
+                            <dd>
+                                <img src="/public/images/img-3.png" width="650" height="77">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>4、先行赔付标准：</dt>
+                            <dd>
+                                <table class="Z_punishment-way">
+                                    <tbody>
+                                        <tr>
+                                            <th class="Z_cell-1">问题分类</th>
+                                            <th class="Z_cell-2">问题描述</th>
+                                            <th class="Z_cell-3">赔付方式</th>
+                                            <th class="Z_cell-4">受理时间</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="Z_cell-1">商品保证</td>
+                                            <td class="Z_cell-2">如买家所购商品发现假货及非原厂正品商品或商品本身有质量问题的</td>
+                                            <td class="Z_cell-3">先行赔付问题订单的总金额（假一赔三不包含在此项处罚中）</td>
+                                            <td class="Z_cell-4">收货15天内</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Z_cell-1">如实描述</td>
+                                            <td class="Z_cell-2">如卖家对商品的描述、参数与实际不符的</td>
+                                            <td class="Z_cell-3">先行赔付问题订单的总金额</td>
+                                            <td class="Z_cell-4">收货15天内</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Z_cell-1">物流配送</td>
+                                            <td class="Z_cell-2">如卖家未提供满399包邮服务，向您收取物流费用的</td>
+                                            <td class="Z_cell-3">先行赔付问题订单产生的运费</td>
+                                            <td class="Z_cell-4">收货15天内</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Z_cell-1">发票保障</td>
+                                            <td class="Z_cell-2">如卖家未履行所承诺的发票保障服务的，未按规定提供正规发票或提供假发票的</td>
+                                            <td class="Z_cell-3">先行赔付问题订单的总金额</td>
+                                            <td class="Z_cell-4">收货15天内</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Z_cell-1">售后服务</td>
+                                            <td class="Z_cell-2">如卖家未履行7天无理由退货、15天换货售后服务，或发货后一直没有收到商品的</td>
+                                            <td class="Z_cell-3">先行赔付问题订单的总金额</td>
+                                            <td class="Z_cell-4">收货15天内</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p style="color:#c00;">注： 产品均需在订单完成出现对应问题后发起先行赔付服务，否则商城将不按先行赔付处理。</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>5、先行赔付受理时间：</dt>
+                            <dd>买家向ZOL商城申请"先行赔付"服务，需严格按照受理时限进行申请，超时商城将不与受理，并且不承担任何责任。</dd>
+                        </dl>
+                    </div>
+                    <h4 class="Z_service-title">
+                        <i class="Z_ico-3"></i>
+                        24小时发货
+                    </h4>
+                    <div class="Z_service_content">
+                        <p>当您在ZOL商城中购买商品时，商家承诺您所下的订单，将在24小时内进行发货（部分商家节假日不发货）。</p>
+                        <dl>
+                            <dt>1、如何跟踪配送信息</dt>
+                            <dd>
+                                配送信息您可点击查询"物流状态"即可查询到您所购买的商品的在途情况或者请您点击对应的物流承运商网站进行查询，快递单号可以登陆ZOL商城账号的订单管理中获取，建议发货后48小时后进行查询。
+                            </dd>
+                        </dl>
+                    </div>
+                    <h4 class="Z_service-title">
+                        <i class="Z_ico-3"></i>
+                        物流配送
+                    </h4>
+                    <div class="Z_service_content">
+                        <p>
+                            当您在ZOL商城购买产品时，商家承诺全店商品满399元且收货地址在商家指定的物流公司所覆盖的派送区域内，均采用商家指定的物流公司为消费者提供免费物流配送服务；如收货地址不在商家指定的物流公司派送范围内时，商家则使用其它可送达快递为消费者提供免费物流配送服务。如在商家店铺未购买达到399元，除商家优惠外，物流费用由买家自己承担。
+                        </p>
+                        <dl>
+                            <dt>1、赔付保障权益</dt>
+                            <dd>如商家在规定的范围内向您收取物流费用，您可根据ZOL商城"先行赔付"进行维权、获得赔偿。</dd>
+                        </dl>
+                        <dl>
+                            <dt>2、买家须知</dt>
+                            <dd>
+                                1.&nbsp;&nbsp;如收货地址不在商家指定的物流公司派送范围内时，且在商家店铺购买达到399元，商家可使用其快递为消费者提供免费物流配送服务；    
+                                <br/>
+                                2.&nbsp;&nbsp;寄递物品违反禁、限寄规定或有关运输管理条例，经有关部门没收或依照有关法规、规定处理的，不在补偿范围内； 
+                                <br/>
+                                3.&nbsp;&nbsp;商家指定的物流公司的配送范围以本页公示的范围为准。港澳台及海外地区，大陆地区的部队（含武警）或受部队（含武警）管制的等商家指定的物流公司不予收送快件的机构不在配送范围内。 
+                            </dd>
+                        </dl>
+                    </div>
+                    <h4 class="Z_service-title">
+                        <i class="Z_ico-3"></i>
+                        发票保障
+                    </h4>
+                    <div class="Z_service_content">
+                        <p>买家在zol商城购买商品时，所购买商品可提供正规商品发票。且使用该服务不向买家收取任何其他费用。</p>
+                        <dl>
+                            <dt>1、赔付保障权益</dt>
+                            <dd>如商家未履行所承诺的发票保障服务，您可根据ZOL商城"先行赔付"进行维权、获得赔偿。</dd>
+                        </dl>
+                        <dl>
+                            <dt>2、开发票的注意事项</dt>
+                            <dd>
+                                1.发票金额不能高于订单金额。
+                                <br>
+                                2.为了享受厂商提供的质保服务，商品发票开具为产品明细。（售后服务需根据发票确认您的购买日期，发票内容默认为您订购的商品明细。） 3.使用优惠券、积分的金额不开具发票。 4.销售产品均可开具正规机打发票（普通增值税发票），无需加税点，但为了保证发票不遗漏和错开，请下订单时在补充说明（或者卖家留言），留言注明：需开发票抬头XXX公司或者XXX人名。如忘记注明，请及时联系客服帮助备注。 5.如果您收到的发票与您输入的开票信息、订单信息不一致，请及时联系400-688-1999 6.未经ZOL商城允许，客服部门将不接受电话、传真、邮件、邮寄等形式的重开发票申请，如您擅自将发票寄到我公司的任一办公地址，在寄送过程中发生的发票遗失、缺失等情况，概不负责。 
+                            </dd>
+                        </dl>
+                    </div>
+                    <h4 class="Z_service-title">
+                        <i class="Z_ico-7"></i>
+                        售后服务
+                    </h4>
+                    <div class="Z_service_content">
+                        <p>
+                            凡在ZOL商城购买产品，售出产品有非人为质量问题凭有效检测报告、不影响商家二次销售的情况下可享受商品在自售出之日（以实际收货日期为准）起7日内无理由退换货、15日内换货的服务。如商家未履行所承诺的售后服务，您可根据ZOL商城"先行赔付"进行维权、获得赔偿。
+                        </p>
+                        <dl>
+                            <dt>特别声明</dt>
+                            <dd>
+                                本站ZOL商城所出售商品的商品详情信息及包装参数信息均由卖家自行设计、制作并通过ZOL商城向其开放的数据端口自行发布，其真实性、准确性和合法性由卖家负责。本站保证ZOL商城所出售商品均为原厂正品行货，但因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本站不能确保用户收到的货物与本站展示的图片、产地、附件说明完全一致。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>价格声明</dt>
+                            <dd>
+                                购买价：购买价为商品的销售价，是您最终决定是否购买商品的依据。划线价：商品展示的划横线价，可能是如官方网站零售价、厂商指导价、厂商建议零售价、销售商门店挂牌价；由于地区、时间的差异性和市场行情波动，可能会与您购物时展示的不一致，该价格仅供您参考。折扣价：折扣指卖家在划线价（如官方网站零售价、厂商指导价、厂商建议零售价、销售商门店挂牌价）等某一价格基础上计算出的优惠比例或优惠金额。促销价：商品促销信息以商品详情页“促销”信息为准；商品的具体售价以订单结算页价格为准；如您发现商品售价或促销信息有异常，建议购买前先联系销售商咨询。
+                            </dd>
+                        </dl>  
+                    </div>
+                    <h4 class="Z_service-title">
+                        <i class="Z_ico-8"></i>
+                        退换货说明
+                    </h4>
+                    <div class="Z_service_content">
+                        <dl>
+                            <dt>1、退换货成立条件：</dt>
+                            <dd>
+                                1）&nbsp;&nbsp;商品在国家三包政策范围内并且不影响二次销售。
+                                <br> 
+                                2）&nbsp;&nbsp;经由生产厂家认可的售后服务中心或国家认可的第三方质检平台检测确认的非人为商品质量问题，并出具检测报告(检测报告需由维权方出具，如维权方当地无检测条件的请联系卖家是否提供代检测服务)。
+                                <br>
+                                3）&nbsp;&nbsp;当您购买的商品需要办理退换货时，商家会根据退换货规则在24小时内为您审核。 
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>2、退换货服务流程：</dt>
+                            <dd>
+                                <img src="/public/images/img-4.png" width="650" height="271">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>3、退换货商品引起的运费问题:</dt>
+                            <dd>
+                                1）&nbsp;&nbsp;非商品质量问题而由买家发起的七天无理由退换货行为，买家退货的商品应当完好，退回商品的来回所有运费由买家承担。如因商品质量问题而导致的7天退货，15天换货行为，退回商品的所有来回运费均由卖家承担。卖家和买家另有约定的，按照约定。
+                                <br> 
+                                2）&nbsp;&nbsp;售后商品经过检测后无质量问题，可以正常使用，商家一律使用顺丰到付返回。 
+                                <br>
+                                3）&nbsp;&nbsp;退、换商品经售后检测无质量问题寄回后，如在7天内问题依然出现，将按上次的申请生效，请联系商家说明并将商品寄回，商家承担来回运费。 
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>4、赔付保障权益</dt>
+                            <dd>如商家未履行所承诺的无理由退换货服务，您可根据ZOL商城"先行赔付"进行维权、获得赔偿。</dd>
+                        </dl>
+                    </div>
+                    <h4 class="Z_service-title">
+                        <i class="Z_ico-9"></i>
+                        如何退款
+                    </h4>
+                    <div class="Z_service_content">
+                        <dl>
+                            <dt>1、退款流程：</dt>
+                            <dd>
+                                <img src="/public/images/img-5.png">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>2、退款说明</dt>
+                            <dd>取消订单退款：如果您完成支付后取消订单，ZOL商城会在订单取消完成后1天内处理您的退款。如果您只取消了部分商品，会在剩余商品发货完成后1天内处理您的退款。</dd>
+                        </dl>
+                        <dl>
+                            <dt>3、赔付保障权益</dt>
+                            <dd>如商家未履行所承诺的退款服务，您可根据ZOL商城"先行赔付"进行维权、获得赔偿。</dd>
+                        </dl>
+                        <dl>
+                            <dt>4、退款方式</dt>
+                            <dd>
+                                <table class="Z_refund_way">
+                                    <tbody>
+                                        <tr>
+                                            <th class="Z_cell-1">支付方式</th>
+                                            <th class="Z_cell-2">退款方式</th>
+                                            <th class="Z_cell-3">退款处理时限</th>
+                                        </tr>
+                                        <tr>
+                                            <td class="Z_cell-1">支付宝</td>
+                                            <td class="Z_cell-2">支付宝账号</td>
+                                            <td class="Z_cell-3">1-2个工作日</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Z_cell-1">网上银行</td>
+                                            <td class="Z_cell-2">原借记卡帐户</td>
+                                            <td class="Z_cell-3">5-7个工作日</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="Z_cell-1">信用卡</td>
+                                            <td class="Z_cell-2">原借记卡帐户</td>
+                                            <td class="Z_cell-3">7-15个工作日</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>
+                                    <strong>注意：</strong>
+                                    银行退款处理时限仅供您参考，具体退款到账时间依各银行、支付机构等的具体操作处理时间而定。
+                                </p>
+                                <p>
+                                    <strong>各银行退款限制</strong>
+                                </p>
+                                <ul class="Z_refund_limit">
+                                    <li>支付宝不受理90天以前支付成功订单的退款申请</li>
+                                    <li>建设银行不受理148天以前支付成功订单的退款申请</li>
+                                    <li>中信银行信用卡不受理228天以前支付成功订单的退款申请</li>
+                                    <li>浦发银行不受理同一支付成功订单的多次退款申请</li>
+                                    <li>民生银行、浦发银行、中国邮政、中国农业银行不受理85天以前支付成功订单的退款申请</li>
+                                    <li>其他银行不受理365天前支付成功订单的退款申请</li>
+                                    <li>浦发银行、华夏银行、中国邮政不受理同一支付成功订单的多次退款申请</li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                    <h4 class="Z_service-title">
+                        <i class="Z_ico-10"></i>
+                        交易条款
+                    </h4>
+                    <div class="Z_service_content">
+                        <p>Zol商城为增加买家与商家双方之间的信任与交流，规避交易过程中的风险和受骗可能，确保您和商家不受损失。ZOL商城采用统一收款方式来保障买家与卖家的双方利益。</p>
+                        <p>1、客户在接受商品订购与送货的同时，在您消费之前有义务遵守以下交易条款。请您仔细阅读以下条款。</p>
+                        <dl>
+                            <dt>1）&nbsp;&nbsp;变化性</dt>
+                            <dd>由于价格波动不可预知，以订单提交付款时的价格为标准；</dd>
+                        </dl>
+                        <dl>
+                            <dt>2）&nbsp;&nbsp;准确性</dt>
+                            <dd>
+                                清楚准确地填写您的真实姓名、送货地址及联系方式；因如下情况造成订单延迟或无法配送等，ZOL商城将不承担责任； <br>
+                                1.客户提供错误信息和不详细的地址；
+                                <br>
+                                2.货物送达无人签收，由此造成的重复配送所产生的费用及相关的后果；
+                                <br>
+                                3.不可抗力，例如：自然灾害、交通戒严、突发战争等。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>3）&nbsp;&nbsp;安全性</dt>
+                            <dd>我们会保证交易信息的安全。</dd>
+                        </dl>
+                        <dl>
+                            <dt>4）&nbsp;&nbsp;&nbsp;&nbsp;隐私权</dt>
+                            <dd>
+                                ZOL商城尊重您的隐私权，在任何情况下，我们都不会将您的个人和订单信息出售或泄露给任何第三方（国家司法机关调取除外）。我们从线上得到的所有客户信息仅用来处理您的相关订单。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>5）&nbsp;&nbsp;免责</dt>
+                            <dd>
+                                如因不可抗力或其它ZOL商城无法控制的原因使本平台销售系统崩溃或无法正常使用导致网上交易无法完成或丢失有关的信息、记录等，ZOL商城会尽可能合理地协助处理善后事宜，并努力使客户免受经济损失。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>6）&nbsp;&nbsp;客户监督</dt>
+                            <dd>ZOL商城希望通过不懈努力，为客户提供优质服务，我们在给客户提供服务的全过程中接受客户的监督。</dd>
+                        </dl>
+                        <dl>
+                            <dt>7）&nbsp;&nbsp;争议处理</dt>
+                            <dd>如果客户与ZOL商家之间发生任何争议，可依据当时双方所认定的协议或相关法律来解决。</dd>
+                        </dl>
+                    </div>
+                    <h4 class="Z_service-title">
+                        <i class="Z_ico-11"></i>
+                        服务承诺
+                    </h4>
+                    <div class="Z_service_content">
+                        <dl>
+                            <dt style="color:red;">特别声明:</dt>
+                            <dd>本站ZOL商城所出售商品的商品详情信息及包装参数信息均由卖家自行设计、制作并通过ZOL商城向其开放的数据端口自行发布，其真实性、准确性和合法性由卖家负责。本站保证ZOL商城所出售商品均为原厂正品行货，但因生产厂家可能会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本站不能确保用户收到的货物与本站展示的图片、产地、附件说明完全一致。</dd>
+                        </dl>
+                        <dl>
+                            <dt style="color:red;">价格声明:</dt>
+                            <dd>购买价：购买价为商品的销售价，是您最终决定是否购买商品的依据。划线价：商品展示的划横线价，可能是如官方网站零售价、厂商指导价、厂商建议零售价、销售商门店挂牌价；由于地区、时间的差异性和市场行情波动，可能会与您购物时展示的不一致，该价格仅供您参考。折扣价：折扣指卖家在划线价（如官方网站零售价、厂商指导价、厂商建议零售价、销售商门店挂牌价）等某一价格基础上计算出的优惠比例或优惠金额。促销价：商品促销信息以商品详情页“促销”信息为准；商品的具体售价以订单结算页价格为准；如您发现商品售价或促销信息有异常，建议购买前先联系销售商咨询。。</dd>
+                        </dl>
+                    </div>
+                    <h4 class="Z_service-title" style="display:none;">
+                        <i class="Z_ico-12"></i>
+                        常见问题
+                    </h4>
+                    <div class="Z_service_content" style="display:none;">
+                        <dl>
+                            <dt>1、什么是定制机？</dt>
+                            <dd>
+                                定制机和非定制机在硬件上完全一致，定制的只是手机软件内容，内嵌移动运营商旗下的增值服务，为消费者提供简单，方便、快捷的服务，完全不影响正常使用，都属正规渠道的原厂机。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>2、什么是合约机？</dt>
+                            <dd>
+                                合约机是指通讯运营商与手机生产商共同定制的手机类型，用户使用该手机必须和指定运营商签约，而且要一次性付清交租机款（大多以存话费的名义交清）。购买运营商的合约机器后，会送一定金额的话费，所送话费金额是根据客户所选合约按月返还的！
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>3、什么是欧版、亚太版、日版？</dt>
+                            <dd>
+                                是指销售地区在除中国香港、中国大陆地区外的海外市场,其质量和使用方面无任何影响, 硬件配置跟国行基本一样，使用起来也并无区别，带中文，插卡即用，欧版、亚太版、日版等统称海外版。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>4、所售的手机为何会出现开封的情况？</dt>
+                            <dd>
+                                因所售手机版本内有欧版、亚太版、日版等其它版本，需先拆封激活后才能通过海关送到中国，采购到的手机在发货前会进行验机，原厂(欧版、亚太版原装)手机软件都会升级为简体中文版，和国内行货一样都是有简体中文，激活看屏幕有无坏线、死点，质检合格后才会安排发货。
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>5、手机制式常识：</dt>
+                            <dd>
+                                <img src="/public/images/img-6.png" width="650" height="382">
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>6、怎么判断一款手机可以用哪种手机卡？</dt>
+                            <dd>
+                                手机能用哪种手机卡是由手机的网络制式决定的。每款手机都会标明网络制式，不同制式适用的手机卡如下：
+                                <p>GSM：支持中国联通和中国移动2G号段（131、132、134、135、136、137、138、139、151、156、158、159、186、188）</p>
+                                <p>CDMA：支持中国电信2G号段（133、153、189）</p>
+                                <p>GSM/WCDMA：支持中国联通和中国移动2G号段，以及中国联通3G号段（131、132、134、135、136、137、138、139、151、156、158、159、186、188）</p>
+                                <p>GSM/TD-SCMDA：支持中国联通和中国移动2G号段，以及中国移动3G号段(131、132、134、135、136、137、138、139、151、156、158、159、186、188）</p>
+                                <p>CDMA/CDMA2000：支持中国电信2G号段，以及中国电信3G号段（133、153、189）</p>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>7、为什么主机上显示的内存容量比参数上写的小？</dt>
+                            <dd>商品参数上标明的是硬件本身v的容量。手机出厂之前都会预装操作系统，操作系统会占用部分机身内存（ROM）。系统占用部分的机身内存是不显示的，Android操作系统的机制是只显示剩余机身内存。机身内存剩余多少和系统自带的应用软件数量也有关，你安装一款软件，内存就减少一部分。因此，手机上显示的机身内存容量会小于商品参数标明的容量。在手机启动后，系统会预留部分运行内存（RAM）给GPU、显示模块、音频播放、编解码等需要连续大块物理内存的应用，这部分的运行内存是不能释放出来的，而安装软件占用的运行内存是可以释放出来的。平板的情况与手机相同。</dd>
+                        </dl>
+                        <dl>
+                            <dt>8、手机发热是什么原因？</dt>
+                            <dd>
+                                1. 手机上网时射频电路及CPU都在高频运转，功耗较大，会有一定量的发热。 
+                                <br>
+                                2. 在手机充电时，因为有大量电流流过（充电电流一般有1安培），机身及电池会在46度左右是很正常的。
+                                <br>
+                                3. 在玩游戏、看电影时因手机CPU在高速运转手机会发热，发热区域集中在摄像头周围，这与电脑是同样的道理。
+                                <br>
+                                4. 发热现象也与周围环境也有关，在夏天因为外界环境较高，体感会觉得手机温度稍微高一些。手机出厂的温升要求都会满足国家的安规相关标准，只要不感觉明显烫手，手机不发出异味或壳体出现变形，基本都是正常的发热范围，请您放心使用。如果想减轻发热量，则充电时尽量不要使用手机上网或玩大型游戏，通话尽量选择插入耳机。
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧导航栏 -->
+            <div class="Z_side" style="height: 4500px;">
+                <div class="Z_quick_menu">
+                    <ul class="introduct">
+                        <li>
+                            <a href="javascript:;" class="Z_cur">商品介绍</a>
+                        </li>
+                       
+                    </ul>
+                    <ul style="display:none;" class="Z_fw">
+                        <li>
+                            <a href="javascript:;" class="Z_cur">正品保障</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">先行赔付</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">24小时发货</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">物流配送</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">发票保障</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">发票保障</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">服务承诺</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+                    
+        </div>
+
+    </div>
+    <!-- 侧边按钮 -->
+    <div class="Z_consult_layer">
+        <a href="#" class="Z_quick_dove">快速咨询</a>
+        <a href="#" class="Z_qq_consult">qq咨询</a>
+    </div>
+    <!-- 返回顶部 -->
+    <div id="Z_pubFreeBack" class="widget">
+        <a href="#" class="Z_backtop" id="Z_backTop" title="返回顶部"></a>
+    </div>
+    <script>
+	window.onscroll = function(){
+		if($('html ,body').scrollTop() > 900){
+    		$('#Z_pubFreeBack').css({'display':'block'});
+    	}else{
+    		$('#Z_pubFreeBack').css({'display':'none'});
+    	}
+	}
+    	
+    	//点击回到顶部
+    	
+		$('#Z_pubFreeBack').on('click',function(){
+			$('html ,body').animate({scrollTop: 0}, 400);
+			return false;
+		});
+    </script>
+    <!-- 底部 -->
+    <footer>
+        <div class="Z_wrapper">
+            <div class="Z_foot_head clear">
+                <dl class="Z_cooperation">
+                    <dt>商家合作</dt>
+                    <dd>
+                        <p>错过天猫？别再错过我们！</p>
+                        <p>Z商城开启全新旅程！</p>
+                        <a href="#" class="Z_btn">
+                            <span>关于入驻</span>
+                        </a>
+                    </dd>
+                </dl>
+                <dl class="Z_hotline">
+                    <dt>400-688-1999</dt>
+                    <dd>
+                        <p>工作日 9:00 - 18:00</p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd>
+                        <p><a href="#">账号注册</a></p>
+                        <p><a href="#">购物流程</a></p>
+                        <p><a href="#">付款方式</a></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>售后服务</dt>
+                    <dd>
+                        <p><a href="#">先行赔付</a></p>
+                        <p><a href="#">退款退货流程</a></p>
+                        <p><a href="#">投诉举报</a></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>商城保障</dt>
+                    <dd>
+                        <p><a href="#">正品保障</a></p>
+                        <p><a href="#">物流配送</a></p>
+                        <p><a href="#">24小时发货</a></p>
+                        <p><a href="#">发票保障</a></p>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>商家中心</dt>
+                    <dd>
+                        <p><a href="#">商家中心</a></p>
+                    </dd>
+                </dl>
+
+            </div>
+        </div>
+    </footer>
+<script src="/public/js/Z_details.js"></script>

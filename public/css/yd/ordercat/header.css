@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  width: 100%;
+  height: 2.66666667rem;
+  background: #EDEDED;
+}
+header div:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #ccc;
+}
+header div:nth-child(1) a {
+  display: inline-block;
+  width: 2.66666667rem;
+  height: 2.66666667rem;
+  float: left;
+  font-size: 0.8rem;
+  color: #333;
+  text-decoration: none;
+  line-height: 2.66666667rem;
+  text-align: center;
+}
+header div:nth-child(1) span {
+  display: inline-block;
+  font-size: 1.06666667rem;
+  line-height: 2.66666667rem;
+  margin-left: 5.06666667rem;
+}
+header div:nth-child(2) {
+  width: 100%;
+  height: 2.93333333rem;
+  background: white;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  color: #1F94F5;
+  line-height: 2.93333333rem;
+}
+header div:nth-child(2) i:nth-child(1) {
+  font-size: 1.33333333rem;
+}
+header div:nth-child(2) i:nth-child(3) {
+  font-size: 0.8rem;
+  color: #333;
+  margin-right: 1.06666667rem;
+  float: right;
+  margin-top: 0.26666667rem;
+}
+header #panelparent {
+  width: 100%;
+  height: 1000%;
+  background: rgba(102, 102, 102, 0.8);
+  display: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 99;
+}
+header #panelparent #panel {
+  width: 100%;
+  height: 18.93333333rem;
+  display: none;
+  background: white;
+  position: relative;
+  z-index: 100;
+}
+header #panelparent #panel ol {
+  width: 85%;
+  margin: 0 auto;
+}
+header #panelparent #panel ol li {
+  font-size: 0.93333333rem;
+}
+header #panelparent #panel p {
+  font-size: 0.74666667rem;
+  text-align: center;
+  margin-top: 0.53333333rem;
+  color: #666;
+}
+header #panelparent #panel a {
+  display: block;
+  width: 12rem;
+  height: 2.4rem;
+  border-radius: 0.13333333rem;
+  background: #FF6600;
+  text-align: center;
+  line-height: 2.4rem;
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: white;
+  margin-left: 3.6rem;
+  margin-top: 0.53333333rem;
+}
+/*购物车*/
+.che {
+  width: 100%;
+  height: 12.8rem;
+  margin-top: 9.06666667rem;
+}
+.che p:nth-child(1) {
+  width: 6.13333333rem;
+  height: 6.13333333rem;
+  background: #F7F7F7;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+.che p:nth-child(1) i {
+  display: inline-block;
+  font-size: 3.46666667rem;
+  line-height: 6.13333333rem;
+  color: #D6D6D6;
+}
+.che p:nth-child(2) {
+  font-size: 0.88rem;
+  color: #ccc;
+  text-align: center;
+  margin-top: 1.06666667rem;
+}
+.che a {
+  display: block;
+  width: 5.6rem;
+  line-height: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid #FF8C3F;
+  font-size: 0.88rem;
+  text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1.86666667rem;
+  color: #FF8C3F;
+}

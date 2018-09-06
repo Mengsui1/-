@@ -1,0 +1,51 @@
+
+#Z_title {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0 0;
+    height: 22px;
+    font: 12px/22px sumsin;
+    color: #666;
+}
+#Z_title a {
+    color: #03589e;
+    margin: 0 8px;
+    font-family: arial;
+}
+#Z_title a:hover {
+    color: #c00;
+    border-bottom: 1px solid #c00;
+}
+
+
+.Z_main {
+    width: 1000px;
+    margin: 30px auto;
+}
+.Z_main > .Z_detail {
+    padding: 20px;
+    border: 1px solid #E6E6E6;
+}
+.Z_main > .Z_detail > h4 {
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0 15px;
+}
+.Z_main > .Z_detail > p {
+    font: 12px/22px arial;
+}
+.Z_main > .Z_detail img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+}
+
+
+
+
+
+
+
+
+

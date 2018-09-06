@@ -1,0 +1,205 @@
+<style>
+	.W_page_nav{
+		margin:0 auto;
+		text-align:center;
+		height: 40px;
+	}
+	.pagination{
+		float:left;
+		margin:0 !important;
+	}
+	.pagination li{
+		float:left;
+		height: 40px;
+
+	}
+	.pagination li > a:hover{
+		background:#Ff9A97 !important;
+	}
+	#W_pages li[class="active"] a{
+		background:#F00A07;
+		color:white;
+	}
+	.pagination li[class="hide"] a{
+		display:none;
+	}
+	.pagination li a{
+		min-width:40px;
+		height: 40px;
+		border:none;
+		margin:0px;
+		padding:0px;
+	    float: left;
+	    color: #337ab7;
+	    text-decoration: none;
+	    background-color: #fff;
+	    font-size: 14px;
+	    line-height: 40px;
+	    text-align:center;
+		border:1px solid #ccc;
+		margin:0px 2px;
+		
+	    
+	}
+	
+</style>
+
+<nav class="clear W_page_nav">
+	<div style="display: table;margin: 0 auto;" class="clear">
+		<ul class="W_page pagination clear" data-page="{{page}}" data-pages="{{pages}}" data-num="{{num}}">
+			<li>
+		    	<a style="border-left:1px solid #ccc;padding:0px 10px;" href="/{{arg}}?hover=1&page=1&num={{num}}&pa={{pa}}&xu={{xu}}">
+		    		首 页
+		    	</a>
+		    </li>
+		    <li id="W_pager_L">
+		    	<a style="border-left:1px solid #ccc;" href="/{{arg}}?hover=1&page={{page-1}}&num={{num}}&pa={{pa}}&xu={{xu}}">
+		    		<span aria-hidden="true" class="iconfont">&#xe502;</span>
+		    	</a>
+		    </li>
+		    <li id="W_list_hideL" class="hide"><a href="javascript:;">···</a></li>
+		    <ul id="W_pages" class="pagination"></ul>
+		    <li id="W_list_hideR" class="hide"><a href="javascript:;">···</a></li>
+	
+		    <li id="W_pager_R"><a href="/{{arg}}?hover=1&page={{page+1}}&num={{num}}&pa={{pa}}&xu={{xu}}">
+		    	<span aria-hidden="true" class="iconfont">&#xe609;</span>
+		    </a></li>
+		    <li>
+		    	<a style="border-left:1px solid #ccc;padding:0px 10px;" href="/{{arg}}?hover=1&page={{pages}}&num={{num}}&pa={{pa}}&xu={{xu}}">
+		    		尾 页
+		    	</a>
+		    </li>
+		    <li>
+		    	<a style="border-left:1px solid #ccc;padding:0px 10px;" href="javascript:;">共{{pages}}页</a>
+		    </li>
+		 </ul>
+	</div>
+	 
+</nav>
+ 	<!--<h4 class="text-center">总共有{{count}}条数据,每页显示{{limit}}条,一共{{pages}}页,当前是第{{page}}页 </h4>-->
+
+<script>
+$(function(){
+	var oW_pages = $('#W_pages').get()[0];//找到要添加分页按钮的对象
+	var W_pager = $('.W_page').get()[0];//分页的大ul
+	var W_pageLengths = W_pager.getAttribute('data-pages');//找到后台渲染前台的总页数
+	var W_pageL = W_pager.getAttribute('data-page');//找到后台渲染前台的当前页数
+	var W_num = W_pager.getAttribute('data-num');//找到后台渲染商品类型
+	var W_pages = 5;//定义显示的总页数
+	//	定义最大显示中间的值
+	var W_center_pages = Math.ceil(W_pages / 2);
+	var W_ca_pages = W_pages - W_center_pages;
+	var W_pageArr = [];
+	//	动态创建所有带序号的翻页按钮
+	for (var i = 1; i <= W_pageLengths; i++){
+		var objli = document.createElement("li");//创建DIV节点 
+		W_pageArr.push( '<a class="active" style="border-radius:2px;" href="/{{arg}}?hover=1&xu={{xu}}&pa={{pa}}&page='+i+'&num='+W_num+'">'+ i +'</a>' );
+		objli.innerHTML = W_pageArr[i - 1];
+		oW_pages.appendChild(objli);
+		
+	}
+	//循环序号翻页按钮，按条件限制只显示W_pages个
+	for (var i = 0; i < oW_pages.children.length; i++){
+		if(oW_pages.children.length <= W_pages){
+			$('#W_list_hideL').attr('class','hide');
+			$('#W_list_hideR').attr('class','hide');
+			if(W_pageL == i + 1){
+				oW_pages.children[i].className = 'active';
+			}
+		}else{
+			
+			//当前页小于中间页
+			if(W_pageL <= W_center_pages){
+				$('#W_list_hideR').attr('class','hide');
+				$('#W_list_hideR').attr('class','');
+				
+				for (var j =0 ; j < oW_pages.children.length; j++){
+					
+					if(W_pageL <= W_center_pages){
+						if(j < W_pages){
+							if(W_pageL == j +1){
+								oW_pages.children[j].className = 'active';
+							}else{
+								oW_pages.children[j].className = '';
+							}
+						}else{
+							oW_pages.children[j].className = 'hide';
+						}
+						
+					}
+					if(W_pageL > W_center_pages && W_pageL < (W_pageLengths - W_ca_pages)){
+						
+						if( W_pageL - (W_pages - W_center_pages) >= j && W_pageL + (W_pages - W_center_pages) <= j ){
+							oW_pages.children[j].className = '';
+							if(W_pageL == j +1){
+								oW_pages.children[j].className = 'active';
+							}else{
+								oW_pages.children[j].className = '';
+							}
+						}else{
+							oW_pages.children[j].className = 'hide';
+						}
+					}
+				}
+			//当前页大于中间页且小于总页减2
+			}else if(W_pageL > W_center_pages && W_pageL < (W_pageLengths - W_ca_pages)){
+				$('#W_list_hideL').attr('class','');
+				$('#W_list_hideR').attr('class','');
+				
+				for (var j =0 ; j < oW_pages.children.length; j++){
+					if( j >= (W_pageL - 1) - W_ca_pages && j <= (W_pageL - 1) + W_ca_pages){
+						if(W_pageL == j +1){
+							oW_pages.children[W_pageL - 1].className = 'active';
+						}else{
+							oW_pages.children[j].className = '';
+						}
+					}else{
+						oW_pages.children[j].className = 'hide';
+					}
+
+				}
+			}else{
+				$('#W_list_hideL').attr('class','');
+				$('#W_list_hideR').attr('class','hide');
+				for (var j =0 ; j < oW_pages.children.length; j++){
+					if(j >= W_pageLengths - W_pages){
+						if(W_pageL == j +1){
+							oW_pages.children[j].className = 'active';
+						}else{
+							oW_pages.children[j].className = '';
+						}
+					}else{
+						oW_pages.children[j].className = 'hide';
+					}
+				}
+			}
+
+		
+		}
+		//判断
+		
+	}
+	//判断当前页是不是第一页或者最后一页，如果是，则a标签的href属性为javascript:;
+	if(W_pageL <= 1){
+		$('#W_pager_L').find('a').attr('href','javascript:;');
+	}else{
+		$('#W_pager_L').find('a').attr('href','/{{arg}}?hover=1&page={{page-1}}&num={{num}}&pa={{pa}}&xu={{xu}}');
+	}
+	
+	if(W_pageL == W_pageLengths){
+		$('#W_pager_R').find('a').attr('href','javascript:;');
+	}else{
+		$('#W_pager_R').find('a').attr('href','/{{arg}}?hover=1&page={{page+1}}&num={{num}}&pa={{pa}}&xu={{xu}}');
+	}
+	
+	for	(var i = 0; i < oW_pages.children.length; i++){
+		if(W_pageL == i+1){
+			var aaa = oW_pages.getElementsByTagName('li')[i].getElementsByTagName('a')[0];
+			aaa.setAttribute('href','javascript:;');
+		}
+	}
+	
+	
+});
+
+</script>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="/public/css/L_user_head.css">
+	<link rel="stylesheet" href="/public/css/reset.css">
+	<link rel="stylesheet" href="/public/css/iconfont.css">
+	<script src="/public/js/jquery.min.js"></script>
+	<script src="/public/js/L_user_foot.js"></script>
+</head>
+<body>
+	<div class="L_head01">
+		<div class="L_head01_box">
+			<div>
+				<a href=""><img src="/public/images/user-logo.png" alt=""></a>
+			</div>
+			<div>
+				<ul class="L_clear">
+					<li><a href="">首页</a></li>
+					<li><a href="">个人主页</a></li>
+					<li><a href="">消息</a></li>
+					<li><a href="">个人设置</a>
+						<div class="L_li_box">
+							<ol>
+								<li><a href="/index/core">个人设置</a></li>
+								<li><a href="">账号设置</a></li>
+							</ol>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<header class="L_clear">
+		<div class="L_user">
+			<ul class="L_clear">
+				<li><a href="">wddcfdd</a></li>
+				<li><a href="">Lv.1</a></li>
+			</ul>
+			<div class="L_clear_bq">
+				<p><span class="iconfont">&#xe605;</span>编辑个人资料</p>
+			</div>
+		</div>
+		<div class="L_gz">
+			<ul class="L_clear">
+				<li><a href="">0</a><p>好友</p></li>
+				<li><a href="">0</a><p>关注</p></li>
+				<li><a href="">0</a><p>粉丝</p></li>
+			</ul>
+		</div>
+		<div class="L_photo">
+			<a href=""><img src={{oPhoto}} alt=""></a>
+		</div>
+	</header>
+	<main class="L_clear">
+		<div class="L_left">
+			<dl>
+				<dt><span class="iconfont">&#xe622;</span>资料</dt>
+				<dd><a href="javascript:;" class="L_color2">个人资料</a></dd>
+				<dd><a href="javascript:;">修改头像</a></dd>
+				<dd><a href="javascript:;">修改密码</a></dd>
+				<dd><a href="javascript:;">其他</a></dd>
+				<dd><a href="javascript:;">找回密码</a></dd>
+			</dl>
+			<dl>
+				<dt><span class="iconfont">&#xe7da;</span>账号设置</dt>
+				<dd><a href="javascript:;">账号管理</a></dd>
+				<dd><a href="javascript:;">账号绑定</a></dd>
+				<dd><a href="javascript:;">隐私管理</a></dd>
+				<dd><a href="javascript:;">账号申诉</a></dd>
+				<dd><a href="javascript:;">认证</a></dd>
+			</dl>
+		</div>
+		<div class="L_right">
+			{%include 'L_user_foot.html'%}
+		</div>
+	</main>
+	
+</body>
+</html>

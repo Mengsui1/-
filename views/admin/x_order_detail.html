@@ -1,0 +1,43 @@
+{% extends 'W_message.html' %}
+
+{% block main %}
+<ol class="breadcrumb">
+    <li><a href="/user">管理首页</a></li>
+    <li><span>商品管理</span></li>
+</ol>
+
+<h3>订单管理</h3>
+<table class="table">
+    <tr>
+        <th>商品号</th>
+        <th>商品编号</th>
+        <th>订单编号</th>
+        <th>商品名称</th>
+        <th>价格</th>
+        <th>数量</th>
+        <th>颜色</th>
+        <th>操作</th>
+    </tr>
+    {% for orderdetail in orderdetails %}
+    <tr>
+        <td>{{orderdetail._id.toString()}}</td>
+        <td>{{orderdetail.gid}}</td>
+        <td>{{orderdetail.oid}}</td>
+        <td>{{orderdetail.name}}</td>
+        <td>{{orderdetail.price}}</td>
+        <td>{{orderdetail.count}}</td>
+        <td>{{orderdetail.color}}</td>
+        <td>
+            <a href="/order/orderdetailupdate?gid={{orderdetail._id.toString()}}" data-toggle="modal" data-target=".xiu-example-modal-lg">编辑</a>
+    </tr>
+    {% endfor %}
+</table>
+
+{% include 'page.html' %}
+
+
+{% endblock %}
+
+
+
+
